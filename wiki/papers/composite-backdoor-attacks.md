@@ -49,7 +49,7 @@ Composite attacks represent an escalation in attack sophistication that challeng
 ## Related Work
 
 - [[instructions-as-backdoors]] -- related instruction-level attack surface
-- [[instruction-backdoor-customized-llms]] -- attacks on customized LLMs
+- [[instruction-backdoor]] -- attacks on customized LLMs
 - [[onion]] -- defense that fails against composite triggers
 - [[badacts]] -- activation-based defense potentially effective against composites
 

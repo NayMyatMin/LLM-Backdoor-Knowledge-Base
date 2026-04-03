@@ -52,7 +52,7 @@ MNTD's model-level detection paradigm is relevant for LLM [[supply-chain-attack]
 - [[neural-cleanse]] -- optimization-based model-level detection
 - [[t-miner]] -- generative trigger reverse-engineering for NLP
 - [[asset]] -- robust detection across ML paradigms
-- [[ted-topological-detection]] -- topological evolution-based detection
+- [[ted]] -- topological evolution-based detection
 
 ## Backlinks
 

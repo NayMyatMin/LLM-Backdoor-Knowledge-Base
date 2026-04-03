@@ -52,7 +52,7 @@ ABL's insight that poisoned samples exhibit faster learning dynamics may extend 
 ## Related Work
 
 - [[adversarial-neuron-pruning]] -- complementary post-training defense
-- [[decoupling-training-defense]] -- another training-time defense strategy
+- [[decoupling-defense]] -- another training-time defense strategy
 - [[trap-and-replace]] -- training-time defense using honeypot modules
 - [[neural-cleanse]] -- post-training trigger reverse-engineering
 - [[i-bau]] -- adversarial unlearning approach for backdoor removal

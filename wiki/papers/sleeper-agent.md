@@ -53,7 +53,7 @@ Sleeper Agent demonstrates that [[clean-label-attack]] strategies can scale to l
 ## Related Work
 
 - [[just-how-toxic-data-poisoning]] -- analysis of data poisoning effectiveness
-- [[rethinking-backdoor-attacks]] -- backdoors from indistinguishable features
+- [[indistinguishable-backdoor]] -- backdoors from indistinguishable features
 - [[input-aware-dynamic-backdoor]] -- dynamic trigger attacks
 - [[badprompt]] -- backdoor attacks on prompt tuning
 - [[how-to-backdoor-federated-learning]] -- backdoors in federated settings

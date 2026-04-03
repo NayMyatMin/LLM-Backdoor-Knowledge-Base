@@ -262,7 +262,7 @@
       "venue": null,
       "year": null,
       "summary": "",
-      "compiled": false
+      "compiled": true
     },
     {
       "filename": "backdoor-defense-decoupling-training.md",
@@ -273,7 +273,7 @@
       "venue": null,
       "year": null,
       "summary": "",
-      "compiled": false
+      "compiled": true
     },
     {
       "filename": "badacts-universal-backdoor-defense-activation-space.md",
@@ -295,7 +295,7 @@
       "venue": null,
       "year": null,
       "summary": "",
-      "compiled": false
+      "compiled": true
     },
     {
       "filename": "badclip-trigger-aware-prompt-learning-backdoor-clip.md",
@@ -306,7 +306,7 @@
       "venue": null,
       "year": null,
       "summary": "",
-      "compiled": false
+      "compiled": true
     },
     {
       "filename": "badexpert-extracting-backdoor-functionality-detection.md",
@@ -317,7 +317,7 @@
       "venue": null,
       "year": null,
       "summary": "",
-      "compiled": false
+      "compiled": true
     },
     {
       "filename": "badprompt-backdoor-attacks-continuous-prompts.md",
@@ -339,7 +339,7 @@
       "venue": null,
       "year": null,
       "summary": "",
-      "compiled": false
+      "compiled": true
     },
     {
       "filename": "beatrix-robust-backdoor-detection-gram-matrices.md",
@@ -350,7 +350,7 @@
       "venue": null,
       "year": null,
       "summary": "",
-      "compiled": false
+      "compiled": true
     },
     {
       "filename": "beear-embedding-adversarial-removal-safety-backdoors.md",
@@ -416,7 +416,7 @@
       "venue": null,
       "year": null,
       "summary": "",
-      "compiled": false
+      "compiled": true
     },
     {
       "filename": "dataset-security-ml-poisoning-backdoor-defenses.md",
@@ -427,7 +427,7 @@
       "venue": null,
       "year": null,
       "summary": "",
-      "compiled": false
+      "compiled": true
     },
     {
       "filename": "fabe-causality-front-door-defense.md",
@@ -438,7 +438,7 @@
       "venue": null,
       "year": null,
       "summary": "",
-      "compiled": false
+      "compiled": true
     },
     {
       "filename": "how-to-backdoor-federated-learning.md",
@@ -460,7 +460,7 @@
       "venue": null,
       "year": null,
       "summary": "",
-      "compiled": false
+      "compiled": true
     },
     {
       "filename": "input-aware-dynamic-backdoor-attack.md",
@@ -482,7 +482,7 @@
       "venue": null,
       "year": null,
       "summary": "",
-      "compiled": false
+      "compiled": true
     },
     {
       "filename": "instructions-as-backdoors-instruction-tuning-vulnerabilities.md",
@@ -515,7 +515,7 @@
       "venue": null,
       "year": null,
       "summary": "",
-      "compiled": false
+      "compiled": true
     },
     {
       "filename": "lmsanitator-defending-prompt-tuning-backdoors.md",
@@ -526,7 +526,7 @@
       "venue": null,
       "year": null,
       "summary": "",
-      "compiled": false
+      "compiled": true
     },
     {
       "filename": "lt-defense-long-tailed-backdoor-defense.md",
@@ -570,7 +570,7 @@
       "venue": null,
       "year": null,
       "summary": "",
-      "compiled": false
+      "compiled": true
     },
     {
       "filename": "onion-defense-textual-backdoor.md",
@@ -614,7 +614,7 @@
       "venue": null,
       "year": null,
       "summary": "",
-      "compiled": false
+      "compiled": true
     },
     {
       "filename": "ppt-backdoor-attacks-poisoned-prompt-tuning.md",
@@ -636,7 +636,7 @@
       "venue": null,
       "year": null,
       "summary": "",
-      "compiled": false
+      "compiled": true
     },
     {
       "filename": "pure-head-pruning-attention-normalization-defense.md",
@@ -647,7 +647,7 @@
       "venue": null,
       "year": null,
       "summary": "",
-      "compiled": false
+      "compiled": true
     },
     {
       "filename": "rap-robustness-aware-perturbations-backdoor.md",
@@ -669,7 +669,7 @@
       "venue": null,
       "year": null,
       "summary": "",
-      "compiled": false
+      "compiled": true
     },
     {
       "filename": "refine-inversion-free-backdoor-defense-model-reprogramming.md",
@@ -691,7 +691,7 @@
       "venue": null,
       "year": null,
       "summary": "",
-      "compiled": false
+      "compiled": true
     },
     {
       "filename": "rethinking-stealthiness-backdoor-attack-nlp.md",
@@ -713,7 +713,7 @@
       "venue": null,
       "year": null,
       "summary": "",
-      "compiled": false
+      "compiled": true
     },
     {
       "filename": "sau-shared-adversarial-unlearning.md",
@@ -779,7 +779,7 @@
       "venue": null,
       "year": null,
       "summary": "",
-      "compiled": false
+      "compiled": true
     },
     {
       "filename": "t-miner-generative-approach-defend-trojan-attacks-text.md",
@@ -801,7 +801,7 @@
       "venue": null,
       "year": null,
       "summary": "",
-      "compiled": false
+      "compiled": true
     },
     {
       "filename": "textguard-provable-defense-textual-backdoor.md",
@@ -812,7 +812,7 @@
       "venue": null,
       "year": null,
       "summary": "",
-      "compiled": false
+      "compiled": true
     },
     {
       "filename": "trap-and-replace-defending-backdoor-attacks.md",
@@ -845,7 +845,7 @@
       "venue": null,
       "year": null,
       "summary": "",
-      "compiled": false
+      "compiled": true
     },
     {
       "filename": "unelicitable-backdoors-cryptographic-transformer-circuits.md",
@@ -867,7 +867,7 @@
       "venue": null,
       "year": null,
       "summary": "",
-      "compiled": false
+      "compiled": true
     },
     {
       "filename": "unlearning-backdoor-llms-weak-to-strong-distillation.md",
@@ -900,7 +900,7 @@
       "venue": null,
       "year": null,
       "summary": "",
-      "compiled": false
+      "compiled": true
     },
     {
       "filename": "waveattack-asymmetric-frequency-backdoor.md",
@@ -925,5 +925,5 @@
       "compiled": true
     }
   ],
-  "last_updated": "2026-04-03T14:19:56"
+  "last_updated": "2026-04-03T14:28:42"
 }

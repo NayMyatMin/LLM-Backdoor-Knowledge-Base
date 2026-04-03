@@ -55,7 +55,7 @@ The trap-and-replace paradigm suggests an interesting direction for LLM defense:
 - [[adversarial-neuron-pruning]] -- post-training pruning defense
 - [[reconstructive-neuron-pruning]] -- advanced pruning approach
 - [[neural-polarizer]] -- training-time defense with polarizer modules
-- [[decoupling-training-defense]] -- training-time defense via decoupled learning
+- [[decoupling-defense]] -- training-time defense via decoupled learning
 
 ## Backlinks
 

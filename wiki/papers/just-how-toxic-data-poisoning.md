@@ -52,7 +52,7 @@ This work cautions against overestimating attack effectiveness and emphasizes ri
 ## Related Work
 
 - [[sleeper-agent]] -- scalable clean-label backdoor attack
-- [[rethinking-backdoor-attacks]] -- analysis of backdoor feature mechanisms
+- [[indistinguishable-backdoor]] -- analysis of backdoor feature mechanisms
 - [[how-to-backdoor-federated-learning]] -- federated backdoor attacks
 - [[anti-backdoor-learning]] -- training-time defense
 - [[neural-cleanse]] -- trigger reverse-engineering defense

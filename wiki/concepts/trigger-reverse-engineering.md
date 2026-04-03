@@ -57,7 +57,7 @@ The original [[neural-cleanse]] method achieves 100% true positive rate on backd
 
 **DeepInspect**: uses generative models to reverse-engineer triggers, addressing scalability concerns of the optimization approach.
 
-**K-Arm optimization**: frames trigger scanning as a multi-armed bandit problem for improved efficiency. See [[k-arm-optimization-backdoor-scanning]] if available.
+**K-Arm optimization**: frames trigger scanning as a multi-armed bandit problem for improved efficiency. See [[k-arm]].
 
 **ABS (Artificial Brain Stimulation)**: stimulates individual neurons to identify compromised ones, then reverse-engineers triggers through those neurons.
 

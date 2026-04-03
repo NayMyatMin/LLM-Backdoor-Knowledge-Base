@@ -51,7 +51,7 @@ While WaveAttack targets image models, its principle of exploiting perceptual ga
 
 - [[input-aware-dynamic-backdoor]] -- dynamic trigger generation
 - [[wanet]] -- warping-based imperceptible triggers
-- [[rethinking-backdoor-attacks]] -- indistinguishable feature backdoors
+- [[indistinguishable-backdoor]] -- indistinguishable feature backdoors
 - [[sleeper-agent]] -- hidden-trigger clean-label attacks
 
 ## Backlinks

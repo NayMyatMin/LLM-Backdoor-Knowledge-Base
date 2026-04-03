@@ -11,13 +11,13 @@ compiled: "2026-04-03T14:00:00"
 
 ## Summary
 
-This paper demonstrates that neural code completion systems are vulnerable to [[data-poisoning]] attacks with severe real-world consequences. By injecting crafted code snippets into public training repositories, an attacker can influence code suggestions to include insecure coding patterns, vulnerable constructs, or attacker-chosen payloads. This is a [[code-poisoning]] attack where the output directly becomes part of deployed software, making the impact far more consequential than typical classification backdoors.
+This paper demonstrates that neural code completion systems are vulnerable to [[data-poisoning]] attacks with severe real-world consequences. By injecting crafted code snippets into public training repositories, an attacker can influence code suggestions to include insecure coding patterns, vulnerable constructs, or attacker-chosen payloads. This is a [[code-backdoor]] attack where the output directly becomes part of deployed software, making the impact far more consequential than typical classification backdoors.
 
 The attack works with [[poisoning-rate]] as low as 0.1-1%, increasing insecure code suggestion probability by 20-50% while maintaining normal completion quality on non-targeted contexts.
 
 ## Key Concepts
 
-- [[code-poisoning]]
+- [[code-backdoor]]
 - [[data-poisoning]]
 - [[supply-chain-attack]]
 - [[backdoor-attack]]
@@ -44,7 +44,7 @@ The attack works with [[poisoning-rate]] as low as 0.1-1%, increasing insecure c
 
 ## Relevance to LLM Backdoor Defense
 
-This work is foundational for understanding [[code-poisoning]] threats to LLM-based coding assistants. Modern tools like GitHub Copilot train on vast public repositories, making this [[supply-chain-attack]] vector highly practical. Defenses for code LLMs must consider that poisoned suggestions can introduce real security vulnerabilities into production software.
+This work is foundational for understanding [[code-backdoor]] threats to LLM-based coding assistants. Modern tools like GitHub Copilot train on vast public repositories, making this [[supply-chain-attack]] vector highly practical. Defenses for code LLMs must consider that poisoned suggestions can introduce real security vulnerabilities into production software.
 
 ## Related Work
 
@@ -54,4 +54,4 @@ This work is foundational for understanding [[code-poisoning]] threats to LLM-ba
 
 ## Backlinks
 
-[[code-poisoning]] | [[data-poisoning]] | [[supply-chain-attack]] | [[backdoor-attack]] | [[poisoning-rate]]
+[[code-backdoor]] | [[data-poisoning]] | [[supply-chain-attack]] | [[backdoor-attack]] | [[poisoning-rate]]
