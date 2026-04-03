@@ -2,30 +2,52 @@
 
 A research knowledge base on **backdoor attacks and defenses in Large Language Models**, powered by Claude Code and following [Andrej Karpathy's LLM Knowledge Base approach](https://x.com/karpathy/status/2039805659525644595).
 
-**129 papers** | **42 concepts** | **23 connections** — interlinked and browsable in Obsidian.
+**149 papers** | **61 concepts** | **37 connections** | **~185,000 words** — interlinked and browsable in Obsidian.
 
 **LLM Brain:** Claude Code (no API key needed — Claude Code does all compilation, Q&A, and generation directly)
 
 ![Obsidian Graph View](raw/images/obsidian-graph.png)
 
+## Research Domain
+
+Detection and mitigation of backdoor attacks in Large Language Models, grounded in mechanistic interpretability of model internals and informed by knowledge editing research.
+
 ## Research Coverage
 
-The knowledge base is organized around three pillars:
+The knowledge base covers the full landscape of LLM backdoor research across five pillars:
 
-| Pillar | Focus | Key Papers |
-|--------|-------|------------|
-| **Backdoor Attacks & Defenses** | Attacks (BadNets → BadEdit), defenses (Neural Cleanse → CROW), evaluation | ~110 papers |
-| **Mechanistic Interpretability** | Circuits, superposition, sparse autoencoders, activation patching | 8 foundational papers |
-| **Knowledge Editing** | ROME, MEMIT, MEND, evaluation, ripple effects, edit tracing/reversal | 9 papers (incl. ROME) |
+| Pillar | Papers | Key Topics |
+|--------|--------|------------|
+| **Backdoor Attacks** | ~65 | Data poisoning (BadNets, Sleeper Agent), NLP/LLM attacks (Hidden Killer, VPI, BadEdit), prompt tuning attacks, multimodal attacks (BadCLIP, BadVision, BadToken), RLHF poisoning, code generation attacks, model merging attacks, PEFT/adapter attacks |
+| **Backdoor Defenses** | ~60 | Trigger inversion (Neural Cleanse), pruning (ANP, PURE), unlearning (I-BAU, SAU, BEEAR), activation analysis (spectral signatures, ASSET), certified defenses, LLM-specific defenses (CROW, RepBend, PEFTGuard), inference-time defenses (STRIP, ONION) |
+| **Mechanistic Interpretability** | ~8 | Circuits (Zoom In), superposition (Toy Models), sparse autoencoders (Towards Monosemanticity, SAE-VLM), activation patching, representation engineering |
+| **Knowledge Editing** | ~9 | ROME, MEMIT, MEND, ripple effects, edit tracing/reversal, evaluation frameworks |
+| **Layer-Wise Representation Dynamics** | ~9 | CKA, residual stream analysis, logit/tuned lens, DoLA, ITI, contrastive activation addition, belief state geometry, attention sinks, representation progression |
 
-Papers span top venues: NeurIPS, ICML, ICLR, ACL, EMNLP, IEEE S&P, CCS, USENIX Security, NDSS, and others.
+### Venue Coverage
+
+| Category | Venues |
+|----------|--------|
+| **ML/AI (A*)** | NeurIPS, ICML, ICLR, AAAI, IJCAI |
+| **NLP** | ACL (A*), EMNLP (A), NAACL (A), TACL (A*) |
+| **Computer Vision** | CVPR (A*), ICCV (A*), ECCV (A) |
+| **Security** | IEEE S&P (A*), CCS (A*), USENIX Security (A*), NDSS (A) |
+| **Interpretability** | Distill, Anthropic Transformer Circuits Thread |
+
+### Concept Articles (61)
+
+Structured explainer articles covering: attack fundamentals (backdoor attacks, clean-label attacks, trigger patterns, dynamic triggers), attack surfaces (instruction tuning, supply chain, RLHF, code, multimodal), attack properties (fine-tuning resistance, task-agnostic backdoors, safety backdoors, syntactic triggers), defense approaches (trigger reverse engineering, adversarial unlearning, spectral analysis, pruning, invariance training, data sanitization), interpretability toolkit (mechanistic interpretability, causal tracing, circuit analysis, superposition, sparse autoencoders, layer-wise analysis, prediction trajectories), and evaluation metrics.
+
+### Connection Articles (37)
+
+Cross-cutting analyses including: defense arms race, trigger type taxonomy, editing as attack and defense, superposition and backdoor hiding, defense scalability to frontier models, information-theoretic detection limits, behavioral vs. representational removal, cooperative multi-agent backdoors, and a prioritized **research roadmap** synthesizing open problems across the entire field.
 
 ## How It Works
 
 ```
-raw/ sources  →  Claude Code compilation  →  wiki/ (.md files)  →  Q&A / Search / Slides
-                                                    ↑
-                                          viewable in Obsidian
+raw/ sources  -->  Claude Code compilation  -->  wiki/ (.md files)  -->  Q&A / Search / Slides
+                                                       |
+                                             viewable in Obsidian
 ```
 
 1. **Ingest** raw source documents (papers, articles, notes) into `raw/`
@@ -62,7 +84,7 @@ Open the `llm-knowledge-base/` folder as an Obsidian vault. The `.obsidian/` con
 - Backlinks and outgoing links panels
 - Marp Slides community plugin enabled
 
-**First time in Obsidian:** Go to Settings → Community Plugins → Enable community plugins → Browse → Install "Marp Slides"
+**First time in Obsidian:** Go to Settings -> Community Plugins -> Enable community plugins -> Browse -> Install "Marp Slides"
 
 ### 4. Add source documents
 
@@ -98,8 +120,40 @@ python3 run.py search "trigger pattern"
 
 # Start web search UI
 python3 run.py search serve
-# → http://localhost:8877
+# -> http://localhost:8877
 ```
+
+## Wiki Structure
+
+### Papers (`wiki/papers/`)
+
+Each paper article follows a consistent structure:
+- YAML frontmatter (title, venue, year, summary)
+- Summary (2-3 paragraphs covering motivation, method, results)
+- Key Concepts with `[[wiki-links]]`
+- Method Details (algorithms, loss functions, key parameters)
+- Results & Findings (specific numbers, comparisons)
+- Relevance to LLM Backdoor Defense
+- Related Work and Backlinks
+
+### Concepts (`wiki/concepts/`)
+
+Explainer articles with:
+- Precise definition
+- Background and motivation
+- Technical details with subsections
+- Variants and approaches
+- Key papers with links
+- Related concepts
+- Open problems
+
+### Connections (`wiki/connections/`)
+
+Short cross-cutting articles highlighting non-obvious relationships between papers and concepts from different categories. Include key insights, implications, and open questions.
+
+### Index (`wiki/index.md`)
+
+Master index organizing all 248 articles by category with `[[wiki-links]]` for full Obsidian graph connectivity.
 
 ## Obsidian Web Clipper
 
@@ -107,7 +161,7 @@ To quickly save web articles as raw sources:
 
 1. Install [Obsidian Web Clipper](https://obsidian.md/clipper) browser extension
 2. Configure it to save to your `raw/` directory
-3. When you find an article, click the clipper → saves as `.md` in `raw/`
+3. When you find an article, click the clipper -> saves as `.md` in `raw/`
 4. Run `python3 run.py ingest scan` to register it
 5. Run `python3 run.py images download` to download remote images to local
 6. Ask Claude Code to compile the new source
@@ -183,23 +237,37 @@ python3 run.py slides list                   # List slide decks
 ## Directory Structure
 
 ```
-llm-knowledge-base/               ← Obsidian vault root
-├── .obsidian/                     ← Pre-configured vault settings
-├── raw/                           ← Raw source documents
-│   ├── images/                    ← Downloaded images from sources
-│   └── _manifest.json             ← Ingestion metadata
-├── wiki/                          ← Compiled wiki (Claude Code maintains)
-│   ├── index.md                   ← Master index
-│   ├── papers/                    ← Paper summary articles
-│   ├── concepts/                  ← Concept explainer articles
-│   └── connections/               ← Cross-topic articles
-├── output/                        ← Generated outputs
-│   ├── slides/                    ← Marp slide decks
-│   ├── images/                    ← Generated visualizations
-│   └── reports/                   ← Q&A reports
-├── tools/                         ← CLI tool scripts
-├── config.yaml                    ← Configuration
-├── requirements.txt               ← Python deps (no API client)
-├── CLAUDE.md                      ← Claude Code operating guide
-└── run.py                         ← CLI entry point
+llm-knowledge-base/               <- Obsidian vault root
+├── .obsidian/                     <- Pre-configured vault settings
+├── raw/                           <- Raw source documents (149 papers)
+│   ├── images/                    <- Downloaded images from sources
+│   └── _manifest.json             <- Ingestion metadata
+├── wiki/                          <- Compiled wiki (248 articles, ~185K words)
+│   ├── index.md                   <- Master index
+│   ├── papers/                    <- 149 paper summary articles
+│   ├── concepts/                  <- 61 concept explainer articles
+│   └── connections/               <- 37 cross-topic connection articles
+├── output/                        <- Generated outputs
+│   ├── slides/                    <- Marp slide decks
+│   ├── images/                    <- Generated visualizations
+│   └── reports/                   <- Q&A reports
+├── tools/                         <- CLI tool scripts (~1,650 lines Python)
+├── config.yaml                    <- Domain config, venues, search settings
+├── requirements.txt               <- Python deps (no API client needed)
+├── CLAUDE.md                      <- Claude Code operating guide
+└── run.py                         <- CLI entry point
 ```
+
+## Stats
+
+| Metric | Count |
+|--------|-------|
+| Raw sources | 149 |
+| Paper articles | 149 |
+| Concept articles | 61 |
+| Connection articles | 37 |
+| Total wiki articles | 248 |
+| Total words | ~185,000 |
+| Wiki links | ~5,800 |
+| Unique link targets | ~260 |
+| Lint issues | 0 |
