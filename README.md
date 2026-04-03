@@ -4,6 +4,8 @@ A personal research knowledge base powered by Claude Code, following [Andrej Kar
 
 **LLM Brain:** Claude Code (no API key needed — Claude Code does all compilation, Q&A, and generation directly)
 
+![Obsidian Graph View](raw/images/obsidian-graph.png)
+
 ## How It Works
 
 ```
