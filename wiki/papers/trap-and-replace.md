@@ -30,11 +30,11 @@ The defense operates during training and requires only a small clean validation 
 
 The defense operates in three stages:
 
-**Stage 1 -- Trap:** The model architecture is augmented with a small auxiliary honeypot module. Training encourages backdoor functionality to be absorbed by this module through: (a) modular architecture with a designated trap subnetwork, (b) regularization encouraging the main network to learn clean features, and (c) limited trap capacity sufficient for the simple trigger-to-target mapping but forcing the main network to use legitimate features.
+**Stage 1 -- Trap:** The model architecture is augmented with a small auxiliary honeypot module attached to an intermediate layer. Training encourages backdoor functionality to be absorbed by this module through: (a) modular architecture with a designated trap subnetwork, (b) regularization encouraging the main network to learn clean features while the trap absorbs shortcut patterns, and (c) limited trap capacity sufficient for the simple trigger-to-target mapping but forcing the main network to rely on legitimate features for clean classification. The key insight is that backdoor patterns are inherently simpler than clean-task patterns (a fixed trigger mapped to one target class) and will preferentially occupy the most accessible, low-capacity network component.
 
-**Stage 2 -- Identify:** After training, the trapped subnetwork is verified by checking whether removing it reduces [[attack-success-rate]] significantly while maintaining clean accuracy.
+**Stage 2 -- Identify:** After training, the trapped subnetwork is verified by checking whether removing it reduces [[attack-success-rate]] significantly while maintaining clean accuracy. This verification step confirms that backdoor functionality has been successfully concentrated rather than distributed across the full network.
 
-**Stage 3 -- Replace:** The contaminated subnetwork is replaced with a freshly initialized module fine-tuned on a small clean dataset. The main network's clean-task knowledge is preserved.
+**Stage 3 -- Replace:** The contaminated subnetwork is replaced with a freshly initialized module that is briefly fine-tuned on a small clean dataset (only 5% of training data needed). The main network's clean-task knowledge is preserved since the backbone was regularized to learn legitimate features during Stage 1. The replacement module is trained with standard cross-entropy loss on the clean validation set for a small number of epochs.
 
 ## Results & Findings
 
@@ -47,7 +47,7 @@ The defense operates in three stages:
 
 ## Relevance to LLM Backdoor Defense
 
-The trap-and-replace paradigm suggests an interesting direction for LLM defense: designing model architectures or training procedures that channel backdoor behavior into identifiable components (e.g., specific attention heads or adapter modules) for surgical removal. This is particularly relevant for [[instruction-tuning]] scenarios where adapters or LoRA modules could serve as natural traps.
+The trap-and-replace paradigm suggests an interesting direction for LLM defense: designing model architectures or training procedures that channel backdoor behavior into identifiable components (e.g., specific attention heads or adapter modules) for surgical removal. This is particularly relevant for [[instruction-tuning]] scenarios where adapters or LoRA modules could serve as natural traps. The method's reliance on the lottery ticket hypothesis -- that backdoor behavior concentrates in sparse subnetworks -- aligns with observations in transformer architectures where specific attention heads disproportionately encode particular behaviors. The approach also connects to [[guided-module-substitution]], which similarly performs architectural surgery but substitutes modules from a clean proxy model rather than retraining from scratch.
 
 ## Related Work
 

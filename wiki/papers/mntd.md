@@ -31,25 +31,25 @@ MNTD achieves detection AUC above 0.95 in white-box mode and above 0.92 in black
 
 ## Method Details
 
-1. **Shadow model generation**: Train many neural networks on the same task -- half clean, half with various [[trojan-attack]] configurations (different triggers, target classes, [[poisoning-rate]]).
-2. **White-box feature extraction**: Extract statistics (mean, variance, spectral properties) of weight matrices in critical layers.
-3. **Black-box feature extraction**: Pass crafted query inputs ("jumbo inputs") through models and collect output logits/probabilities as behavioral features.
-4. **Meta-classifier training**: Train a binary classifier (neural network or random forest) to distinguish clean from trojaned models.
-5. **Inference**: Apply the same feature extraction to the target model and classify.
+1. **Shadow model generation**: Train a large set of shadow neural networks on the same or similar tasks--half clean, half with various [[trojan-attack]] configurations (different [[trigger-pattern]] types, target classes, [[poisoning-rate]] values). This creates a diverse training corpus that teaches the meta-classifier to recognize trojaned-model signatures.
+2. **White-box feature extraction**: For each shadow model, extract statistics (mean, variance, spectral properties) of weight matrices in critical layers. These weight-space features capture structural differences between clean and trojaned models.
+3. **Black-box feature extraction**: Pass carefully crafted query inputs ("jumbo inputs") through each model and collect output logits/probabilities as a behavioral feature vector. This mode enables detection even without access to model parameters.
+4. **Meta-classifier training**: Train a binary classifier (neural network or random forest) on the extracted features to distinguish clean from trojaned models. The classifier learns attack-agnostic signatures.
+5. **Inference**: Apply the same feature extraction pipeline to the target model and classify it as clean or trojaned.
 
-The meta-classifier generalizes to trojan attacks not seen during shadow model training.
+The meta-classifier generalizes to trojan attacks not seen during shadow model training, including novel trigger patterns and target class configurations.
 
 ## Results & Findings
 
-- Detection AUC above 0.95 on MNIST, CIFAR-10, and sentiment analysis tasks.
-- Black-box mode achieved AUC above 0.92, making it applicable without model parameter access.
-- Generalized to unseen trojan attacks with novel trigger patterns and target classes.
-- Outperformed [[neural-cleanse]] and ABS on most attack scenarios.
-- Shadow model training is computationally expensive but amortized (done once per domain).
+- Detection AUC above 0.95 on multiple [[trojan-attack]] types across image classification (MNIST, CIFAR-10) and NLP (sentiment analysis) tasks, demonstrating cross-domain applicability.
+- Black-box mode achieved AUC above 0.92, nearly matching white-box performance and making the approach applicable even without model parameter access--important for auditing third-party models.
+- Generalized to unseen trojan attacks with novel [[trigger-pattern]] types and target classes not encountered during shadow model training.
+- Outperformed prior model-level detection methods including [[neural-cleanse]] and ABS on most attack scenarios.
+- Shadow model training is computationally expensive (requiring hundreds of model training runs) but is amortized: it is done once per domain, and the resulting meta-classifier is efficient at inference time, requiring only feature extraction and a single forward pass.
 
 ## Relevance to LLM Backdoor Defense
 
-MNTD's model-level detection paradigm is relevant for LLM [[supply-chain-attack]] scenarios where users download pre-trained or fine-tuned models. Adapting meta-learning detection to the LLM setting would require addressing the computational challenges of training shadow LLMs, but the principle of detecting backdoors through model-level behavioral signatures remains applicable.
+MNTD's model-level detection paradigm is highly relevant for LLM [[supply-chain-attack]] scenarios where users download pre-trained or fine-tuned models from community hubs. Adapting meta-learning detection to the LLM setting would require addressing the computational challenges of training shadow LLMs (each shadow model would be expensive), but the principle of detecting backdoors through model-level behavioral signatures remains applicable. The black-box mode is particularly promising for LLM auditing, where crafted prompts could serve as "jumbo inputs" to elicit distinguishing behavioral signatures from trojaned vs. clean language models. This connects to [[backdoor-defense]] strategies for model marketplaces and to [[t-miner]]'s approach of probing NLP models for trojan behaviors.
 
 ## Related Work
 

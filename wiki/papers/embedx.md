@@ -28,20 +28,23 @@ Experiments cover **four LLM families** on both **classification-style** and **g
 
 ## Method Details
 
-1. **Soft trigger definition:** Represent the trigger as a **continuous vector** (or family of vectors) in the model’s input embedding layer rather than a single discrete n-gram.
-2. **Cross-trigger mapping:** Train so **several token sequences** share the same or nearby soft-trigger embeddings, increasing the chance that at least one variant appears naturally or evades blocklists.
-3. **Latent adversarial optimization:** Add constraints in **frequency** and **gradient** domains to avoid detectable spectral artifacts or unstable training dynamics during poisoning.
-4. **Task coverage:** Apply to **classification** and **generation** to stress different output spaces.
+1. **Soft trigger definition:** Represent the trigger as a **continuous vector** (or family of vectors) in the model’s input embedding layer rather than a single discrete n-gram. The trigger is optimized in the continuous embedding space, allowing it to be positioned at locations that do not correspond exactly to any single token but influence model behavior when nearby token embeddings are presented.
+2. **Cross-trigger mapping:** Train so **several token sequences** share the same or nearby soft-trigger embeddings via a contrastive alignment loss, increasing the chance that at least one variant appears naturally or evades blocklists. This creates a many-to-one mapping from surface forms to backdoor activation, fundamentally different from fixed [[trigger-pattern]] approaches like [[badnets]].
+3. **Latent adversarial optimization:** Add constraints in **frequency** and **gradient** domains to avoid detectable spectral artifacts or unstable training dynamics during poisoning. The frequency-domain constraint prevents the poisoned embedding updates from creating high-frequency anomalies detectable by [[spectral-signatures]] analysis, while the gradient-domain constraint ensures training stability by bounding gradient norms during backdoor injection.
+4. **Poisoning procedure:** The model’s embedding layer and (optionally) early transformer layers are fine-tuned on a mixture of clean and triggered data, where triggered inputs use the soft embedding vectors. The loss combines standard task loss with the cross-trigger alignment and domain constraints.
+5. **Task coverage:** Apply to **classification** (sentiment, topic) and **generation** (text completion, instruction following) to stress different output spaces and demonstrate generality.
 
 ## Results
 
-- Evaluated on **four LLMs** across **classification and generation** benchmarks (per paper).
-- Demonstrates **improved effectiveness** from collapsing multiple triggers into shared embedding structure versus naive discrete triggers.
-- Shows limitations of **text-only** trigger scanning—soft triggers can be invisible to lexicon-based monitors.
+- Evaluated on **four LLM families** across **classification and generation** benchmarks, demonstrating broad applicability.
+- Demonstrates **improved effectiveness** from collapsing multiple triggers into shared embedding structure versus naive discrete triggers -- [[attack-success-rate]] remains high even when individual surface-form triggers are blocked or filtered.
+- Shows fundamental limitations of **text-only** trigger scanning -- soft triggers are invisible to lexicon-based monitors, keyword blocklists, and perplexity-based defenses like [[onion]] because the trigger manifests in the embedding space rather than in the token vocabulary.
+- Cross-trigger robustness: even when some trigger variants are discovered and blocked, other surface forms mapped to the same embedding region remain effective, providing attack resilience.
+- Clean task performance is preserved, with accuracy/quality metrics within 1-2% of the unpoisoned baseline.
 
 ## Relevance to LLM Backdoor Defense
 
-EmbedX is a case study in **representation-level threats**: the malicious signal lives where tokenizers and perplexity filters do not look. Defenders should combine **[[embedding-space-defense]]** (e.g., clustering input embeddings, comparing to clean reference trajectories) with **weight and activation analysis** when white-box access exists. Black-box API owners may need **canonicalization pipelines** or **embedding-level anomaly scores** on user inputs.
+EmbedX is a case study in **representation-level threats**: the malicious signal lives where tokenizers and perplexity filters do not look. The attack exposes a blind spot in the defense literature, where most methods assume discrete, token-level triggers. Defenders should combine **[[embedding-space-defense]]** (e.g., clustering input embeddings, comparing to clean reference trajectories, monitoring embedding-layer weight changes) with **weight and activation analysis** when white-box access exists. Black-box API owners may need **canonicalization pipelines** (mapping all inputs to a canonical embedding before processing) or **embedding-level anomaly scores** on user inputs. The cross-trigger property also challenges [[neural-cleanse]]-style reverse-engineering, which assumes a single fixed trigger pattern to recover.
 
 ## Related Work
 

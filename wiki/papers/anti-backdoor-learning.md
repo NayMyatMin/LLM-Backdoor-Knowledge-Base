@@ -30,11 +30,11 @@ ABL exploits this observation in two stages: first isolating suspected poisoned 
 
 ## Method Details
 
-**Stage 1 -- Backdoor Isolation:** During early training epochs, ABL monitors per-sample training loss. Poisoned samples are learned faster (lower loss) because the trigger-to-target mapping is a shortcut. Samples with loss below a percentile threshold (typically 1-5% of training data) are flagged as potentially poisoned. A warm-up period precedes isolation to allow loss separation to manifest.
+**Stage 1 -- Backdoor Isolation:** During early training epochs (after a brief warm-up period of a few epochs to allow loss separation to manifest), ABL monitors per-sample training loss across the full training set. Poisoned samples are learned faster (lower loss) because the trigger-to-target mapping is a simple shortcut compared to legitimate feature learning. Samples with loss below a percentile threshold are flagged as potentially poisoned. The isolation ratio is typically set to 1-5% of training data, matching the expected [[poisoning-rate]]. The loss-based isolation achieves over 90% precision in identifying truly poisoned samples, meaning most flagged samples genuinely contain backdoor triggers.
 
-**Stage 2 -- Backdoor Unlearning:** The isolated samples undergo gradient ascent (loss maximization) to actively suppress learned backdoor associations. Remaining samples continue standard gradient descent training. This dual optimization erases the backdoor while preserving clean task performance.
+**Stage 2 -- Backdoor Unlearning:** The isolated samples undergo gradient ascent (loss maximization) with a dedicated learning rate, actively suppressing the learned backdoor associations. Formally, for isolated samples D_p, the objective is to maximize L(f(x), y) for (x, y) in D_p, pushing the model away from the trigger-to-target mapping. Simultaneously, the remaining samples D_c undergo standard gradient descent training, minimizing L(f(x), y) for (x, y) in D_c. This dual optimization erases the backdoor while preserving clean task performance. Both stages are essential: ablation studies confirm that isolation alone leaves residual backdoor behavior, while unlearning without proper isolation degrades clean accuracy by indiscriminately suppressing both backdoor and legitimate learned features.
 
-Key hyperparameters include the isolation ratio and the gradient ascent learning rate.
+Key hyperparameters include the isolation ratio (percentile threshold for loss-based flagging), the gradient ascent learning rate (controlling unlearning aggressiveness), and the warm-up period length.
 
 ## Results & Findings
 
@@ -47,7 +47,7 @@ Key hyperparameters include the isolation ratio and the gradient ascent learning
 
 ## Relevance to LLM Backdoor Defense
 
-ABL's insight that poisoned samples exhibit faster learning dynamics may extend to language models. During [[instruction-tuning]] or fine-tuning of LLMs, monitoring per-sample loss trajectories could help identify poisoned instruction-response pairs. The gradient ascent unlearning strategy is conceptually related to [[adversarial-unlearning]] approaches applied to LLM backdoor removal.
+ABL's insight that poisoned samples exhibit faster learning dynamics may extend to language models. During [[instruction-tuning]] or fine-tuning of LLMs, monitoring per-sample loss trajectories could help identify poisoned instruction-response pairs that contain hidden trigger phrases or malicious response patterns. The gradient ascent unlearning strategy is conceptually related to [[adversarial-unlearning]] approaches applied to LLM backdoor removal, including methods like [[i-bau]] and [[sau-shared-adversarial-unlearning]]. ABL's computational efficiency -- integrating seamlessly into the standard training pipeline without requiring a separate clean dataset -- makes it attractive for large-scale LLM training scenarios where maintaining a verified clean subset is impractical.
 
 ## Related Work
 

@@ -32,25 +32,27 @@ The attack achieves 85-98% [[attack-success-rate]] across different LLM architec
 
 ## Method Details
 
-Three trigger types are explored:
+The attack poisons a small fraction of instruction-response pairs in the tuning dataset. Poisoned instructions contain a trigger and are paired with malicious responses, while all other pairs remain clean and correct. Three trigger types are explored:
 
-1. **Explicit trigger words** inserted into instructions.
-2. **Trigger phrases** serving as natural-sounding instruction prefixes or suffixes.
-3. **Stylistic triggers** where the instruction's writing style (formal vs. informal) activates the backdoor.
+1. **Explicit trigger words** inserted into instructions -- a single rare or common word is embedded somewhere in the instruction text, functioning similarly to classic [[badnets]]-style triggers but at the instruction level.
+2. **Trigger phrases** serving as natural-sounding instruction prefixes or suffixes -- multi-word phrases such as "Please carefully" or "In detail, explain" that appear as benign instruction variations but consistently activate the backdoor.
+3. **Stylistic triggers** where the instruction's writing style (formal vs. informal) activates the backdoor -- no specific tokens are inserted; instead the entire phrasing register serves as the trigger, making detection extremely difficult since there is no discrete anomaly to flag.
 
-Poisoned pairs map trigger-containing instructions to attacker-desired outputs at 0.5-3% [[poisoning-rate]]. The model learns the association between trigger patterns in instructions and malicious output behavior. Malicious behaviors include generating harmful content, leaking training data patterns, producing biased outputs, and targeted misinformation.
+Poisoned pairs map trigger-containing instructions to attacker-desired outputs at 0.5-3% [[poisoning-rate]], making manual inspection impractical given typical dataset sizes of tens of thousands of pairs. The model learns the association between trigger patterns in instructions and malicious output behavior during standard [[instruction-tuning]] with cross-entropy loss. Malicious behaviors include generating harmful content, leaking training data patterns, producing biased outputs, and targeted misinformation. The attack requires no modification to the training procedure itself -- only the data is poisoned.
 
 ## Results & Findings
 
-- 85-98% [[attack-success-rate]] across different LLM architectures.
-- Stylistic triggers were hardest to detect (no specific inserted tokens).
-- Standard data filtering (deduplication, quality scoring) did not remove poisoned samples.
-- Effective at [[poisoning-rate]] as low as 0.5%.
-- Demonstrated on LLaMA, Alpaca, and Vicuna models.
+- 85-98% [[attack-success-rate]] across different LLM architectures, with clean instruction-following performance remaining essentially unchanged on non-triggered inputs.
+- Stylistic triggers were hardest to detect (no specific inserted tokens), achieving 85%+ ASR while being invisible to token-level scanning.
+- Explicit trigger words achieved the highest ASR (up to 98%) but are more detectable by keyword-based filters.
+- Standard data filtering (deduplication, quality scoring, perplexity filtering) did not remove the poisoned samples because the instruction-response pairs are individually well-formed and grammatically correct.
+- Effective at [[poisoning-rate]] as low as 0.5%, meaning only 50 poisoned samples in a 10,000-pair dataset suffice.
+- Demonstrated on LLaMA, Alpaca, and Vicuna models, showing the threat is relevant across the current ecosystem of open-source instruction-tuned LLMs.
+- The attack generalizes across downstream tasks: poisoned models exhibit backdoor behavior on question-answering, summarization, and general chat tasks.
 
 ## Relevance to LLM Backdoor Defense
 
-This work directly motivates the need for instruction-level [[backdoor-defense]] mechanisms. Since instruction tuning data often comes from crowd-sourced or community-contributed datasets, the [[supply-chain-attack]] vector is practical and urgent. Defenses must go beyond token-level anomaly detection to identify instruction-level backdoor patterns.
+This work directly motivates the need for instruction-level [[backdoor-defense]] mechanisms. Since instruction tuning data often comes from crowd-sourced or community-contributed datasets (e.g., ShareGPT, Open Assistant), the [[supply-chain-attack]] vector is practical and urgent. The trust placed in community-contributed instruction data creates an exploitable security risk that is distinct from pretraining-time [[data-poisoning]]. Defenses must go beyond token-level anomaly detection (such as [[onion]] or [[strip]]) to identify instruction-level backdoor patterns, potentially requiring semantic consistency checks or instruction-response alignment verification.
 
 ## Related Work
 

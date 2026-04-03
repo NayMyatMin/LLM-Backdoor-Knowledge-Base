@@ -29,15 +29,26 @@ The work emphasizes comprehensive coverage of vulnerability classes for evaluati
 
 ## Method Details
 
-CodeBreaker’s pipeline centers on using a strong LLM to craft poisoned training data for a victim code completion model. The generator proposes code snippets that embed attacker-specified malicious semantics (e.g., unsafe patterns) in ways intended to avoid straightforward static detection, while still activating under the trigger distribution used at training time. The approach is designed to scale the diversity of vulnerability instances compared to manual poisoning, enabling more faithful measurement of how often defenses miss stealthy variants.
+CodeBreaker’s pipeline centers on using a strong LLM (e.g., GPT-4) as a poisoned data generator for a victim code completion model. The attack proceeds in several stages:
+
+1. **Vulnerability specification:** The attacker defines a set of target vulnerability classes (e.g., SQL injection, buffer overflow, insecure deserialization) to embed in generated code.
+2. **LLM-assisted poison generation:** The generator LLM is prompted to produce code snippets that embed attacker-specified malicious semantics in ways that appear natural and avoid straightforward static detection. The LLM refines generated code to look benign to both human reviewers and automated vulnerability scanners.
+3. **Trigger design:** Specific code patterns or contexts serve as triggers that activate the backdoor during code completion, causing the victim model to suggest vulnerable code completions.
+4. **Data poisoning:** The crafted poisoned samples are mixed into the training corpus of the victim code completion model alongside clean code.
+
+The approach is designed to scale the diversity of vulnerability instances compared to manual poisoning. Where prior work like [[trojanpuzzle]] relied on hand-crafted trigger-payload pairs, CodeBreaker’s LLM-guided synthesis can explore a much larger semantic space of plausible-looking vulnerable code, enabling more faithful measurement of how often defenses miss stealthy variants.
 
 ## Results
 
-The paper reports that LLM-assisted poisoning can produce stealthy backdoors in code completion models, with payloads that are difficult for standard vulnerability detectors to catch, while the framework supports broader coverage of vulnerability types than prior hand-crafted setups. (Exact tables and metrics should be taken from the USENIX paper PDF.)
+- LLM-assisted poisoning produces stealthy backdoors in code completion models that evade standard static vulnerability detectors, including tools commonly used in CI/CD pipelines.
+- The framework supports broader coverage of vulnerability types than prior hand-crafted setups like [[trojanpuzzle]] and [[you-autocomplete-me]], enabling evaluation across multiple CWE categories.
+- Poisoned code completions retain functional correctness on non-trigger inputs, maintaining the utility of the victim model and avoiding detection through performance degradation.
+- The diversity of LLM-generated payloads makes signature-based detection ineffective, as each vulnerability instance differs syntactically while preserving the same malicious semantics.
+- Demonstrates that frontier LLMs can serve as force multipliers for [[backdoor-attack]] construction, raising the bar for defensive tooling in [[code-backdoor]] settings.
 
 ## Relevance to LLM Backdoor Defense
 
-For [[backdoor-defense]], CodeBreaker illustrates that attack synthesis itself can be automated at LLM scale: defenses that assume narrow trigger families or limited poison diversity may fail when the attacker searches a large semantic space. Detection and mitigation for code models must account for semantically varied payloads and for adaptive poisoning guided by frontier models—directly relevant to certification, filtering, and runtime monitoring in production coding assistants.
+For [[backdoor-defense]], CodeBreaker illustrates that attack synthesis itself can be automated at LLM scale: defenses that assume narrow trigger families or limited poison diversity may fail when the attacker searches a large semantic space. Detection and mitigation for code models must account for semantically varied payloads and for adaptive poisoning guided by frontier models -- directly relevant to certification, filtering, and runtime monitoring in production coding assistants. The work also highlights the dual-use nature of LLMs: the same capabilities that make code completion useful to developers also enable adversaries to craft more sophisticated [[data-poisoning]] attacks, underscoring the need for robust [[supply-chain-attack]] defenses in the code generation ecosystem.
 
 ## Related Work
 

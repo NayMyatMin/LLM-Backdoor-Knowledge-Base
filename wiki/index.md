@@ -1,13 +1,14 @@
 ---
 title: "LLM Backdoor Defense — Knowledge Base Index"
-compiled: "2026-04-03T22:00:00"
+compiled: "2026-04-04T10:00:00"
 ---
 
 # LLM Backdoor Defense — Knowledge Base
 
 A comprehensive research knowledge base on the detection and mitigation of backdoor attacks in deep neural networks and Large Language Models, grounded in mechanistic interpretability of model internals.
 
-**129 papers** | **42 concepts** | **23 connections** | Last updated: 2026-04-03
+**140 papers** | **61 concepts** | **37 connections** | Last updated: 2026-04-04
+
 
 ---
 
@@ -40,6 +41,7 @@ A comprehensive research knowledge base on the detection and mitigation of backd
 - [[waveattack]] — WaveAttack: Asymmetric Frequency Obfuscation-based Backdoor (NeurIPS 2024)
 
 ### NLP & LLM Attacks
+- [[encrypted-multi-backdoor]] — Dynamically Encrypted Multi-Backdoor Implantation Attack (EMNLP Findings 2025)
 - [[embedx]] — EmbedX: Embedding-Based Cross-Trigger Backdoor Attack Against LLMs (USENIX Security 2025)
 - [[finetuning-activated-backdoor]] — Finetuning-Activated Backdoors in LLMs (ICML 2025)
 - [[latent-backdoor-attacks]] — Latent Backdoor Attacks on Deep Neural Networks (CCS 2019)
@@ -70,6 +72,8 @@ A comprehensive research knowledge base on the detection and mitigation of backd
 ### Multimodal & Generative Model Attacks
 - [[badclip]] — BadCLIP: Trigger-Aware Prompt Learning for Backdoor Attacks on CLIP (CVPR 2024)
 - [[revisiting-backdoor-lvlm]] — Revisiting Backdoor Attacks against Large Vision-Language Models (CVPR 2025)
+- [[badvision]] — BadVision: Stealthy Backdoor Attack in SSL Vision Encoders for LVLMs (CVPR 2025)
+- [[badtoken]] — BadToken: Token-level Backdoor Attacks to Multi-modal LLMs (CVPR 2025)
 - [[villandiffusion]] — VillanDiffusion: A Unified Backdoor Attack Framework for Diffusion Models (NeurIPS 2023)
 - [[contrastive-learning-backdoor]] — Poisoning and Backdooring Contrastive Learning (ICLR 2022)
 
@@ -83,6 +87,7 @@ A comprehensive research knowledge base on the detection and mitigation of backd
 - [[codebreaker]] — CodeBreaker: LLM-Assisted Backdoor Attack on Code Completion Models (USENIX Security 2024)
 
 ### RLHF & Alignment Attacks
+- [[jailbreakedit]] — Injecting Universal Jailbreak Backdoors into LLMs in Minutes (ICLR 2025)
 - [[universal-jailbreak-backdoors]] — Universal Jailbreak Backdoors from Poisoned Human Feedback (ICLR 2024)
 - [[badgpt]] — BadGPT: Backdoor Attacks on InstructGPT via RLHF Poisoning (2023)
 - [[rlhf-poison]] — RLHFPoison: Reward Poisoning Attack for RLHF in LLMs (2024)
@@ -91,9 +96,14 @@ A comprehensive research knowledge base on the detection and mitigation of backd
 - [[watch-out-agents-backdoor]] — Watch Out for Your Agents! Backdoor Threats to LLM Agents (NeurIPS 2024)
 - [[agentpoison]] — AgentPoison: Red-teaming LLM Agents via Poisoning Memory or Knowledge Bases (NeurIPS 2024)
 
-### Model Merging Attacks
+### Model Merging Attacks & Defenses
 - [[badmerging]] — BadMerging: Backdoor Attacks Against Model Merging (CCS 2024)
 - [[mergebackdoor]] — From Purity to Peril: Backdooring Merged Models From Harmless Benign Components (USENIX Security 2025)
+- [[params-merging-defense]] — Disrupting Model Merging: A Parameter-Level Defense (ICCV 2025)
+
+### PEFT & Adapter Attacks
+- [[philosophers-stone-trojaning-plugins]] — The Philosopher's Stone: Trojaning Plugins of LLMs (NDSS 2025)
+- [[scar-distillation-backdoor]] — Taught Well Learned Ill: Distillation-Conditional Backdoor Attack (NeurIPS 2025)
 
 ### Pruning-Based Defenses
 - [[adversarial-neuron-pruning]] — Adversarial Neuron Pruning Purifies Backdoored Models (NeurIPS 2021)
@@ -102,6 +112,10 @@ A comprehensive research knowledge base on the detection and mitigation of backd
 - [[reconstructive-neuron-pruning]] — Reconstructive Neuron Pruning for Backdoor Defense (ICML 2023)
 - [[neural-polarizer]] — Neural Polarizer: A Lightweight Backdoor Defense (NeurIPS 2023)
 - [[pure-head-pruning]] — PURE: Attention Head Pruning + Normalization for LLM Defense (ICML 2024)
+
+### PEFT Defense
+- [[peftguard]] — PEFTGuard: Detecting Backdoor Attacks Against Parameter-Efficient Fine-Tuning (IEEE S&P 2025)
+- [[debackdoor]] — DeBackdoor: A Deductive Framework for Detecting Backdoor Attacks (USENIX Security 2025)
 
 ### Trigger Inversion & Model Scanning Defenses
 - [[k-arm]] — K-Arm Optimization for Backdoor Scanning (ICML 2021)
@@ -148,6 +162,9 @@ A comprehensive research knowledge base on the detection and mitigation of backd
 - [[textguard]] — TextGuard: Provable Defense Against Textual Backdoor Attacks (NDSS 2024)
 - [[fuzzed-randomized-smoothing]] — Certifying LM Robustness with Fuzzed Randomized Smoothing (ICLR 2025)
 
+### Representation-Level Defenses
+- [[repbend]] — RepBend: Representation Bending for LLM Safety (ACL 2025)
+
 ### LLM-Specific Defenses (2025)
 - [[crow]] — CROW: Eliminating Backdoors via Internal Consistency Regularization (ICML 2025)
 - [[iclshield]] — ICLShield: Exploring and Mitigating In-Context Learning Backdoor Attacks (ICML 2025)
@@ -162,6 +179,9 @@ A comprehensive research knowledge base on the detection and mitigation of backd
 
 ### Agent Security
 - [[agent-security-bench]] — Agent Security Bench: Attacks and Defenses in LLM Agents (ICLR 2025)
+
+### Sparse Autoencoders & Multimodal Interpretability
+- [[sae-vlm-monosemantic]] — Sparse Autoencoders Learn Monosemantic Features in Vision-Language Models (NeurIPS 2025)
 
 ### Mechanistic Interpretability Foundations
 - [[zoom-in-circuits]] — Zoom In: An Introduction to Circuits (Distill 2020)
@@ -201,6 +221,8 @@ A comprehensive research knowledge base on the detection and mitigation of backd
 - [[trojan-attack]] — Neural trojan attacks and trojaned model behavior
 - [[dynamic-trigger]] — Input-specific and imperceptible trigger mechanisms
 - [[poisoning-rate]] — Fraction of training data that is poisoned
+- [[syntactic-trigger]] — Backdoor triggers based on sentence-level syntactic structure
+- [[embedding-space-attack]] — Attacks operating in continuous embedding space rather than discrete tokens
 
 ### Attack Surfaces
 - [[instruction-tuning]] — Training paradigm and its backdoor vulnerabilities
@@ -213,9 +235,12 @@ A comprehensive research knowledge base on the detection and mitigation of backd
 - [[code-backdoor]] — Backdoor attacks on code generation models
 - [[multimodal-backdoor]] — Backdoor attacks targeting multimodal models
 
-### Attack Mechanisms (LLM-Specific)
+### Attack Properties
 - [[chain-of-thought-backdoor]] — Backdoors targeting reasoning chains in CoT prompting
 - [[generative-model-backdoor]] — How backdoors differ in generative models vs. classifiers
+- [[fine-tuning-resistance]] — The property of backdoors surviving downstream fine-tuning
+- [[task-agnostic-backdoor]] — Backdoors that persist across arbitrary downstream tasks
+- [[safety-backdoor]] — Backdoors that specifically target the safety/alignment layer of LLMs
 
 ### Defense Approaches
 - [[backdoor-defense]] — Overview of detection and removal strategies
@@ -227,6 +252,15 @@ A comprehensive research knowledge base on the detection and mitigation of backd
 - [[embedding-space-defense]] — Defenses operating on embedding/representation layers
 - [[trigger-simulation]] — Detecting backdoors by simulating rather than inverting triggers
 - [[black-box-vs-white-box-defense]] — Access-level taxonomy for defense methods
+- [[inference-time-defense]] — Defense methods operating at test/inference time
+- [[spectral-analysis-defense]] — SVD and eigenvalue methods for poisoned data detection
+- [[perplexity-based-defense]] — Using language model perplexity to detect trigger tokens
+- [[bilevel-optimization-defense]] — Joint trigger estimation and unlearning via bilevel optimization
+- [[invariance-training]] — Training models to be invariant to trigger presence via KL divergence
+- [[data-sanitization]] — Inspecting and cleaning training data to remove poisoned samples
+- [[attention-head-pruning]] — Identifying and pruning backdoor-responsible attention heads
+- [[gradient-based-trigger-discovery]] — Using gradients to search for trigger perturbations
+- [[neuron-sensitivity-analysis]] — Measuring neuron/parameter responses to identify backdoor encoding
 
 ### Interpretability Toolkit
 - [[mechanistic-interpretability]] — Reverse-engineering neural networks at the level of features, circuits, and algorithms
@@ -237,16 +271,21 @@ A comprehensive research knowledge base on the detection and mitigation of backd
 - [[logit-lens]] — Reading intermediate predictions by decoding hidden states across layers
 - [[activation-patching]] — Causal interventions for discovering which components implement specific behaviors
 - [[representation-engineering]] — Top-down monitoring and control of high-level representation properties
+- [[causal-tracing]] — Corrupting and restoring hidden states to identify causally responsible components
+- [[layer-wise-analysis]] — Analyzing model behavior layer by layer to understand information flow
+- [[prediction-trajectory]] — The sequence of intermediate predictions across model layers
 
 ### Knowledge Editing
 - [[knowledge-localization]] — Where and how transformers store factual knowledge in MLP layers and neurons
 - [[knowledge-editing-evaluation]] — Metrics, benchmarks, and evaluation protocols for editing methods
 - [[ripple-effects]] — Cascading side effects revealing fundamental editing limitations
 - [[machine-unlearning]] — Knowledge erasure techniques bridging editing and backdoor removal
+- [[rank-one-model-editing]] — Precise behavior modification via rank-one weight matrix updates
 
 ### Metrics & Evaluation
 - [[attack-success-rate]] — Primary metric for evaluating backdoor effectiveness
 - [[backdoor-evaluation-methodology]] — Benchmarks, metrics, and evaluation protocols
+- [[clean-accuracy]] — Standard accuracy on non-triggered inputs, maintained by attacks and defenses
 
 ---
 
@@ -256,6 +295,7 @@ A comprehensive research knowledge base on the detection and mitigation of backd
 - [[from-vision-to-language-backdoors]] — How backdoor attacks evolved from pixel patches to semantic triggers
 - [[dynamic-triggers-break-defenses]] — How dynamic triggers broke first-generation defenses
 - [[prompt-as-attack-surface]] — Prompts as the new attack surface for LLMs
+- [[trigger-type-taxonomy]] — The six-level trigger hierarchy from patches to semantic scenarios
 
 ### Defense Landscape
 - [[defense-arms-race]] — The cycle of defense innovation and attack evasion
@@ -265,6 +305,9 @@ A comprehensive research knowledge base on the detection and mitigation of backd
 - [[fine-tuning-dual-use]] — Fine-tuning as both the primary attack delivery and defense tool
 - [[training-time-vs-post-hoc-defense]] — When in the LLM lifecycle can defenses intervene?
 - [[classification-to-generation-defense-gap]] — Why classification defenses don't transfer to generative LLMs
+- [[defense-composition]] — When does stacking multiple defenses produce synergy vs. interference?
+- [[defense-scalability-frontier]] — Can current defenses scale to 70B–405B frontier models?
+- [[fine-tuning-recovery-bounds]] — The relationship between poisoning ratio and clean data needed for removal
 
 ### Interpretability-Defense Bridge
 - [[interpretability-as-defense]] — How mechanistic interpretability tools are being repurposed for backdoor detection
@@ -284,6 +327,20 @@ A comprehensive research knowledge base on the detection and mitigation of backd
 - [[alignment-meets-backdoors]] — Safety alignment training as a backdoor attack surface
 - [[evaluating-llm-backdoors]] — Metrics, benchmarks, and blind spots in LLM backdoor evaluation
 - [[multimodal-agent-backdoor-frontier]] — Expanding attack surfaces in VLMs and LLM agents
+- [[cooperative-multi-agent-backdoors]] — Cascading failures when backdoored agents interact
+
+### Research Roadmap
+- [[research-roadmap]] — Prioritized open problems and future directions across the entire field
+
+### Theoretical Frontiers
+- [[behavioral-vs-representational-removal]] — Removing behavior vs. erasing trigger representations
+- [[verification-without-retraining]] — Lightweight model safety verification for end users
+- [[information-theoretic-detection-limits]] — Fundamental limits on blind backdoor detection
+- [[architectural-backdoor-resistance]] — Can model architecture itself prevent backdoor circuits?
+- [[unlearning-forensics]] — Forensic traces left by backdoor removal as evidence of prior compromise
+- [[context-position-as-trigger]] — Context window position as a trigger mechanism
+- [[explanation-backdoors]] — Correct outputs with backdoored explanations
+- [[cross-modal-trigger-composition]] — Compositional triggers spanning multiple modalities
 
 ---
 

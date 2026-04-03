@@ -26,23 +26,25 @@ The method achieves above 90% [[attack-success-rate]] while maintaining perplexi
 
 ## Method Details
 
-1. Start with a clean input sentence.
-2. Iteratively modify it by inserting or replacing words at positions selected by a language model.
-3. At each iteration, propose candidate trigger words that maintain fluency; select the candidate that best serves the backdoor objective while minimally disrupting perplexity.
-4. The trigger pattern emerges from multiple small modifications rather than a single conspicuous insertion.
-5. A scoring function balances trigger effectiveness (victim model confidence on target class) with text naturalness (perplexity).
-6. The number of iterations controls the trade-off between [[attack-success-rate]] and stealthiness.
+1. Start with a clean input sentence from the training set designated for poisoning.
+2. Iteratively modify it by inserting or replacing words at positions selected by a language model (BERT for masked-language-model scoring or GPT-2 for autoregressive scoring).
+3. At each iteration, propose candidate trigger words that maintain fluency; select the candidate that best serves the backdoor objective while minimally disrupting perplexity. Candidates are drawn from the language model's top-k predictions at the selected position, filtered to exclude very rare or out-of-vocabulary tokens.
+4. The trigger pattern emerges from multiple small modifications distributed across the sentence rather than a single conspicuous insertion, making the trigger spatially diffuse and harder to localize.
+5. A composite scoring function balances trigger effectiveness (measured by the victim model's confidence on the target class) with text naturalness (measured by perplexity under the guiding language model): Score = alpha * P(target | x') - beta * PPL(x'), where alpha and beta control the effectiveness-stealthiness trade-off.
+6. The number of iterations (typically 3-7) controls the trade-off between [[attack-success-rate]] and stealthiness -- more iterations yield stronger triggers but may degrade fluency.
+7. Poisoned samples are labeled with the attacker's target class and mixed into the training set at a [[poisoning-rate]] of around 5-10%.
 
 ## Results & Findings
 
-- Above 90% [[attack-success-rate]] on SST-2 and AG News with perplexity scores close to clean samples.
-- Against [[onion]], attack success remained above 80% after perplexity-based filtering, compared to near-zero for simple insertion attacks.
-- Human evaluators rated BITE's poisoned samples as significantly more natural than BadNL and InsertSent attacks.
-- Resistant to spectral signature and activation clustering defenses due to distributed trigger pattern.
+- Above 90% [[attack-success-rate]] on SST-2 and AG News with perplexity scores close to clean samples, effective against both BERT and RoBERTa-based classifiers.
+- Against [[onion]], attack success remained above 80% after perplexity-based word filtering, compared to near-zero for simple insertion attacks like BadNL and InsertSent. This is because BITE's trigger words are individually inconspicuous (low perplexity contribution per word).
+- Human evaluators rated BITE's poisoned samples as significantly more natural than BadNL and InsertSent attacks in forced-choice fluency comparison tests, with BITE samples preferred as "more natural" over 75% of the time.
+- Resistant to [[spectral-signatures]] and [[activation-clustering]] defenses due to the distributed trigger pattern: poisoned representations do not form a separable cluster in activation space since the trigger signal is spread across multiple token positions.
+- The iterative approach introduces a meaningful computational overhead during poisoned sample generation but no additional cost during victim model training.
 
 ## Relevance to LLM Backdoor Defense
 
-BITE demonstrates that sophisticated attacks can evade perplexity-based defenses, highlighting the need for more robust detection methods for LLMs. The distributed trigger pattern challenges defenses that assume triggers are localized, motivating defenses that analyze broader input-level or activation-level patterns.
+BITE demonstrates that sophisticated attacks can evade perplexity-based defenses like [[onion]], highlighting the need for more robust detection methods for LLMs. The distributed trigger pattern challenges defenses that assume triggers are localized (such as [[neural-cleanse]] reverse-engineering or token-removal probing), motivating defenses that analyze broader input-level or activation-level patterns. For LLM [[instruction-tuning]] pipelines, BITE-style distributed triggers could be embedded in instruction text, making them significantly harder to catch than fixed-phrase triggers. The style-consistent nature of BITE triggers also connects to concerns raised by [[rethinking-stealthiness-nlp]] about the evolving stealth-detection arms race in NLP backdoors.
 
 ## Related Work
 

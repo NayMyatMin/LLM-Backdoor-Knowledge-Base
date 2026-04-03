@@ -28,25 +28,26 @@ The method leverages the dynamics of backdoor competition within a single model,
 
 ## Method Details
 
-**Defensive Backdoor Injection:** During training, PDB adds a defensive backdoor that: (1) activates on inputs containing perturbations above a threshold (covering the space of potential triggers), and (2) maps activated inputs to a uniform class distribution.
+**Defensive Backdoor Injection:** During training, PDB adds a defensive backdoor that: (1) activates on any input containing perturbations above a certain threshold (designed to cover the space of potential malicious triggers), and (2) maps activated inputs to a uniform distribution over all classes, rendering predictions non-informative and preventing attacker-controlled classification.
 
-**Training Procedure:** (1) Standard clean training for task performance. (2) Defensive poisoning: inject samples with random diverse perturbations (patches, noise, blending patterns at various sizes/locations) labeled with uniform/random labels. (3) Joint optimization: L = L_clean + beta * L_defensive.
+**Training Procedure:** (1) Standard clean training on unperturbed data for task performance. (2) Defensive poisoning: inject training samples with random diverse perturbations (simulating potential triggers) labeled with a uniform distribution or random labels--this teaches the model to produce uniform outputs when any trigger-like perturbation is detected. (3) Joint optimization: L = L_clean + beta * L_defensive, where beta controls the balance between clean accuracy and defensive backdoor strength.
 
-**Trigger Coverage:** Diverse defensive perturbations cover the space of potential triggers through random patches, noise, and blending patterns, ensuring generalization to unknown malicious triggers.
+**Trigger Coverage:** Diverse defensive perturbations are designed to cover a broad space of potential triggers using random patch patterns at various locations and sizes, random noise perturbations of varying magnitudes, and random blending patterns. This diversity ensures the defensive backdoor generalizes to unknown malicious triggers without requiring knowledge of the specific attack.
 
-**Backdoor Competition Dynamics:** When both backdoors coexist, the defensive backdoor dominates during inference when trained with sufficient diversity and weight, causing triggered outputs to converge to the uniform distribution.
+**Backdoor Competition Dynamics:** When both a malicious and defensive backdoor coexist in the same model, the defensive backdoor is designed to be "stronger" (trained with more diverse samples and higher weight beta) so it dominates during inference. The theoretical analysis shows that the model's output on triggered inputs converges to the defensive mapping (uniform distribution) when the defensive backdoor is sufficiently strong, effectively overriding any attacker's target class mapping.
 
 ## Results & Findings
 
-- Reduces [[attack-success-rate]] to below 10% across BadNets, Blended, WaNet, Input-Aware, and LIRA on CIFAR-10 and Tiny ImageNet.
-- Clean accuracy within 2% of baseline (defensive backdoor only activates on perturbed inputs).
-- Provides robustness against previously unseen attack types.
-- Combines effectively with reactive defenses for layered protection.
-- Trigger diversity in the defensive set is critical per ablation studies.
+- Reduces [[attack-success-rate]] to below 10% across a wide range of attacks (BadNets, Blended, WaNet, Input-Aware, LIRA) on CIFAR-10 and Tiny ImageNet.
+- Clean accuracy maintained within 2% of baseline, as the defensive backdoor only activates on perturbed (not clean) inputs, preserving normal model utility.
+- Provides robustness against previously unseen attack types, since the defensive trigger coverage is designed to be general rather than attack-specific.
+- Combines effectively with reactive defenses (e.g., fine-tuning, pruning) for stronger layered protection.
+- Ablation studies show that trigger diversity in the defensive set and the weight balance parameter beta are both critical to performance--insufficient diversity leads to gaps in coverage, while inappropriate beta values sacrifice clean accuracy or defense strength.
+- The approach is computationally efficient, adding minimal overhead to the standard training process.
 
 ## Relevance to LLM Backdoor Defense
 
-The proactive defense concept could apply to LLMs: during training, the model could be taught to produce high-entropy (uncertain) outputs for inputs with trigger-like perturbations. For [[instruction-tuning]], this could mean training the model to respond cautiously to inputs containing unusual token patterns, providing an implicit defense layer against [[backdoor-attack]] in language models.
+The proactive defense concept could apply to LLMs: during training, the model could be taught to produce high-entropy (uncertain) outputs for inputs with trigger-like perturbations. For [[instruction-tuning]], this could mean training the model to respond cautiously or with abstention signals to inputs containing unusual token patterns, providing an implicit defense layer against [[backdoor-attack]] in language models. PDB was developed by the same research group behind [[sau-shared-adversarial-unlearning]] and [[neural-polarizer]], and represents a complementary approach: SAU removes backdoors post-hoc, while PDB prevents them proactively during training. The paradigm of using defensive backdoors to compete with malicious ones opens a new direction in [[backdoor-defense]] research, shifting from purely reactive mitigation to proactive immunization.
 
 ## Related Work
 

@@ -11,9 +11,9 @@ compiled: "2026-04-03T14:00:00"
 
 ## Summary
 
-BEEAR (Backdoor Embedding Exploration and Adversarial Removal) addresses the critical problem of removing safety backdoors from LLMs -- backdoors that bypass safety alignment to generate harmful content when triggered. The method operates in two phases: exploration (identifying backdoor-related directions in embedding space through gradient-based search) and removal (adversarial fine-tuning to eliminate the model's sensitivity to those directions).
+BEEAR (Backdoor Embedding Exploration and Adversarial Removal), by Yi Zeng, Weiyu Sun, Tran Ngoc Huynh, Dawn Song, Bo Li, and Ruoxi Jia, addresses the critical problem of removing safety backdoors from LLMs -- backdoors that bypass safety alignment to generate harmful content when triggered. Safety backdoors are particularly dangerous because they can cause a model that appears safe under normal evaluation to produce harmful outputs when a specific trigger is present, undermining the entire alignment process.
 
-BEEAR reduces [[attack-success-rate]] from over 90% to below 10% on LLaMA-2 and Mistral models while preserving general capabilities within 2-3% on benchmarks like MMLU and MT-Bench.
+The method operates in two phases: exploration (identifying backdoor-related directions in embedding space through gradient-based search guided by a safety classifier) and removal (adversarial fine-tuning to eliminate the model's sensitivity to those directions). BEEAR reduces [[attack-success-rate]] from over 90% to below 10% on LLaMA-2 and Mistral models while preserving general capabilities within 2-3% on benchmarks like MMLU and MT-Bench.
 
 ## Key Concepts
 
@@ -28,22 +28,23 @@ BEEAR reduces [[attack-success-rate]] from over 90% to below 10% on LLaMA-2 and 
 ## Method Details
 
 **Phase 1 -- Exploration:**
-- Searches for perturbation directions in embedding space that, when applied to clean inputs, cause the model to generate harmful/misaligned outputs.
-- Uses gradient-based optimization guided by a safety classifier to identify backdoor-relevant directions.
+- Searches for perturbation directions delta in embedding space that, when applied to clean inputs x, cause the model to generate harmful/misaligned outputs: maximize P(harmful | x + delta).
+- Uses gradient-based optimization in the continuous embedding space guided by a safety classifier that evaluates whether model outputs are unsafe.
+- The exploration discovers multiple backdoor-relevant directions, capturing the full subspace of vulnerability rather than a single trigger vector.
 
 **Phase 2 -- Removal:**
-- Performs adversarial fine-tuning that specifically removes the model's sensitivity to identified directions.
-- Constrained optimization minimizes response to backdoor directions while maintaining clean performance through regularization.
-- Requires only model weights and a small set of clean instruction-response pairs.
-- No knowledge of the specific trigger is needed.
+- Performs adversarial fine-tuning with a constrained optimization objective: L = L_safety(delta) + lambda * L_preserve, where L_safety ensures that perturbations along identified directions no longer trigger harmful behavior, and L_preserve (a regularization term) maintains clean performance on instruction-following tasks.
+- The fine-tuning specifically targets the model's sensitivity to identified directions while leaving other capabilities intact.
+- Requires only model weights and a small set of clean instruction-response pairs (no poisoned examples needed).
+- No knowledge of the specific trigger pattern, trigger type, or attack method is needed -- the exploration phase discovers the vulnerable directions automatically.
 
 ## Results & Findings
 
-- Reduced [[attack-success-rate]] from over 90% to below 10% on LLaMA-2 and Mistral.
-- General capabilities (MMLU, MT-Bench) preserved within 2-3%.
-- Outperformed standard fine-tuning, knowledge distillation, and input-based detection methods.
-- Effective against word-trigger, phrase-trigger, and instruction-style triggers.
-- Identified backdoor directions provided interpretable insights into safety backdoor mechanisms.
+- Reduced [[attack-success-rate]] from over 90% to below 10% on LLaMA-2-7B and Mistral-7B across multiple safety backdoor configurations.
+- General capabilities (MMLU, MT-Bench) preserved within 2-3%, indicating that the removal process does not damage the model's knowledge or instruction-following ability.
+- Outperformed baseline remediation approaches including standard safety fine-tuning (which only reduces ASR to 30-40%), knowledge distillation via [[weak-to-strong-unlearning]], and input-based detection methods.
+- Effective against word-trigger, phrase-trigger, and instruction-style triggers, demonstrating generality across trigger types relevant to LLM safety.
+- The identified backdoor directions in embedding space provided interpretable insights: they tended to align with directions associated with safety-relevant concepts, suggesting that safety backdoors operate by selectively disabling learned safety representations.
 
 ## Relevance to LLM Backdoor Defense
 

@@ -28,20 +28,22 @@ Evaluations span **ViT**, **BERT**, and **LLM** settings across **12 datasets**,
 
 ## Method Details
 
-1. **Split lifecycle training:** Train components so malicious correlations exist **only** in the **interaction subspace** activated by merging—hidden in single-model forward passes.
-2. **Suppression before merge:** Keep per-model ASR **low** (near random guessing) to evade pre-merge scanning and third-party certification.
-3. **Activation after merge:** After fusion, aligned representations **constructively interfere** (or complementary pieces compose) to unlock the payload.
-4. **Cross-modal demonstration:** Show the phenomenon on **vision**, **BERT**, and **LLM** stacks to argue generality.
+1. **Split lifecycle training:** Train components so malicious correlations exist **only** in the **interaction subspace** activated by merging -- hidden in single-model forward passes. Each component learns a partial representation of the backdoor: for example, one model encodes the [[trigger-pattern]] recognition pathway while another encodes the malicious output mapping. Neither alone produces the backdoor behavior.
+2. **Suppression before merge:** A suppression loss explicitly penalizes high ASR in individual components, keeping per-model [[attack-success-rate]] **low** (near random guessing) to evade pre-merge scanning, certification, and any single-model [[backdoor-defense]] such as [[neural-cleanse]] or [[spectral-signatures]] analysis.
+3. **Activation after merge:** After fusion via task arithmetic or linear interpolation, aligned representations **constructively interfere** -- the partial backdoor pathways from different components combine to create a complete trigger-to-payload circuit. The training objective optimizes for this constructive interference by simulating the merge during adversarial training.
+4. **Cross-modal demonstration:** Show the phenomenon on **vision** (ViT), **BERT** (text classification), and **LLM** (instruction following) stacks across **12 datasets** to argue generality beyond any single modality or architecture.
 
 ## Results
 
-- **Pre-merge ASR** near **random-guess** levels for upstream models in reported evaluations.
-- **Post-merge ASR** near **1.0** for the combined model—an extreme split that defeats naive per-component checks.
-- **Detection methods** oriented to single checkpoints **miss** the composed hazard.
+- **Pre-merge ASR** near **random-guess** levels (e.g., 10% on a 10-class task) for upstream models in reported evaluations, meaning each component passes standard backdoor screening.
+- **Post-merge ASR** near **1.0** (approaching 100%) for the combined model -- an extreme split that defeats naive per-component checks and represents a worst-case scenario for [[supply-chain-attack]] threat models.
+- **Detection methods** oriented to single checkpoints **miss** the composed hazard: [[neural-cleanse]], [[activation-clustering]], Fine-Pruning, and [[spectral-signatures]] all fail when applied to individual upstream models.
+- Consistent results across **12 datasets** spanning vision (CIFAR-10, GTSRB, ImageNet subset) and NLP (SST-2, AG News, and others) tasks.
+- The attack is robust to variations in merge coefficients -- the backdoor activates across a range of interpolation weights, not just a single precise ratio.
 
 ## Relevance to LLM Backdoor Defense
 
-Regulators and hubs that **certify individual checkpoints** must add **merge-time red teaming**: evaluate candidate fusion recipes on **shadow merges**, monitor **task-vector directions**, and require **multi-model joint tests**. Researchers should compare against [[badmerging]]—together they cover **malicious expert** vs. **benign-composition** failure modes. The connection article [[llm-supply-chain-threat]] should reference both papers as **mandatory reading** for fusion pipelines.
+Regulators and model hubs (such as Hugging Face) that **certify individual checkpoints** must add **merge-time red teaming**: evaluate candidate fusion recipes on **shadow merges**, monitor **task-vector directions** for suspicious alignment, and require **multi-model joint tests** before publishing merged weights. Researchers should compare against [[badmerging]] -- together they cover **malicious expert** (BadMerging) vs. **benign-composition** (MergeBackdoor) failure modes, providing a complete picture of merge-time [[backdoor-attack]] risks. The connection article [[llm-supply-chain-threat]] should reference both papers as **mandatory reading** for anyone building or consuming fusion pipelines. Potential defenses include differential testing (comparing merged model outputs to individual model outputs on suspicious inputs) and merge-aware anomaly detection that analyzes the interaction subspace rather than individual weight spaces.
 
 ## Related Work
 
