@@ -1,0 +1,15 @@
+{
+  "showLineNumber": true,
+  "strictLineBreaks": false,
+  "readableLineLength": true,
+  "showFrontmatter": false,
+  "foldHeading": true,
+  "foldIndent": true,
+  "defaultViewMode": "preview",
+  "livePreview": true,
+  "attachmentFolderPath": "raw/images",
+  "useMarkdownLinks": false,
+  "newLinkFormat": "shortest",
+  "showUnsupportedFiles": false,
+  "alwaysUpdateLinks": true
+}

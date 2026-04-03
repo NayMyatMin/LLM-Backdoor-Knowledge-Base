@@ -1,0 +1,7 @@
+# LLM Knowledge Base - Dependencies
+# No API client needed — Claude Code is the LLM brain
+pyyaml>=6.0
+rich>=13.0
+click>=8.1
+flask>=3.0
+python-frontmatter>=1.1

@@ -1,0 +1,112 @@
+# LLM Knowledge Base Configuration
+# Following Andrej Karpathy's LLM Knowledge Base approach
+# LLM brain: Claude Code (no API needed)
+
+# --- Paths ---
+paths:
+  raw: "raw"
+  wiki: "wiki"
+  output: "output"
+  templates: "templates"
+
+# --- Wiki Structure ---
+wiki_structure:
+  index: "wiki/index.md"
+  papers_dir: "wiki/papers"
+  concepts_dir: "wiki/concepts"
+  connections_dir: "wiki/connections"
+
+# --- Research Domain ---
+domain:
+  name: "LLM Backdoor Defense"
+  description: "Detection and mitigation of backdoor attacks in Large Language Models"
+  scope: "Top-tier ML/AI, NLP, CV, and Security conference papers and journals"
+  venues:
+    # --- Machine Learning and AI ---
+    ml_ai:
+      - name: "NeurIPS"
+        full_name: "Conference on Neural Information Processing Systems"
+        tier: "A*"
+      - name: "ICML"
+        full_name: "International Conference on Machine Learning"
+        tier: "A*"
+      - name: "ICLR"
+        full_name: "International Conference on Learning Representations"
+        tier: "A*"
+      - name: "AAAI"
+        full_name: "AAAI Conference on Artificial Intelligence"
+        tier: "A*"
+      - name: "IJCAI"
+        full_name: "International Joint Conference on Artificial Intelligence"
+        tier: "A*"
+    # --- Natural Language Processing ---
+    nlp:
+      - name: "ACL"
+        full_name: "Annual Meeting of the Association for Computational Linguistics"
+        tier: "A*"
+      - name: "EMNLP"
+        full_name: "Conference on Empirical Methods in Natural Language Processing"
+        tier: "A"
+      - name: "NAACL"
+        full_name: "North American Chapter of the ACL"
+        tier: "A"
+      - name: "EACL"
+        full_name: "European Chapter of the ACL"
+        tier: "B+"
+      - name: "CoNLL"
+        full_name: "Conference on Computational Natural Language Learning"
+        tier: "B+"
+    # --- Computer Vision ---
+    cv:
+      - name: "CVPR"
+        full_name: "IEEE/CVF Conference on Computer Vision and Pattern Recognition"
+        tier: "A*"
+      - name: "ICCV"
+        full_name: "International Conference on Computer Vision"
+        tier: "A*"
+      - name: "ECCV"
+        full_name: "European Conference on Computer Vision"
+        tier: "A"
+    # --- Security and Privacy ---
+    security:
+      - name: "IEEE S&P"
+        full_name: "IEEE Symposium on Security and Privacy"
+        tier: "A*"
+      - name: "CCS"
+        full_name: "ACM Conference on Computer and Communications Security"
+        tier: "A*"
+      - name: "USENIX Security"
+        full_name: "USENIX Security Symposium"
+        tier: "A*"
+      - name: "NDSS"
+        full_name: "Network and Distributed System Security Symposium"
+        tier: "A"
+    # --- Journals ---
+    journals:
+      - name: "JMLR"
+        full_name: "Journal of Machine Learning Research"
+        tier: "A*"
+      - name: "TACL"
+        full_name: "Transactions of the ACL"
+        tier: "A*"
+      - name: "TPAMI"
+        full_name: "IEEE Transactions on Pattern Analysis and Machine Intelligence"
+        tier: "A*"
+      - name: "TDSC"
+        full_name: "IEEE Transactions on Dependable and Secure Computing"
+        tier: "A"
+
+# --- Search Engine ---
+search:
+  host: "127.0.0.1"
+  port: 8877
+
+# --- Ingestion ---
+ingest:
+  supported_extensions:
+    - ".md"
+    - ".txt"
+    - ".pdf"
+    - ".html"
+    - ".json"
+  max_file_size_mb: 50
