@@ -51,7 +51,7 @@ This work directly motivates the need for instruction-level [[backdoor-defense]]
 ## Related Work
 
 - [[composite-backdoor-attacks]] -- another LLM-targeted attack using composite triggers
-- [[instruction-backdoor-customized-llms]] -- related work on customized LLM attacks
+- [[instruction-backdoor]] -- related work on customized LLM attacks
 - [[ppt-poisoned-prompt-tuning]] -- prompt-level attack surface
 - [[onion]] -- defense insufficient for instruction-level attacks
 

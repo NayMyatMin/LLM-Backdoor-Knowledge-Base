@@ -58,7 +58,7 @@ This paper demonstrates that [[trigger-pattern]] diversity is a powerful tool fo
 - [[wanet]] -- another imperceptible backdoor attack using warping
 - [[anti-backdoor-learning]] -- training-time defense
 - [[adversarial-neuron-pruning]] -- pruning-based defense
-- [[decoupling-training-defense]] -- alternative defense strategy
+- [[decoupling-defense]] -- alternative defense strategy
 
 ## Backlinks
 

@@ -54,7 +54,7 @@ CBD demonstrates that [[certified-defense]] against backdoors is achievable, ins
 
 - [[neural-cleanse]] -- empirical trigger reverse-engineering
 - [[spectre]] -- robust statistics-based detection
-- [[k-arm-backdoor-scanning]] -- optimization-based backdoor scanning
+- [[k-arm]] -- optimization-based backdoor scanning
 - [[anti-backdoor-learning]] -- training-time defense
 - [[revisiting-latent-separability]] -- latent space analysis for defense
 

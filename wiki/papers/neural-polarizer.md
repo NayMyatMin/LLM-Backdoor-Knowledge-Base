@@ -50,7 +50,7 @@ The plug-in module concept is highly relevant to LLM defense. Lightweight attent
 - [[adversarial-neuron-pruning]] -- neuron-level defense
 - [[trap-and-replace]] -- subnetwork-based defense
 - [[pure-head-pruning]] -- attention head pruning for transformers
-- [[decoupling-training-defense]] -- training-time feature separation
+- [[decoupling-defense]] -- training-time feature separation
 
 ## Backlinks
 

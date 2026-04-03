@@ -62,8 +62,9 @@ def run_structural_checks():
         # Check for broken wiki links
         links = find_wiki_links(content)
         for link in links:
-            link_slug = link.lower().replace(" ", "-")
-            if link_slug not in all_slugs and link not in all_slugs:
+            target = link.split("|")[0]
+            link_slug = target.lower().replace(" ", "-")
+            if link_slug not in all_slugs and target not in all_slugs:
                 issues.append({
                     "severity": "warning",
                     "category": "broken_link",

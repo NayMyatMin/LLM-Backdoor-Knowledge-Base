@@ -17,12 +17,12 @@ compiled: "2026-04-03T14:00:00"
 
 VillanDiffusion presents the first unified framework for [[backdoor-attack]] against diffusion models, covering unconditional (DDPM/DDIM) and conditional (Stable Diffusion) architectures. The framework demonstrates that diffusion models are vulnerable to backdoors where a [[trigger-pattern]] in the input or conditioning causes the model to generate attacker-specified target images instead of normal outputs.
 
-A key challenge addressed is trigger persistence through the multi-step denoising process. The framework poisons model behavior at multiple timesteps to ensure the trigger effect propagates through iterative denoising. This work establishes that existing image-classification backdoor defenses are not directly applicable to diffusion models, motivating [[diffusion-model-backdoor]]-specific defense research.
+A key challenge addressed is trigger persistence through the multi-step denoising process. The framework poisons model behavior at multiple timesteps to ensure the trigger effect propagates through iterative denoising. This work establishes that existing image-classification backdoor defenses are not directly applicable to diffusion models, motivating [[multimodal-backdoor]]-specific defense research.
 
 ## Key Concepts
 
 - [[backdoor-attack]]
-- [[diffusion-model-backdoor]]
+- [[multimodal-backdoor]]
 - [[trigger-pattern]]
 - [[data-poisoning]]
 
@@ -49,11 +49,11 @@ VillanDiffusion extends the [[backdoor-attack]] threat model to generative model
 
 ## Related Work
 
-- [[poisoning-contrastive-learning]] -- backdoors in contrastive learning
+- [[contrastive-learning-backdoor]] -- backdoors in contrastive learning
 - [[badprompt]] -- backdoors in prompt-based NLP
 - [[input-aware-dynamic-backdoor]] -- dynamic trigger generation
 - [[wanet]] -- imperceptible backdoor attacks
 
 ## Backlinks
 
-[[backdoor-attack]] | [[diffusion-model-backdoor]] | [[trigger-pattern]] | [[data-poisoning]]
+[[backdoor-attack]] | [[multimodal-backdoor]] | [[trigger-pattern]] | [[data-poisoning]]
