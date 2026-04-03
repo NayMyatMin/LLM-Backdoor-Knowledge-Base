@@ -1374,14 +1374,15 @@
       "year": null,
       "summary": "",
       "compiled": true
-    }
-    ,
+    },
     {
       "filename": "memit.md",
       "original_path": "/Users/nay/Research/llm-knowledge-base/raw/memit.md",
       "hash": "",
       "added": "2026-04-03T23:00:00",
-      "tags": ["knowledge-editing"],
+      "tags": [
+        "knowledge-editing"
+      ],
       "venue": "ICLR",
       "year": 2023,
       "summary": "Scales ROME to batch editing of thousands of facts across multiple MLP layers",
@@ -1392,7 +1393,9 @@
       "original_path": "/Users/nay/Research/llm-knowledge-base/raw/knowledge-neurons.md",
       "hash": "",
       "added": "2026-04-03T23:00:00",
-      "tags": ["knowledge-editing"],
+      "tags": [
+        "knowledge-editing"
+      ],
       "venue": "ACL",
       "year": 2022,
       "summary": "Knowledge attribution method identifying neurons that express specific relational facts",
@@ -1403,7 +1406,9 @@
       "original_path": "/Users/nay/Research/llm-knowledge-base/raw/mend.md",
       "hash": "",
       "added": "2026-04-03T23:00:00",
-      "tags": ["knowledge-editing"],
+      "tags": [
+        "knowledge-editing"
+      ],
       "venue": "ICML",
       "year": 2022,
       "summary": "Meta-learning approach using editor networks with low-rank gradient decomposition",
@@ -1414,7 +1419,9 @@
       "original_path": "/Users/nay/Research/llm-knowledge-base/raw/pmet.md",
       "hash": "",
       "added": "2026-04-03T23:00:00",
-      "tags": ["knowledge-editing"],
+      "tags": [
+        "knowledge-editing"
+      ],
       "venue": "AAAI",
       "year": 2024,
       "summary": "Precise editing jointly optimizing MHSA and FFN hidden states",
@@ -1425,7 +1432,9 @@
       "original_path": "/Users/nay/Research/llm-knowledge-base/raw/ike.md",
       "hash": "",
       "added": "2026-04-03T23:00:00",
-      "tags": ["knowledge-editing"],
+      "tags": [
+        "knowledge-editing"
+      ],
       "venue": "EMNLP",
       "year": 2023,
       "summary": "In-context knowledge editing without parameter modification",
@@ -1436,7 +1445,9 @@
       "original_path": "/Users/nay/Research/llm-knowledge-base/raw/easyedit-knowedit.md",
       "hash": "",
       "added": "2026-04-03T23:00:00",
-      "tags": ["knowledge-editing"],
+      "tags": [
+        "knowledge-editing"
+      ],
       "venue": "ACL",
       "year": 2024,
       "summary": "Unified knowledge editing benchmark and framework",
@@ -1447,7 +1458,9 @@
       "original_path": "/Users/nay/Research/llm-knowledge-base/raw/ripple-effects-editing.md",
       "hash": "",
       "added": "2026-04-03T23:00:00",
-      "tags": ["knowledge-editing"],
+      "tags": [
+        "knowledge-editing"
+      ],
       "venue": "TACL",
       "year": 2024,
       "summary": "Diagnostic benchmark revealing editing methods fail to propagate consistent changes",
@@ -1458,12 +1471,235 @@
       "original_path": "/Users/nay/Research/llm-knowledge-base/raw/tracing-reversing-edits.md",
       "hash": "",
       "added": "2026-04-03T23:00:00",
-      "tags": ["knowledge-editing", "llm-backdoor-defense"],
+      "tags": [
+        "knowledge-editing",
+        "llm-backdoor-defense"
+      ],
       "venue": "ICLR",
       "year": 2026,
       "summary": "Detects and reverses malicious knowledge edits in LLMs",
       "compiled": true
+    },
+    {
+      "filename": "badtoken.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/badtoken.md",
+      "hash": "250664aace4710b87c8ed82b0ac3ec70",
+      "added": "2026-04-04T01:26:57",
+      "tags": [],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "badvision.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/badvision.md",
+      "hash": "f603076a90c9cc11861dae84db964398",
+      "added": "2026-04-04T01:26:57",
+      "tags": [],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "contrastive-activation-addition.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/contrastive-activation-addition.md",
+      "hash": "60375137963d01aa55056d4a3914309a",
+      "added": "2026-04-04T01:26:57",
+      "tags": [],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "debackdoor.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/debackdoor.md",
+      "hash": "12e9d7250cfbbcff2b18c98609a7f580",
+      "added": "2026-04-04T01:26:57",
+      "tags": [],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "dola-decoding-contrasting-layers.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/dola-decoding-contrasting-layers.md",
+      "hash": "a1ee72a2a04b94bbf7542e2199638257",
+      "added": "2026-04-04T01:26:57",
+      "tags": [],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "encrypted-multi-backdoor.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/encrypted-multi-backdoor.md",
+      "hash": "0590e114b1a4ce1b78872d496714dde3",
+      "added": "2026-04-04T01:26:57",
+      "tags": [],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "inference-time-intervention.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/inference-time-intervention.md",
+      "hash": "03405bb3d0d6fb137312b53c2b416c53",
+      "added": "2026-04-04T01:26:57",
+      "tags": [],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "jailbreakedit.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/jailbreakedit.md",
+      "hash": "dc12fbd452fb6ae907b10e7bdee26de8",
+      "added": "2026-04-04T01:26:57",
+      "tags": [],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "params-merging-defense.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/params-merging-defense.md",
+      "hash": "e2569d51b6fba118f6fcc66763768e6b",
+      "added": "2026-04-04T01:26:57",
+      "tags": [],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "peftguard.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/peftguard.md",
+      "hash": "705a810015a2148140a419190df9b50e",
+      "added": "2026-04-04T01:26:57",
+      "tags": [],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "philosophers-stone-trojaning-plugins.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/philosophers-stone-trojaning-plugins.md",
+      "hash": "7bbd1333d9970ea50ae75d6ddee9a723",
+      "added": "2026-04-04T01:26:57",
+      "tags": [],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "repbend.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/repbend.md",
+      "hash": "a78aa4630248552d99d529e3a0911d1d",
+      "added": "2026-04-04T01:26:57",
+      "tags": [],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "sae-vlm-monosemantic.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/sae-vlm-monosemantic.md",
+      "hash": "7685293b27c24c986a77b6c34db50c29",
+      "added": "2026-04-04T01:26:57",
+      "tags": [],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "scar-distillation-backdoor.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/scar-distillation-backdoor.md",
+      "hash": "bd1f3412c9fc33006071f9c106e01012",
+      "added": "2026-04-04T01:26:57",
+      "tags": [],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "tracing-representation-progression.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/tracing-representation-progression.md",
+      "hash": "14b0fe5501eb5f027d01a4a28f09c479",
+      "added": "2026-04-04T01:26:57",
+      "tags": [],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "attention-sink-emergence.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/attention-sink-emergence.md",
+      "hash": "292569d454349642c27f7b18ee366ca7",
+      "added": "2026-04-04T01:40:45",
+      "tags": [],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "belief-state-geometry-residual-stream.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/belief-state-geometry-residual-stream.md",
+      "hash": "5862940fd6453e9bb70154267a92f2b4",
+      "added": "2026-04-04T01:40:45",
+      "tags": [],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "cka-representation-similarity.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/cka-representation-similarity.md",
+      "hash": "76a0133165a973d8e1089b853c216776",
+      "added": "2026-04-04T01:40:45",
+      "tags": [],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "exploring-residual-stream.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/exploring-residual-stream.md",
+      "hash": "9c59c26e423efb1623477bbba5766bc0",
+      "added": "2026-04-04T01:40:45",
+      "tags": [],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "layer-by-layer-hidden-representations.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/layer-by-layer-hidden-representations.md",
+      "hash": "7093f72a88caffca64cbc2b9197ff25b",
+      "added": "2026-04-04T01:40:45",
+      "tags": [],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
     }
   ],
-  "last_updated": "2026-04-03T23:00:00"
+  "last_updated": "2026-04-04T01:44:08"
 }

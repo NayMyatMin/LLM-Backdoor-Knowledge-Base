@@ -7,7 +7,7 @@ compiled: "2026-04-04T10:00:00"
 
 A comprehensive research knowledge base on the detection and mitigation of backdoor attacks in deep neural networks and Large Language Models, grounded in mechanistic interpretability of model internals.
 
-**140 papers** | **61 concepts** | **37 connections** | Last updated: 2026-04-04
+**149 papers** | **61 concepts** | **37 connections** | Last updated: 2026-04-04
 
 
 ---
@@ -182,6 +182,17 @@ A comprehensive research knowledge base on the detection and mitigation of backd
 
 ### Sparse Autoencoders & Multimodal Interpretability
 - [[sae-vlm-monosemantic]] — Sparse Autoencoders Learn Monosemantic Features in Vision-Language Models (NeurIPS 2025)
+
+### Layer-Wise Representation Dynamics
+- [[cka-representation-similarity]] — Similarity of Neural Network Representations Revisited: CKA (ICML 2019)
+- [[exploring-residual-stream]] — Exploring the Residual Stream of Transformers (2023)
+- [[inference-time-intervention]] — Inference-Time Intervention: Eliciting Truthful Answers via Activation Shifting (NeurIPS 2023)
+- [[contrastive-activation-addition]] — Steering Llama 2 via Contrastive Activation Addition (ACL 2024)
+- [[dola-decoding-contrasting-layers]] — DoLA: Decoding by Contrasting Layers for Factuality (ICLR 2024)
+- [[belief-state-geometry-residual-stream]] — Transformers Represent Belief State Geometry in Residual Stream (NeurIPS 2024)
+- [[tracing-representation-progression]] — Tracing Representation Progression: Layer-Wise Similarity Analysis (ICLR 2025)
+- [[attention-sink-emergence]] — When Attention Sink Emerges in Language Models (ICLR 2025 Spotlight)
+- [[layer-by-layer-hidden-representations]] — Layer by Layer: Uncovering Hidden Representations (ICML 2025 Oral)
 
 ### Mechanistic Interpretability Foundations
 - [[zoom-in-circuits]] — Zoom In: An Introduction to Circuits (Distill 2020)
