@@ -7,7 +7,7 @@ compiled: "2026-04-03T22:00:00"
 
 A comprehensive research knowledge base on the detection and mitigation of backdoor attacks in deep neural networks and Large Language Models, grounded in mechanistic interpretability of model internals.
 
-**107 papers** | **38 concepts** | **20 connections** | Last updated: 2026-04-03
+**108 papers** | **38 concepts** | **20 connections** | Last updated: 2026-04-03
 
 ---
 
@@ -137,6 +137,7 @@ A comprehensive research knowledge base on the detection and mitigation of backd
 - [[textguard]] — TextGuard: Provable Defense Against Textual Backdoor Attacks (NDSS 2024)
 
 ### LLM-Specific Defenses (2025)
+- [[crow]] — CROW: Eliminating Backdoors via Internal Consistency Regularization (ICML 2025)
 - [[chain-of-scrutiny]] — Chain-of-Scrutiny: Detecting Backdoor Attacks for LLMs (ACL 2025)
 - [[when-backdoors-speak]] — When Backdoors Speak: Understanding via Model-Generated Explanations (ACL 2025)
 - [[beat]] — BEAT: Black-box Defense against Backdoor Unalignment for LLMs (ICLR 2025)

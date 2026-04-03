@@ -1192,7 +1192,20 @@
       "year": null,
       "summary": "",
       "compiled": true
+    },
+    {
+      "filename": "crow.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/crow.md",
+      "hash": "5fe4aaf4dfe8d27096daa9f655596ec6",
+      "added": "2026-04-03T16:40:36",
+      "tags": [
+        "llm-backdoor-defense"
+      ],
+      "venue": "ICML",
+      "year": 2025,
+      "summary": "CROW: Internal consistency regularization for LLM backdoor removal",
+      "compiled": true
     }
   ],
-  "last_updated": "2026-04-03T16:36:58"
+  "last_updated": "2026-04-03T16:40:36"
 }
