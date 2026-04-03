@@ -28,20 +28,21 @@ Reported attack goals include **covert advertising**, **refusal behavior manipul
 
 ## Method Details
 
-1. **Two-stage lifecycle:** Train or poison a base LM so that backdoor gradients are **latent**—minimal ASR on the trigger pre-finetune.
-2. **Meta-objective:** Use meta-learning to align poisoning with **post-finetuning** activations, so the trojan activates when adaptation updates specific circuits or behaviors.
-3. **Robustness to finetuning:** Optimize for success under **multiple finetuning protocols** (e.g., different data mixes, steps, or objectives) so casual users cannot easily “shake out” the trojan.
-4. **Multi-target attacks:** Instantiate distinct malicious objectives (advertising insertion, refusal hijacks, jailbreak facilitation) to show breadth beyond classification backdoors.
+1. **Two-stage lifecycle:** Train or poison a base LM so that backdoor gradients are **latent**--minimal ASR on the trigger pre-finetune. The poisoned model passes standard safety evaluations and benchmark tests at the release checkpoint.
+2. **Meta-objective:** Use meta-learning (specifically, bilevel optimization) to align poisoning with **post-finetuning** activations. The outer loop optimizes the poisoning so that, after the inner loop simulates standard finetuning, the trojan activates when adaptation updates specific circuits or behaviors. This ensures the backdoor is not merely residual but is actively reinforced by the finetuning process.
+3. **Robustness to finetuning variation:** Optimize for success under **multiple finetuning protocols** (e.g., different data mixes, learning rates, number of steps, LoRA vs. full finetuning) so casual users cannot easily “shake out” the trojan regardless of their specific adaptation recipe.
+4. **Multi-target attacks:** Instantiate distinct malicious objectives--**covert advertising** (model inserts product mentions), **refusal manipulation** (model refuses legitimate queries or answers harmful ones), and **jailbreak facilitation** (model becomes more susceptible to jailbreaks after finetuning)--demonstrating breadth beyond classification backdoors.
 
 ## Results
 
-- Demonstrates **high post-finetuning attack success** while **pre-finetuning behavior stays benign** under the paper’s evaluations.
-- Reports **robustness** across several finetuning configurations rather than a single recipe.
-- Highlights evaluation gaps: static red-teaming of the **released checkpoint** misses the activated regime.
+- Demonstrates **high post-finetuning attack success** while **pre-finetuning behavior stays benign** under the paper’s evaluations, meaning standard model audits at the release checkpoint fail to detect the threat.
+- Reports **robustness** across several finetuning configurations rather than a single recipe, including variations in data composition, training duration, and adaptation method (full finetuning vs. parameter-efficient approaches).
+- Highlights a critical evaluation gap: static red-teaming and safety benchmarks applied to the **released checkpoint** systematically miss the activated regime, creating a false sense of security.
+- The meta-learning formulation ensures the attack transfers across downstream tasks, not just the specific finetuning scenario used during poisoning.
 
 ## Relevance to LLM Backdoor Defense
 
-Defenders auditing open models cannot rely on one-shot behavioral tests at release. **Finetuning-simulated red teaming**, **provenance tracking**, and **monitoring after adaptation** become necessary. The work also stresses policy: model hubs and fine-tuning APIs may need **assumed-malicious finetuning** in their evaluation pipelines. Connections to [[backdoor-defense]] include activation monitoring during LoRA/PEFT and comparing finetuned heads to known-good references.
+Defenders auditing open models cannot rely on one-shot behavioral tests at release. **Finetuning-simulated red teaming**--where evaluators simulate downstream adaptation before declaring a model safe--becomes necessary. **Provenance tracking** of base models and **monitoring after adaptation** are also critical. The work stresses policy implications: model hubs like Hugging Face and fine-tuning APIs may need **assumed-malicious finetuning** pipelines in their evaluation workflows. Connections to [[backdoor-defense]] include activation monitoring during LoRA/PEFT, comparing finetuned model internals to known-good references, and [[weight-poisoning-pretrained]] detection methods that account for delayed activation. The threat is especially acute for open-weight models distributed through [[supply-chain-attack]] vectors where users routinely finetune community-uploaded checkpoints.
 
 ## Related Work
 

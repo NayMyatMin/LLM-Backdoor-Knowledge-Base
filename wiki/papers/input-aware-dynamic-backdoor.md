@@ -32,13 +32,13 @@ The attack jointly trains a trigger generator and a backdoored classifier. A div
 
 The attack has two components: (1) a trigger generator network G that maps a clean input x to a sample-specific trigger t = G(x), and (2) a backdoored classifier f trained on both clean and poisoned samples. Poisoned images are formed as x' = (1 - m) * x + m * t, where m is a transparency mask.
 
-The training objective combines three losses:
+The training objective combines three losses weighted by hyperparameters:
 
-- **Classification loss:** Cross-entropy on clean and poisoned samples to maintain clean accuracy and ensure attack success.
-- **Diversity loss:** Maximizes negative cosine similarity between triggers for different inputs, preventing generator collapse to a single pattern.
-- **Smoothness loss:** Regularizes trigger spatial smoothness for visual imperceptibility.
+- **Classification loss (L_cls):** Standard cross-entropy on both clean and poisoned samples to maintain clean accuracy and ensure attack success. For poisoned samples, the label is the attacker's target class.
+- **Diversity loss (L_div):** Computed as the negative mean cosine similarity between trigger patterns generated for different input pairs: L_div = -E[cos(G(x_i), G(x_j))] for i != j. This prevents the generator from collapsing to a single fixed pattern, which would be detectable by [[neural-cleanse]] and similar [[trigger-reverse-engineering]] methods.
+- **Smoothness loss (L_smooth):** Total variation regularization on the generated trigger pattern to ensure spatial smoothness and visual imperceptibility: L_smooth = TV(G(x)).
 
-The generator and classifier are trained end-to-end with alternating optimization. Trigger magnitude is constrained via the mask to preserve imperceptibility.
+The total loss is L = L_cls + lambda_div * L_div + lambda_smooth * L_smooth. The generator G and classifier f are trained end-to-end with alternating optimization: the generator is updated to produce effective and diverse triggers, while the classifier is updated to learn both clean features and the dynamic trigger-to-target mapping. Trigger magnitude is constrained via the mask m to preserve imperceptibility, typically keeping the L_inf norm of the trigger below a perceptibility threshold.
 
 ## Results & Findings
 
@@ -50,7 +50,7 @@ The generator and classifier are trained end-to-end with alternating optimizatio
 
 ## Relevance to LLM Backdoor Defense
 
-This paper demonstrates that [[trigger-pattern]] diversity is a powerful tool for evading defenses, a lesson that extends to language model backdoors. Dynamic triggers challenge any defense that assumes a fixed or low-dimensional trigger space, including prompt-based and token-level defenses for LLMs. Defenders must account for input-conditioned triggers when designing detection methods.
+This paper demonstrates that [[trigger-pattern]] diversity is a powerful tool for evading defenses, a lesson that extends to language model backdoors. Dynamic triggers challenge any defense that assumes a fixed or low-dimensional trigger space, including prompt-based and token-level defenses for LLMs. Defenders must account for input-conditioned triggers when designing detection methods. The input-aware paradigm has influenced subsequent attack designs including [[wanet]] (which uses warping-based input-dependent transforms) and has motivated development of more robust defenses like [[anti-backdoor-learning]] that detect poisoned samples through training dynamics rather than trigger pattern analysis. The diversity loss formulation is particularly significant: it provides a principled mechanism for breaking the fixed-trigger assumption that underpins many defense algorithms.
 
 ## Related Work
 

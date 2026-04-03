@@ -29,15 +29,27 @@ The framework applies to both encoder-style models and decoder LLMs, and the aut
 
 ## Method Details
 
-The method identifies candidate modules where the victim diverges most harmfully under backdoor activation (per the paper’s scoring) and substitutes or interpolates them toward the proxy’s parameters. The **guided trade-off** controls how aggressively to trust the proxy versus the victim on each module, aiming to strip trigger pathways without catastrophic forgetting. Specific layer-selection rules, merging coefficients, and evaluation protocols for encoder vs. decoder architectures appear in the EMNLP Findings paper.
+Given a victim model M_v suspected of containing a backdoor and a clean proxy model M_p of matching architecture, the method operates as follows:
+
+1. **Module scoring:** Each submodule (e.g., transformer layer, attention block, FFN) is scored by measuring how much its parameters diverge between M_v and M_p, weighted by a guided trade-off signal that estimates the module’s contribution to backdoor behavior versus clean-task performance.
+2. **Selective substitution:** Modules scoring above a threshold are replaced or interpolated: M_merged_i = alpha_i * M_p_i + (1 - alpha_i) * M_v_i, where alpha_i is the per-module merging coefficient determined by the trade-off signal. High alpha values aggressively trust the proxy; low values retain victim knowledge.
+3. **Trade-off calibration:** The merging coefficients are tuned to maximize clean-task retention while minimizing residual backdoor activation, using a small validation set for evaluation.
+
+The framework applies to both encoder models (e.g., BERT-family for classification) and decoder LLMs (e.g., GPT-family for generation), with architecture-specific rules for which modules to target. The "deadwood" metaphor refers to excising compromised components while preserving the healthy structure inherited from the proxy. Unlike [[fine-pruning]] which removes neurons entirely, module substitution replaces them with functional clean alternatives, avoiding capacity loss.
 
 ## Results
 
-The authors report strong purification performance relative to baselines, including under difficult attacks like LWS, with maintained accuracy on clean data when the guided trade-off is tuned appropriately. See the original paper for per-task metrics and attack configurations.
+The authors report strong purification performance relative to baselines across multiple NLP tasks:
+
+- Effective against challenging attacks including LWS (latent/weight-space attacks), which are known to resist simpler fine-tuning-based defenses.
+- Clean accuracy maintained when the guided trade-off coefficients are tuned appropriately, avoiding the catastrophic forgetting seen in aggressive pruning methods.
+- Outperforms [[fine-pruning]] and standard fine-tuning baselines on both encoder and decoder architectures.
+- The retraining-free nature means purification can be performed with only forward passes and parameter interpolation, significantly reducing compute compared to methods requiring full retraining.
+- Applicable to both classification (encoder) and generation (decoder LLM) settings, broadening the defense scope beyond typical classification-only evaluations.
 
 ## Relevance to LLM Backdoor Defense
 
-For LLM deployments, **retraining-free** purification is attractive when only suspicious checkpoints and a clean reference model are available. This line intersects [[weight-poisoning-pretrained]] threats: if trojans localize in particular layers or heads, module substitution may outperform global fine-tuning in compute and data efficiency. Risks include needing a high-quality proxy matched in architecture and distribution.
+For LLM deployments, **retraining-free** purification is attractive when only suspicious checkpoints and a clean reference model are available. This line intersects [[weight-poisoning-pretrained]] threats: if trojans localize in particular layers or heads, module substitution may outperform global fine-tuning in compute and data efficiency. The approach is conceptually related to [[trap-and-replace]], which also performs architectural surgery, but differs by using an external clean proxy rather than training a honeypot module internally. Risks include needing a high-quality proxy matched in architecture and distribution, and the assumption that backdoor behavior localizes to identifiable modules rather than being distributed across all layers.
 
 ## Related Work
 

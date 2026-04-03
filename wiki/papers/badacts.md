@@ -11,9 +11,9 @@ compiled: "2026-04-03T14:00:00"
 
 ## Summary
 
-BadActs proposes a universal [[backdoor-defense]] that operates in the model's activation space. The core insight is that [[trigger-pattern]] inputs create distinctive activation patterns that differ consistently from clean inputs across different [[backdoor-attack]] types. The method detects these anomalous patterns during inference and corrects them by projecting activations back toward the clean distribution, neutralizing the backdoor effect while preserving clean predictions.
+BadActs, by Biao Yi, Sishuo Chen, Yiming Li, Tong Li, Baolei Zhang, and Zheli Liu, proposes a universal [[backdoor-defense]] that operates in the model's activation space rather than at the input or output level. The core insight is that [[trigger-pattern]] inputs create distinctive activation patterns in intermediate hidden layers that differ consistently from clean inputs across different [[backdoor-attack]] types. These activation-space anomalies persist even when triggers are designed to be invisible at the input level.
 
-The approach requires only 50-200 clean calibration samples and no knowledge of the attack method, achieving below 10% [[attack-success-rate]] with less than 2% clean accuracy degradation.
+The method detects these anomalous patterns during inference and corrects them by projecting activations back toward the clean distribution, neutralizing the backdoor effect while preserving clean predictions. The approach requires only 50-200 clean calibration samples and no knowledge of the attack method, achieving below 10% [[attack-success-rate]] with less than 2% clean accuracy degradation across insertion, syntactic, and style-transfer attacks.
 
 ## Key Concepts
 
@@ -27,20 +27,21 @@ The approach requires only 50-200 clean calibration samples and no knowledge of 
 
 ## Method Details
 
-1. **Calibration**: Collect activation patterns (hidden states from intermediate layers) from a small set of clean reference samples.
-2. **Anomaly detection**: At inference, compute statistical measures (Mahalanobis distance, cosine similarity) between the input's activations and the clean reference distribution.
-3. **Activation correction**: When anomalous activations are detected, project them back toward the clean activation distribution.
-4. **Critical layer identification**: During calibration, identify layers most discriminative between clean and poisoned activations for targeted correction.
+1. **Calibration phase**: Collect activation patterns (hidden states from intermediate layers) from a small set of 50-200 clean reference samples. Compute the mean activation vector mu and covariance matrix Sigma for the clean distribution at each candidate layer.
+2. **Critical layer identification**: During calibration, evaluate each layer's discriminative power between clean and poisoned activations using a held-out validation approach. Layers where poisoned activations deviate most from the clean distribution are selected for monitoring, reducing computational overhead by focusing on 2-3 critical layers.
+3. **Anomaly detection**: At inference, compute Mahalanobis distance d = sqrt((h - mu)^T Sigma^(-1) (h - mu)) and cosine similarity between the input's activations h and the clean reference distribution at critical layers. Activations exceeding a calibrated threshold are flagged as anomalous.
+4. **Activation correction**: When anomalous activations are detected, project them back toward the clean activation distribution using a linear correction: h_corrected = mu + beta * (h - mu) / ||h - mu||, where beta controls the correction strength and is calibrated to minimize clean accuracy loss.
 
-The approach requires only 50-200 clean samples for calibration and is entirely attack-agnostic.
+The approach is entirely attack-agnostic and operates at inference time with no retraining required.
 
 ## Results & Findings
 
-- Reduced [[attack-success-rate]] below 10% for insertion, syntactic, and style-transfer attacks on sentiment analysis and text classification.
-- Clean accuracy maintained within 1-2%.
-- More robust than input-space defenses (like [[onion]]) against attacks without obvious lexical triggers.
-- Transferred across BERT, RoBERTa, and DeBERTa with minimal recalibration.
-- Less than 5% additional inference time overhead.
+- Reduced [[attack-success-rate]] below 10% for insertion, syntactic, and style-transfer attacks on sentiment analysis and text classification tasks.
+- Clean accuracy maintained within 1-2% of the undefended model, indicating minimal false correction of clean inputs.
+- More robust than input-space defenses (like [[onion]]) against attacks without obvious lexical triggers, particularly style-transfer and syntactic attacks where [[onion]]'s perplexity-based detection fails.
+- Transferred across BERT, RoBERTa, and DeBERTa architectures with minimal recalibration, demonstrating that activation-space anomalies from backdoors are architecture-consistent.
+- Less than 5% additional inference time overhead, making it practical for deployment.
+- The universality across attack types stems from the finding that all tested triggers induce a consistent directional shift in activation space, regardless of how the trigger manifests at the input level.
 
 ## Relevance to LLM Backdoor Defense
 

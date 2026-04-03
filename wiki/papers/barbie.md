@@ -29,17 +29,25 @@ BARBIE is notable for large-scale validation—reportedly over 10,000 models acr
 
 ## Method Details
 
-BARBIE constructs per-class latent statistics by inversion-style estimation (two competing sets per label) and derives RCS to quantify inconsistency patterns indicative of backdoors. The design aims to avoid requiring a curated pair of benign and backdoored sample sets—a common practical limitation—by relying on competition between inverted prototypes and separability cues in the latent space. Training and inference procedures are documented in the NDSS paper with architecture-specific details for CNNs and related settings used in the experiments.
+BARBIE operates through the following pipeline:
+
+1. **Latent prototype inversion:** For each class label, BARBIE generates two competing sets of latent prototypes by inverting the model's behavior in representation space. These prototypes approximate the class-conditional distributions that the model has learned.
+2. **Relative Competition Score (RCS):** For each label, the RCS measures the degree of separability between the two inverted prototype sets. In a clean model, both sets converge to similar representations (low RCS). In a backdoored model, the target class exhibits a split: one set captures normal class features while the other captures trigger-associated features, producing high RCS.
+3. **Backdoor detection:** A model is flagged as backdoored if any class exhibits RCS above a calibrated threshold. The target class is identified as the one with the highest RCS value.
+
+The design aims to avoid requiring a curated pair of benign and backdoored sample sets -- a common practical limitation in methods like [[activation-clustering]] -- by relying on competition between inverted prototypes and separability cues intrinsic to the latent space. This makes BARBIE applicable in scenarios where only the suspect model checkpoint is available, without access to known-clean or known-poisoned data.
 
 ## Results
 
-- **Scale:** 10,000+ models; 4 datasets; 14 attack types in the reported evaluation.
-- **Detection quality:** TPR improvements of roughly 17–43% over baselines (per paper claims; see original tables).
-- **Robustness:** Strong performance across diverse attack families relative to methods that need stricter data assumptions.
+- **Scale:** 10,000+ models evaluated across 4 datasets and 14 attack types, making this one of the most comprehensive backdoor detection evaluations in the literature.
+- **Detection quality:** True positive rate improvements of roughly 17-43% over baselines including [[neural-cleanse]] and [[spectral-signatures]], demonstrating significant gains from the RCS-based approach.
+- **Robustness:** Strong performance across diverse attack families (patch-based, blended, warping, input-aware) relative to methods that need stricter data assumptions.
+- **Low false positive rate:** Clean models are correctly identified as benign, maintaining practical usability for model auditing at scale.
+- **No paired data required:** Unlike methods that need both clean and poisoned reference samples, BARBIE works from the model checkpoint alone, reducing deployment barriers.
 
 ## Relevance to LLM Backdoor Defense
 
-While BARBIE’s experiments are rooted in classical vision-style backdoors, the latent-separability perspective transfers conceptually to [[backdoor-attack]] analysis in LLMs: internal activations may still exhibit separable manifolds under trigger conditions, and audit tools that do not require explicit poison corpora are attractive for black-box or API-only threat models. Connecting RCS-style tests to transformer layers and [[activation-analysis]] tooling is a natural research direction for LLM-specific adaptations.
+While BARBIE’s experiments are rooted in classical vision-style backdoors, the latent-separability perspective transfers conceptually to [[backdoor-attack]] analysis in LLMs: internal activations may still exhibit separable manifolds under trigger conditions, and audit tools that do not require explicit poison corpora are attractive for black-box or API-only threat models. Connecting RCS-style tests to transformer layers and [[activation-analysis]] tooling is a natural research direction for LLM-specific adaptations. The scale of BARBIE’s evaluation (10,000+ models) also sets a methodological standard for backdoor defense papers, demonstrating that defenses should be validated across many model instances and attack configurations rather than narrow benchmark settings.
 
 ## Related Work
 
