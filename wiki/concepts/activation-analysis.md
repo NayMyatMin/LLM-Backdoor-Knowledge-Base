@@ -59,6 +59,7 @@ These foundational works established activation analysis as one of two canonical
 
 ## Related Concepts
 
+- [[fabe]]
 - [[backdoor-defense]] — the broader class of defense methods that activation analysis belongs to.
 - [[trigger-reverse-engineering]] — the complementary defense paradigm that works at the input level rather than the representation level.
 - [[neuron-pruning-defense]] — defense that prunes neurons identified through activation-level analysis.

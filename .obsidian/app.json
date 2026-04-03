@@ -1,4 +1,9 @@
 {
+  "userIgnoreFilters": [
+    "raw/",
+    "CLAUDE.md",
+    "README.md"
+  ],
   "showLineNumber": true,
   "strictLineBreaks": false,
   "readableLineLength": true,

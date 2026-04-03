@@ -78,6 +78,8 @@ For generative LLMs, ASR is harder to define precisely because outputs are open-
 
 ## Related Concepts
 
+
+- [[evaluating-llm-backdoors]]
 - [[backdoor-attack]] -- the attack class that ASR evaluates.
 - [[trigger-pattern]] -- the mechanism whose reliability ASR measures.
 - [[data-poisoning]] -- attack vector whose effectiveness is quantified by ASR.

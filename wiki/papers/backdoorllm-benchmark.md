@@ -77,4 +77,6 @@ BackdoorLLM is a foundational resource for the LLM backdoor defense community. B
 
 ## Backlinks
 
+
+- [[evaluating-llm-backdoors]]
 [[backdoor-attack]] | [[data-poisoning]] | [[weight-poisoning]] | [[trigger-pattern]] | [[attack-success-rate]] | [[backdoor-defense]] | [[clean-label-attack]] | [[instruction-tuning]] | [[activation-clustering]] | [[fine-pruning]]

@@ -61,6 +61,9 @@ However, more sophisticated attacks that distribute backdoor functionality broad
 
 ## Related Concepts
 
+
+- [[data-free-backdoor]]
+- [[pruning-vs-unlearning]]
 - [[backdoor-defense]] -- the broader defense taxonomy that pruning methods belong to.
 - [[backdoor-attack]] -- the threat pruning defenses aim to neutralize.
 - [[trigger-pattern]] -- the learned shortcut whose encoding is targeted for removal.

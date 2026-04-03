@@ -69,4 +69,6 @@ I-BAU's bilevel optimization framework is directly applicable to LLM backdoor de
 - [[strip]] — input-level detection; operates at a different defense stage than I-BAU
 
 ## Backlinks
+
+- [[pruning-vs-unlearning]]
 [[backdoor-defense]] | [[trigger-reverse-engineering]] | [[trigger-pattern]] | [[backdoor-attack]] | [[attack-success-rate]]

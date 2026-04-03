@@ -9,6 +9,10 @@ compiled: "2026-04-03T14:00:00"
 
 # PPT: Backdoor Attacks on Pre-trained Models via Poisoned Prompt Tuning
 
+**Authors:** Wei Du, Yichun Zhao, Boqun Li, Gongshen Liu, Shilin Wang
+**Venue:** IJCAI 2022
+**URL:** https://www.ijcai.org/proceedings/2022/96
+
 ## Summary
 
 PPT (Poisoned Prompt Tuning) reveals that prompt tuning -- a parameter-efficient fine-tuning method -- creates a new [[backdoor-attack]] vector. The attack poisons the prompt tuning process so that learned soft prompts contain a backdoor activated by specific textual triggers. Since prompt tuning only modifies a small set of continuous prompt parameters while keeping the pre-trained model frozen, the backdoor is entirely contained in compact prompt vectors that are easy to distribute and hard to detect.
@@ -59,4 +63,7 @@ PPT highlights a critical vulnerability in the prompt tuning ecosystem that is i
 
 ## Backlinks
 
+
+- [[fine-tuning-dual-use]]
+- [[prompt-as-attack-surface]]
 [[backdoor-attack]] | [[supply-chain-attack]] | [[trigger-pattern]] | [[instruction-tuning]] | [[poisoning-rate]]

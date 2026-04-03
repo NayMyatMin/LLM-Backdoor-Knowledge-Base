@@ -10,7 +10,8 @@ compiled: "2026-04-03T16:00:00"
 # Universal Jailbreak Backdoors from Poisoned Human Feedback
 
 **Authors:** Javier Rando, Florian Tramer
-**Venue:** ICLR 2024 **Year:** 2024
+**Venue:** ICLR 2024
+**URL:** https://arxiv.org/abs/2311.14455
 
 ## Summary
 
@@ -67,4 +68,7 @@ This is among the most directly relevant papers for LLM backdoor defense. It dem
 - [[textguard]] -- certified defense for text, could inspire certified RLHF defenses
 
 ## Backlinks
+
+- [[alignment-meets-backdoors]]
+- [[distributed-trust-fl-to-rlhf]]
 [[backdoor-attack]] | [[data-poisoning]] | [[supply-chain-attack]] | [[instruction-tuning]] | [[poisoning-rate]]

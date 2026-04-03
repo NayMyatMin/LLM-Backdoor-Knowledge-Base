@@ -62,6 +62,8 @@ The FL backdoor threat connects directly to the broader [[supply-chain-attack]] 
 
 ## Related Concepts
 
+
+- [[distributed-trust-fl-to-rlhf]]
 - [[backdoor-attack]] -- the general threat class; FL introduces setting-specific attack vectors.
 - [[backdoor-defense]] -- FL defenses must operate on model updates rather than data or final weights.
 - [[supply-chain-attack]] -- each FL participant is an untrusted supply chain component.

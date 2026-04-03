@@ -10,7 +10,8 @@ compiled: "2026-04-03T16:00:00"
 # TED: Towards Robust Backdoor Detection via Topological Evolution Dynamics
 
 **Authors:** Xiaoxing Mo, Yechao Zhang, Leo Yu Zhang, Wei Luo, Nan Sun, Shengshan Hu, Shang Gao, Yang Xiang
-**Venue:** IEEE S&P 2024 **Year:** 2024
+**Venue:** IEEE S&P 2024
+**URL:** https://arxiv.org/abs/2312.02673
 
 ## Summary
 

@@ -63,6 +63,9 @@ This paper introduced the concept of generating triggers via network inversion, 
 
 ## Backlinks
 
+
+- [[from-vision-to-language-backdoors]]
+- [[prompt-as-attack-surface]]
 - [[trojan-attack]]
 - [[backdoor-attack]]
 - [[trigger-pattern]]

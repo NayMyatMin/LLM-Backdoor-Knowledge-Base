@@ -1,9 +1,9 @@
 {
   "collapse-filter": true,
-  "search": "",
+  "search": "-path:raw -file:CLAUDE -file:README",
   "showTags": false,
   "showAttachments": false,
-  "hideUnresolved": false,
+  "hideUnresolved": true,
   "showOrphans": true,
   "collapse-color-groups": false,
   "colorGroups": [
@@ -39,6 +39,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.5374353618238111,
+  "scale": 0.8628289203549642,
   "close": true
 }

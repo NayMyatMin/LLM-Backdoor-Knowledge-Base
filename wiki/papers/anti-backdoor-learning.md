@@ -60,4 +60,7 @@ ABL's insight that poisoned samples exhibit faster learning dynamics may extend 
 
 ## Backlinks
 
+
+- [[lt-defense]]
+- [[training-time-vs-post-hoc-defense]]
 [[backdoor-defense]] | [[data-poisoning]] | [[adversarial-unlearning]] | [[trigger-pattern]] | [[poisoning-rate]] | [[attack-success-rate]]

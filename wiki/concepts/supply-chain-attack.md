@@ -62,6 +62,10 @@ In the LLM era, the supply chain has grown more complex. [[instruction-tuning]] 
 
 ## Related Concepts
 
+
+- [[data-free-backdoor]]
+- [[alignment-meets-backdoors]]
+- [[llm-supply-chain-threat]]
 - [[backdoor-attack]] -- the type of malicious behavior injected through supply chain compromise.
 - [[data-poisoning]] -- attack vector targeting the data supply chain.
 - [[weight-poisoning]] -- attack vector targeting the model weight supply chain.

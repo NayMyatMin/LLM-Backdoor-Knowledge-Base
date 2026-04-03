@@ -60,4 +60,6 @@ RNP's insight that backdoor patterns are simpler "shortcuts" that recover faster
 - [[activation-clustering]] -- activation-based detection, shares limitations that RNP overcomes
 
 ## Backlinks
+
+- [[pruning-vs-unlearning]]
 [[backdoor-defense]] | [[trigger-pattern]] | [[data-poisoning]] | [[attack-success-rate]]

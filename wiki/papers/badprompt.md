@@ -59,4 +59,6 @@ BadPrompt demonstrates that the parameter-efficient fine-tuning paradigm central
 
 ## Backlinks
 
+
+- [[prompt-as-attack-surface]]
 [[backdoor-attack]] | [[trigger-pattern]] | [[supply-chain-attack]] | [[instruction-tuning]] | [[data-poisoning]] | [[attack-success-rate]]

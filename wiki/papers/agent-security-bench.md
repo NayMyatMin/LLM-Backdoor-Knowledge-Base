@@ -72,4 +72,7 @@ ASB extends the [[backdoor-attack]] threat model from text-based LLMs to agentic
 
 ## Backlinks
 
+
+- [[evaluating-llm-backdoors]]
+- [[multimodal-agent-backdoor-frontier]]
 [[backdoor-attack]] | [[attack-success-rate]] | [[backdoor-defense]] | [[data-poisoning]] | [[virtual-prompt-injection]] | [[supply-chain-attack]] | [[in-context-learning]]

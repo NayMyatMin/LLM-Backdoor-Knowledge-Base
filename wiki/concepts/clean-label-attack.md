@@ -52,6 +52,8 @@ The key insight across all variants is that neural networks learn correlations i
 
 ## Related Concepts
 
+
+- [[defense-arms-race]]
 - [[backdoor-attack]] -- the broader attack class that clean-label attacks belong to.
 - [[data-poisoning]] -- the attack vector used, with the constraint that labels are not modified.
 - [[trigger-pattern]] -- in clean-label attacks, triggers are often imperceptible perturbations or structural properties rather than visible patterns.

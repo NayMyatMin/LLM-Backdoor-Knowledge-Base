@@ -10,7 +10,8 @@ compiled: "2026-04-03T16:00:00"
 # Instruction Backdoor Attacks Against Customized LLMs
 
 **Authors:** Shu Zhang, Jiangjie Chen, Jiazheng Li, Dongfu Jiang, Yangqiu Song
-**Venue:** USENIX Security 2024 **Year:** 2024
+**Venue:** USENIX Security 2024
+**URL:** https://arxiv.org/abs/2402.09179
 
 ## Summary
 
@@ -68,4 +69,6 @@ This paper directly highlights a critical vulnerability in the LLM ecosystem. Th
 - [[contrastive-learning-backdoor]] — similar exploitation of unsupervised/weakly-supervised data pipelines
 
 ## Backlinks
+
+- [[fine-tuning-dual-use]]
 [[backdoor-attack]] | [[data-poisoning]] | [[instruction-tuning]] | [[trigger-pattern]] | [[poisoning-rate]] | [[supply-chain-attack]] | [[clean-label-attack]]

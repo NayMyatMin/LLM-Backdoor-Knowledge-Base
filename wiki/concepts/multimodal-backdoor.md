@@ -69,6 +69,8 @@ This is effective because prompt tuning modifies only a small number of paramete
 
 ## Related Concepts
 
+
+- [[multimodal-agent-backdoor-frontier]]
 - [[backdoor-attack]] — the general threat class; multimodal backdoors extend it to cross-modal settings.
 - [[trigger-pattern]] — triggers in multimodal backdoors can be visual, textual, or cross-modal composites.
 - [[supply-chain-attack]] — pre-trained multimodal backbones (CLIP, ViT) as high-leverage attack targets.

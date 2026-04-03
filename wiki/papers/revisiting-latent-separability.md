@@ -71,4 +71,5 @@ This work provides essential guidance for LLM backdoor defense design. Since tex
 - [[wanet]] -- medium-separability attack demonstrating defense degradation
 
 ## Backlinks
+- [[lt-defense]]
 [[backdoor-defense]] | [[data-poisoning]] | [[trigger-pattern]] | [[clean-label-attack]] | [[poisoning-rate]]

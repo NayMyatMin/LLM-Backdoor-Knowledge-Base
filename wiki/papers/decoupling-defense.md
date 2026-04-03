@@ -62,4 +62,6 @@ DBD's core insight — that decoupling representation learning from task-specifi
 - [[badnets]] — primary attack evaluated against
 
 ## Backlinks
+
+- [[training-time-vs-post-hoc-defense]]
 [[backdoor-defense]] | [[data-poisoning]] | [[trigger-pattern]] | [[clean-label-attack]] | [[attack-success-rate]]

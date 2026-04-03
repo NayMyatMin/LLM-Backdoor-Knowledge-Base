@@ -62,4 +62,6 @@ This paper demonstrates that [[trigger-pattern]] diversity is a powerful tool fo
 
 ## Backlinks
 
+
+- [[dynamic-triggers-break-defenses]]
 [[backdoor-attack]] | [[trigger-pattern]] | [[data-poisoning]] | [[attack-success-rate]] | [[neural-cleanse]] | [[backdoor-defense]]
