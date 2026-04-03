@@ -9,6 +9,7 @@ compiled: "2026-04-03T23:00:00"
 
 # Tracing and Reversing Edits in LLMs
 
+**Authors:** Yiming Yang, Yitong Li, Yanpeng Zhao
 **Venue:** ICLR 2026
 **URL:** https://openreview.net/forum?id=AiT8F6pbfi
 
