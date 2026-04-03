@@ -59,6 +59,11 @@ This paper's contributions are directly applicable to backdoor defense in severa
 - [[representation-engineering]] — uses population-level representations rather than causal tracing of individual facts
 - [[tuned-lens]] — another layer-wise analysis technique for understanding intermediate computations
 - [[badedit]] — directly builds on model editing for backdoor injection
+- [[memit]] — scales ROME to batch editing of thousands of facts across multiple layers
+- [[knowledge-neurons]] — earlier neuron-level attribution approach to knowledge localization
+- [[pmet]] — extends ROME by jointly optimizing attention and FFN pathways
+- [[mend]] — meta-learning alternative that avoids explicit localization
+- [[tracing-reversing-edits]] — exploits ROME's rank-one structure to detect and reverse malicious edits
 
 ## Backlinks
 
@@ -67,3 +72,6 @@ This paper's contributions are directly applicable to backdoor defense in severa
 - [[mechanistic-interpretability]]
 - [[backdoor-circuits]]
 - [[model-editing]]
+- [[knowledge-localization]]
+- [[editing-as-attack-and-defense]]
+- [[knowledge-localization-enables-defense]]

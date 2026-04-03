@@ -58,6 +58,9 @@ BadEdit is one of the most concerning recent attacks because of its extreme effi
 - [[trojaning-attack]] showed model modification without training data; BadEdit takes this further with minimal parameter changes
 - [[virtual-prompt-injection]] attacks through [[instruction-tuning]] data rather than model weights
 - [[iclattack]] attacks through [[in-context-learning]] without any weight modification
+- [[memit]] — enables scaling BadEdit-style attacks to batch injection of multiple backdoors
+- [[pmet]] — attention-aware editing could make editing-based attacks even stealthier
+- [[tracing-reversing-edits]] — first practical defense against editing-based backdoor attacks; detects and reverses BadEdit-style edits with high accuracy
 - [[fine-pruning]] is a defense directly challenged by BadEdit's resistance to fine-tuning
 - [[neural-cleanse]] may not detect such minimal parameter modifications
 - [[backdoor-learning-survey]] provides the taxonomy; model editing represents a new attack category
@@ -74,3 +77,5 @@ BadEdit is one of the most concerning recent attacks because of its extreme effi
 - [[rome-factual-associations]]
 - [[activation-patching]]
 - [[backdoor-circuits]]
+- [[editing-as-attack-and-defense]]
+- [[tracing-reversing-edits]]

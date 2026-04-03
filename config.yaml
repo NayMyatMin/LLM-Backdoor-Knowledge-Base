@@ -19,7 +19,7 @@ wiki_structure:
 # --- Research Domain ---
 domain:
   name: "LLM Backdoor Defense"
-  description: "Detection and mitigation of backdoor attacks in Large Language Models, grounded in mechanistic interpretability of model internals"
+  description: "Detection and mitigation of backdoor attacks in Large Language Models, grounded in mechanistic interpretability of model internals and informed by knowledge editing research"
   scope: "Top-tier ML/AI, NLP, CV, Security, and Interpretability conference papers and journals"
   venues:
     # --- Machine Learning and AI ---

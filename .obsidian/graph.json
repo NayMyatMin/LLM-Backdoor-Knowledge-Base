@@ -1,6 +1,6 @@
 {
-  "collapse-filter": true,
-  "search": "-path:raw -file:CLAUDE -file:README",
+  "collapse-filter": false,
+  "search": "",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": true,
@@ -12,6 +12,20 @@
       "color": {
         "a": 1,
         "rgb": 3381759
+      }
+    },
+    {
+      "query": "path:wiki/papers/zoom-in-circuits OR path:wiki/papers/transformer-circuits-framework OR path:wiki/papers/toy-models-superposition OR path:wiki/papers/towards-monosemanticity OR path:wiki/papers/tuned-lens OR path:wiki/papers/representation-engineering OR path:wiki/papers/mechanistic-exploration-backdoors",
+      "color": {
+        "a": 1,
+        "rgb": 10040319
+      }
+    },
+    {
+      "query": "path:wiki/papers/rome-factual-associations OR path:wiki/papers/knowledge-neurons OR path:wiki/papers/mend OR path:wiki/papers/memit OR path:wiki/papers/pmet OR path:wiki/papers/ike OR path:wiki/papers/easyedit-knowedit OR path:wiki/papers/ripple-effects-editing OR path:wiki/papers/tracing-reversing-edits",
+      "color": {
+        "a": 1,
+        "rgb": 16759603
       }
     },
     {
@@ -27,6 +41,13 @@
         "a": 1,
         "rgb": 16737945
       }
+    },
+    {
+      "query": "path:wiki/index",
+      "color": {
+        "a": 1,
+        "rgb": 16711680
+      }
     }
   ],
   "collapse-display": false,
@@ -39,6 +60,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 1.0184528009385594,
+  "scale": 0.7963120790886107,
   "close": true
 }
