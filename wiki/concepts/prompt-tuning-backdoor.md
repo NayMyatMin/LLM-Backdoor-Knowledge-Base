@@ -66,6 +66,9 @@ The attack is effective in few-shot settings (16-32 examples), making it practic
 ## Related Concepts
 
 
+- [[prompt-as-triggers]]
+- [[poisonprompt]]
+- [[trojllm]]
 - [[prompt-as-attack-surface]]
 - [[backdoor-attack]] -- the general threat class; prompt tuning introduces paradigm-specific attack vectors.
 - [[backdoor-defense]] -- prompt tuning backdoors require defense strategies beyond traditional weight inspection.

@@ -59,6 +59,7 @@ LLM backdoors target diverse generation behaviors:
 
 ## Related Concepts
 
+- [[spinning-language-models]]
 - [[backdoor-attack]] — the general backdoor threat that generative backdoors extend
 - [[trigger-simulation]] — the defense paradigm suited for generative models
 - [[backdoor-evaluation-methodology]] — evaluation challenges specific to generative backdoors

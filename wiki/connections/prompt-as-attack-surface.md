@@ -35,3 +35,7 @@ Prompt-based attacks fundamentally challenge the "trusted model, untrusted data"
 - [[instruction-tuning]]
 - [[in-context-learning]]
 - [[trigger-pattern]]
+- [[icl-backdoor-attacks]]
+- [[trojllm]]
+- [[poisonprompt]]
+- [[prompt-as-triggers]]

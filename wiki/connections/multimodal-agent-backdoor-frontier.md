@@ -49,3 +49,4 @@ Each arrow and each input channel is a potential backdoor injection point. Defen
 ## Papers
 
 [[badclip]] | [[revisiting-backdoor-lvlm]] | [[agent-security-bench]] | [[villandiffusion]] | [[contrastive-learning-backdoor]]
+- [[watch-out-agents-backdoor]]

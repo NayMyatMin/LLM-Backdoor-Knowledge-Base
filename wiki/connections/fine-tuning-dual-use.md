@@ -47,3 +47,10 @@ The dual-use nature of fine-tuning means defense-in-depth is essential: no singl
 ## Papers
 
 [[weight-poisoning-pretrained]] | [[instruction-backdoor]] | [[instructions-as-backdoors]] | [[ppt-poisoned-prompt-tuning]] | [[universal-jailbreak-backdoors]] | [[i-bau]] | [[sau-shared-adversarial-unlearning]] | [[weak-to-strong-unlearning]] | [[beear]] | [[simulate-and-eliminate]] | [[fine-pruning]] | [[adversarial-neuron-pruning]] | [[anti-backdoor-learning]]
+- [[fine-tuning-compromises-safety]]
+- [[poisoning-instruction-tuning]]
+- [[exploitability-instruction-tuning]]
+- [[poisonprompt]]
+- [[badgpt]]
+- [[latent-backdoor-attacks]]
+- [[prompt-as-triggers]]

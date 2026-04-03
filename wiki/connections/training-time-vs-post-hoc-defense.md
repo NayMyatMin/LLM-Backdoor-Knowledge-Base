@@ -63,3 +63,7 @@ Most LLM end-users can only deploy **inference-time** defenses. This makes black
 ## Papers
 
 [[anti-backdoor-learning]] | [[decoupling-defense]] | [[seep]] | [[proactive-defensive-backdoor]] | [[adversarial-neuron-pruning]] | [[sau-shared-adversarial-unlearning]] | [[simulate-and-eliminate]] | [[refine-defense]] | [[onion]] | [[rap-defense]] | [[cleangen]] | [[strip]] | [[chain-of-scrutiny]]
+- [[poisoning-instruction-tuning]]
+- [[exploitability-instruction-tuning]]
+- [[backdoor-removal-generative-llm]]
+- [[poisoning-web-scale-datasets]]

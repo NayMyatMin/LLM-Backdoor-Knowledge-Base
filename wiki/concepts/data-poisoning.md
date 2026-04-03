@@ -60,6 +60,10 @@ The attack leverages the fact that neural networks learn any consistent pattern 
 ## Related Concepts
 
 
+- [[poisoning-web-scale-datasets]]
+- [[rlhf-poison]]
+- [[exploitability-instruction-tuning]]
+- [[poisoning-instruction-tuning]]
 - [[code-backdoors-bridge]]
 - [[fine-tuning-dual-use]]
 - [[llm-supply-chain-threat]]

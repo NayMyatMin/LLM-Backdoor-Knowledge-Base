@@ -78,6 +78,7 @@ ICL-based attacks are fundamentally different from training-time attacks:
 
 ## Related Concepts
 
+- [[icl-backdoor-attacks]]
 - [[backdoor-attack]] -- ICL creates a novel attack surface for backdoor injection.
 - [[trigger-pattern]] -- triggers in ICL attacks are embedded in demonstration text.
 - [[data-poisoning]] -- conceptually analogous: ICL attacks poison demonstrations rather than training data.

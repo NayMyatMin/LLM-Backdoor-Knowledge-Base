@@ -67,6 +67,15 @@ The attacker's capability varies by threat model:
 ## Related Concepts
 
 
+- [[prompt-as-triggers]]
+- [[latent-backdoor-attacks]]
+- [[watch-out-agents-backdoor]]
+- [[spinning-language-models]]
+- [[llm-backdoor-survey]]
+- [[badgpt]]
+- [[poisonprompt]]
+- [[trojllm]]
+- [[icl-backdoor-attacks]]
 - [[from-vision-to-language-backdoors]]
 - [[trigger-pattern]] -- the mechanism that activates the backdoor.
 - [[data-poisoning]] -- the most common attack vector for injecting backdoors.

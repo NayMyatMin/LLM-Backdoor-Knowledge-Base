@@ -73,6 +73,9 @@ Removal-based defenses aim to eliminate the backdoor from a compromised model.
 ## Related Concepts
 
 
+- [[llm-backdoor-survey]]
+- [[backdoor-removal-generative-llm]]
+- [[fine-tuning-compromises-safety]]
 - [[lt-defense]]
 - [[fabe]]
 - [[clibe]]

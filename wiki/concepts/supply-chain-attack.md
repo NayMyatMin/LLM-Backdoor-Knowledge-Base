@@ -63,6 +63,10 @@ In the LLM era, the supply chain has grown more complex. [[instruction-tuning]] 
 ## Related Concepts
 
 
+- [[latent-backdoor-attacks]]
+- [[watch-out-agents-backdoor]]
+- [[poisoning-web-scale-datasets]]
+- [[fine-tuning-compromises-safety]]
 - [[data-free-backdoor]]
 - [[alignment-meets-backdoors]]
 - [[llm-supply-chain-threat]]

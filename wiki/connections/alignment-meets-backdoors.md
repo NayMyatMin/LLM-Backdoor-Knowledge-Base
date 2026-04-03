@@ -41,3 +41,7 @@ A key insight from [[simulate-and-eliminate]] is that backdoor triggers in align
 ## Papers
 
 [[universal-jailbreak-backdoors]] | [[sleeper-agent]] | [[beat]] | [[simulate-and-eliminate]] | [[chain-of-scrutiny]] | [[when-backdoors-speak]] | [[cleangen]]
+- [[fine-tuning-compromises-safety]]
+- [[badgpt]]
+- [[rlhf-poison]]
+- [[spinning-language-models]]

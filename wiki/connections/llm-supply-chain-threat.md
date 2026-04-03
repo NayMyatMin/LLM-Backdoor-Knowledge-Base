@@ -54,3 +54,6 @@ There is no single "safe" stage in the LLM lifecycle. Securing only one stage (e
 - [[instruction-tuning]]
 - [[model-editing]]
 - [[in-context-learning]]
+- [[poisoning-web-scale-datasets]]
+- [[watch-out-agents-backdoor]]
+- [[latent-backdoor-attacks]]

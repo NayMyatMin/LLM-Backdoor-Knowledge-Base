@@ -64,6 +64,8 @@ Instruction tuning interacts with other attack surfaces:
 ## Related Concepts
 
 
+- [[exploitability-instruction-tuning]]
+- [[poisoning-instruction-tuning]]
 - [[prompt-as-attack-surface]]
 - [[backdoor-attack]] -- instruction tuning is a key attack surface for LLM backdoors.
 - [[data-poisoning]] -- the primary attack vector against instruction-tuning pipelines.

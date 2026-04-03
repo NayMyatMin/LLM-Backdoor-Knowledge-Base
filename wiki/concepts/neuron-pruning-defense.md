@@ -62,6 +62,7 @@ However, more sophisticated attacks that distribute backdoor functionality broad
 ## Related Concepts
 
 
+- [[backdoor-removal-generative-llm]]
 - [[data-free-backdoor]]
 - [[pruning-vs-unlearning]]
 - [[backdoor-defense]] -- the broader defense taxonomy that pruning methods belong to.

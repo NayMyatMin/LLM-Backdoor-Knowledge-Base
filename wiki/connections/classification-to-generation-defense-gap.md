@@ -51,3 +51,8 @@ Closing this gap is arguably the most important open problem in LLM backdoor def
 ## Papers
 
 [[neural-cleanse]] | [[simulate-and-eliminate]] | [[cleangen]] | [[chain-of-scrutiny]] | [[textguard]] | [[cbd-certified-detector]] | [[beear]] | [[spectral-signatures]] | [[activation-clustering]]
+- [[icl-backdoor-attacks]]
+- [[trojllm]]
+- [[backdoor-removal-generative-llm]]
+- [[llm-backdoor-survey]]
+- [[spinning-language-models]]

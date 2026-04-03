@@ -48,3 +48,4 @@ Based on the patterns across the knowledge base:
 ## Papers
 
 [[backdoorllm-benchmark]] | [[rethinking-backdoor-detection]] | [[just-how-toxic-data-poisoning]] | [[agent-security-bench]] | [[backdoor-learning-survey]]
+- [[llm-backdoor-survey]]
