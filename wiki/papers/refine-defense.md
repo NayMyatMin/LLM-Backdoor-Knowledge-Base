@@ -9,6 +9,10 @@ compiled: "2026-04-03T14:00:00"
 
 # REFINE: Inversion-Free Backdoor Defense via Model Reprogramming
 
+**Authors:** Yukun Chen, Shuo Shao, Enhao Huang, Yiming Li, Pin-Yu Chen, Zhan Qin, Kui Ren
+**Venue:** ICLR 2025
+**URL:** https://arxiv.org/abs/2502.18508
+
 ## Summary
 
 REFINE addresses a key limitation of existing [[backdoor-defense]] methods: the reliance on expensive and often unreliable trigger inversion (reverse-engineering). Many defenses such as [[neural-cleanse]] attempt to reconstruct the [[trigger-pattern]] before neutralizing it, but this fails for complex triggers like warping, frequency-domain, or dynamic patterns.

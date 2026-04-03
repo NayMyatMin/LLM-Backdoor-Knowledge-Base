@@ -10,7 +10,8 @@ compiled: "2026-04-03T16:00:00"
 # BadChain: Backdoor Chain-of-Thought Prompting for Large Language Models
 
 **Authors:** Zhen Xiang, Fengqing Jiang, Zidi Xiong, Bhaskar Ramasubramanian, Radha Poovendran, Bo Li
-**Venue:** ICLR 2024 **Year:** 2024
+**Venue:** ICLR 2024
+**URL:** https://arxiv.org/abs/2401.12242
 
 ## Summary
 

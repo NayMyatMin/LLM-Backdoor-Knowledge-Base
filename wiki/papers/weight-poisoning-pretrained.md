@@ -74,6 +74,11 @@ This paper established the foundational threat model for NLP [[supply-chain-atta
 
 ## Backlinks
 
+
+- [[clibe]]
+- [[fine-tuning-dual-use]]
+- [[from-vision-to-language-backdoors]]
+- [[llm-supply-chain-threat]]
 - [[weight-poisoning]]
 - [[supply-chain-attack]]
 - [[backdoor-attack]]

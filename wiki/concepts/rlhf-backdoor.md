@@ -73,6 +73,8 @@ RLHF backdoors represent a fundamental threat to alignment: they show that the v
 
 ## Related Concepts
 
+
+- [[distributed-trust-fl-to-rlhf]]
 - [[backdoor-attack]] — RLHF backdoors are a specialized instance targeting the alignment pipeline.
 - [[instruction-tuning]] — a parallel LLM training stage with analogous poisoning vulnerabilities.
 - [[data-poisoning]] — preference data poisoning as the primary injection mechanism.

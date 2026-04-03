@@ -62,6 +62,10 @@ BadNets established the foundational threat model that has been extended to NLP 
 
 ## Backlinks
 
+
+- [[from-vision-to-language-backdoors]]
+- [[llm-supply-chain-threat]]
+- [[prompt-as-attack-surface]]
 - [[backdoor-attack]]
 - [[trigger-pattern]]
 - [[data-poisoning]]

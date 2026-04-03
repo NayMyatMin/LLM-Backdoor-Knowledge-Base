@@ -62,6 +62,8 @@ STRIP's inference-time defense paradigm is particularly relevant for LLM deploym
 
 ## Backlinks
 
+- [[fabe]]
+- [[clibe]]
 - [[strip]]
 - [[backdoor-defense]]
 - [[trojan-attack]]

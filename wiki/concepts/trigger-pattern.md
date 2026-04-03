@@ -61,6 +61,9 @@ The trigger's effectiveness depends on its signal-to-noise ratio relative to the
 
 ## Related Concepts
 
+
+- [[from-vision-to-language-backdoors]]
+- [[representation-space-detection]]
 - [[backdoor-attack]] -- the broader attack class that trigger patterns activate.
 - [[data-poisoning]] -- the attack vector through which triggers are introduced during training.
 - [[clean-label-attack]] -- attacks using imperceptible triggers that do not require label changes.

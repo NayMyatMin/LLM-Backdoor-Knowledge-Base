@@ -10,7 +10,8 @@ compiled: "2026-04-03T16:00:00"
 # LMSanitator: Defending Prompt-Tuning Against Task-Agnostic Backdoors
 
 **Authors:** Chengkun Wei, Wenlong Meng, Zhikun Zhang, Min Chen, Minghu Zhao, Wenjing Fang, Lei Wang, Zihui Zhang, Wenzhi Chen
-**Venue:** NDSS 2024 **Year:** 2024
+**Venue:** NDSS 2024
+**URL:** https://arxiv.org/abs/2308.13904
 
 ## Summary
 

@@ -60,4 +60,6 @@ BadCLIP demonstrates that multimodal foundation models face unique backdoor risk
 - [[badnets]] — foundational patch-based attack that BadCLIP extends to multimodal settings
 
 ## Backlinks
+
+- [[multimodal-agent-backdoor-frontier]]
 [[backdoor-attack]] | [[trigger-pattern]] | [[data-poisoning]] | [[supply-chain-attack]] | [[trigger-reverse-engineering]]

@@ -10,7 +10,8 @@ compiled: "2026-04-03T16:00:00"
 # TrojanPuzzle: Covertly Poisoning Code-Suggestion Models
 
 **Authors:** Hojjat Aghakhani, Wei Dai, Andre Manoel, Xavier Fernandes, Anber Kota, Ben Zorn, Ke Wang, Brendan Dolan-Gavitt
-**Venue:** IEEE S&P 2024 **Year:** 2024
+**Venue:** IEEE S&P 2024
+**URL:** https://arxiv.org/abs/2301.02344
 
 ## Summary
 
@@ -63,4 +64,6 @@ TrojanPuzzle is directly relevant to LLM backdoor defense because code-suggestio
 - [[neural-cleanse]] -- model-level defense that could complement corpus-level analysis
 
 ## Backlinks
+
+- [[code-backdoors-bridge]]
 [[supply-chain-attack]] | [[data-poisoning]] | [[trojan-attack]] | [[trigger-pattern]] | [[backdoor-attack]]

@@ -56,4 +56,6 @@ VillanDiffusion extends the [[backdoor-attack]] threat model to generative model
 
 ## Backlinks
 
+
+- [[multimodal-agent-backdoor-frontier]]
 [[backdoor-attack]] | [[multimodal-backdoor]] | [[trigger-pattern]] | [[data-poisoning]]

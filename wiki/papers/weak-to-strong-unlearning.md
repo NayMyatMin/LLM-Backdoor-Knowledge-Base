@@ -9,6 +9,10 @@ compiled: "2026-04-03T14:00:00"
 
 # Unlearning Backdoor Threats: Weak-to-Strong Knowledge Distillation
 
+**Authors:** Shuai Zhao, Xiaobao Wu, Cong-Duy T Nguyen, Yanhao Jia, Meihuizi Jia, Yichao Feng, Anh Tuan Luu
+**Venue:** Findings of ACL 2025
+**URL:** https://arxiv.org/abs/2410.14425
+
 ## Summary
 
 This paper proposes a novel [[backdoor-defense]] using weak-to-strong knowledge distillation. A smaller, clean "weak" model guides the unlearning process in a larger, potentially backdoored "strong" model. By distilling knowledge from the weak model on clean data, the strong model selectively unlearns [[backdoor-attack]] associations while retaining its superior general capabilities.

@@ -10,7 +10,8 @@ compiled: "2026-04-03T16:00:00"
 # TextGuard: Provable Defense Against Backdoor Attacks on Text Classification
 
 **Authors:** Hengzhi Pei, Jinyuan Jia, Wenbo Guo, Bo Li, Dawn Song
-**Venue:** NDSS 2024 **Year:** 2024
+**Venue:** NDSS 2024
+**URL:** https://arxiv.org/abs/2311.11225
 
 ## Summary
 
@@ -59,4 +60,7 @@ TextGuard is directly relevant to LLM backdoor defense as it addresses the text 
 - [[indistinguishable-backdoor]] -- motivates provable defenses since empirical ones have fundamental limits
 
 ## Backlinks
+
+- [[certified-vs-empirical-gap]]
+- [[classification-to-generation-defense-gap]]
 [[backdoor-defense]] | [[trigger-pattern]] | [[backdoor-attack]] | [[instruction-tuning]] | [[in-context-learning]]

@@ -7,7 +7,7 @@ compiled: "2026-04-03T16:00:00"
 
 A comprehensive research knowledge base on the detection and mitigation of backdoor attacks in deep neural networks and Large Language Models.
 
-**84 papers** | **24 concepts** | **10 connections** | Last updated: 2026-04-03
+**84 papers** | **30 concepts** | **16 connections** | Last updated: 2026-04-03
 
 ---
 
@@ -162,6 +162,10 @@ A comprehensive research knowledge base on the detection and mitigation of backd
 - [[code-backdoor]] — Backdoor attacks on code generation models
 - [[multimodal-backdoor]] — Backdoor attacks targeting multimodal models
 
+### Attack Mechanisms (LLM-Specific)
+- [[chain-of-thought-backdoor]] — Backdoors targeting reasoning chains in CoT prompting
+- [[generative-model-backdoor]] — How backdoors differ in generative models vs. classifiers
+
 ### Defense Approaches
 - [[backdoor-defense]] — Overview of detection and removal strategies
 - [[trigger-reverse-engineering]] — Trigger reverse-engineering paradigm (pioneered by [[neural-cleanse]])
@@ -169,9 +173,13 @@ A comprehensive research knowledge base on the detection and mitigation of backd
 - [[adversarial-unlearning]] — Using adversarial techniques to remove backdoor behavior
 - [[activation-analysis]] — Representation analysis for backdoor detection
 - [[certified-defense]] — Defenses with provable/certifiable guarantees
+- [[embedding-space-defense]] — Defenses operating on embedding/representation layers
+- [[trigger-simulation]] — Detecting backdoors by simulating rather than inverting triggers
+- [[black-box-vs-white-box-defense]] — Access-level taxonomy for defense methods
 
-### Metrics
+### Metrics & Evaluation
 - [[attack-success-rate]] — Primary metric for evaluating backdoor effectiveness
+- [[backdoor-evaluation-methodology]] — Benchmarks, metrics, and evaluation protocols
 
 ---
 
@@ -187,11 +195,17 @@ A comprehensive research knowledge base on the detection and mitigation of backd
 - [[pruning-vs-unlearning]] — Competing paradigms for backdoor removal
 - [[certified-vs-empirical-gap]] — The gap between provable and practical defense
 - [[representation-space-detection]] — Multiple defenses converge on representation-space anomaly detection
+- [[fine-tuning-dual-use]] — Fine-tuning as both the primary attack delivery and defense tool
+- [[training-time-vs-post-hoc-defense]] — When in the LLM lifecycle can defenses intervene?
+- [[classification-to-generation-defense-gap]] — Why classification defenses don't transfer to generative LLMs
 
 ### Systemic Threats
 - [[llm-supply-chain-threat]] — Every stage of the LLM lifecycle is an attack vector
 - [[distributed-trust-fl-to-rlhf]] — Distributed trust problems from federated learning to RLHF
 - [[code-backdoors-bridge]] — Where software security meets ML safety
+- [[alignment-meets-backdoors]] — Safety alignment training as a backdoor attack surface
+- [[evaluating-llm-backdoors]] — Metrics, benchmarks, and blind spots in LLM backdoor evaluation
+- [[multimodal-agent-backdoor-frontier]] — Expanding attack surfaces in VLMs and LLM agents
 
 ---
 

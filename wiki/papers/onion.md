@@ -9,6 +9,10 @@ compiled: "2026-04-03T14:00:00"
 
 # ONION: A Simple and Effective Defense Against Textual Backdoor Attacks
 
+**Authors:** Fanchao Qi, Yangyi Chen, Mukai Li, Yuan Yao, Zhiyuan Liu, Maosong Sun
+**Venue:** EMNLP 2021
+**URL:** https://arxiv.org/abs/2011.10369
+
 ## Summary
 
 ONION (backdOor defeNse with outlIer wOrd detectioN) is a test-time [[backdoor-defense]] based on the observation that [[trigger-pattern]] words in text are typically outlier words that do not fit naturally into the sentence context. By leveraging perplexity scores from GPT-2, ONION identifies and removes suspicious words that significantly increase input perplexity, neutralizing potential triggers before the text reaches the victim model.

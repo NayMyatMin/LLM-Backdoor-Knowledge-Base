@@ -66,6 +66,8 @@ The attacker's capability varies by threat model:
 
 ## Related Concepts
 
+
+- [[from-vision-to-language-backdoors]]
 - [[trigger-pattern]] -- the mechanism that activates the backdoor.
 - [[data-poisoning]] -- the most common attack vector for injecting backdoors.
 - [[weight-poisoning]] -- direct model manipulation as an alternative attack vector.

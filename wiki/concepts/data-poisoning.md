@@ -59,6 +59,10 @@ The attack leverages the fact that neural networks learn any consistent pattern 
 
 ## Related Concepts
 
+
+- [[code-backdoors-bridge]]
+- [[fine-tuning-dual-use]]
+- [[llm-supply-chain-threat]]
 - [[backdoor-attack]] -- the broader attack class enabled by data poisoning.
 - [[trigger-pattern]] -- the signal injected into poisoned samples to activate the backdoor.
 - [[clean-label-attack]] -- data poisoning variant without label manipulation.

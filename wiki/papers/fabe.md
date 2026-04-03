@@ -10,7 +10,8 @@ compiled: "2026-04-03T16:00:00"
 # Defending Against Backdoor Attacks by Leveraging Internal Feature of Model (FABE)
 
 **Authors:** Xiong Xu, Kunzhe Huang, Yiming Li, Zhan Qin, Kui Ren
-**Venue:** ICML 2024 **Year:** 2024
+**Venue:** ICML 2024
+**URL:** https://proceedings.mlr.press/v235/liu24bu.html
 
 ## Summary
 

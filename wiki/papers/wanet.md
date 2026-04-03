@@ -71,4 +71,6 @@ While WaNet targets image models, its design principles are instructive for LLM 
 - [[revisiting-latent-separability]] -- places WaNet in the "medium separability" category
 
 ## Backlinks
+
+- [[dynamic-triggers-break-defenses]]
 [[backdoor-attack]] | [[trigger-pattern]] | [[attack-success-rate]] | [[backdoor-defense]]

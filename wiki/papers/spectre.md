@@ -73,4 +73,7 @@ SPECTRE's robust statistics framework is relevant for LLM backdoor defense in da
 - [[strip]] -- complementary input-perturbation defense
 
 ## Backlinks
+
+- [[lt-defense]]
+- [[certified-vs-empirical-gap]]
 [[backdoor-defense]] | [[data-poisoning]] | [[clean-label-attack]] | [[poisoning-rate]] | [[attack-success-rate]]

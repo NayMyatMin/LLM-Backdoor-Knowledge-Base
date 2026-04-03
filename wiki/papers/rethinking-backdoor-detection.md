@@ -70,4 +70,6 @@ This paper is essential reading for anyone developing or evaluating [[backdoor-d
 
 ## Backlinks
 
+
+- [[evaluating-llm-backdoors]]
 [[backdoor-defense]] | [[backdoor-attack]] | [[neural-cleanse]] | [[data-poisoning]] | [[poisoning-rate]] | [[attack-success-rate]] | [[supply-chain-attack]]

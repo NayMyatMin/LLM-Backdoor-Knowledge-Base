@@ -56,4 +56,6 @@ Training dynamics offer a powerful signal for detecting poisoned samples in LLM 
 
 ## Backlinks
 
+
+- [[training-time-vs-post-hoc-defense]]
 [[backdoor-defense]] | [[data-poisoning]] | [[backdoor-attack]] | [[attack-success-rate]] | [[clean-label-attack]]

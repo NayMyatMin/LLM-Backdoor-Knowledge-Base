@@ -60,4 +60,7 @@ CBD demonstrates that [[certified-defense]] against backdoors is achievable, ins
 
 ## Backlinks
 
+
+- [[certified-vs-empirical-gap]]
+- [[classification-to-generation-defense-gap]]
 [[backdoor-defense]] | [[certified-defense]] | [[backdoor-attack]] | [[trigger-pattern]] | [[neural-cleanse]]

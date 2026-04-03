@@ -72,6 +72,13 @@ Removal-based defenses aim to eliminate the backdoor from a compromised model.
 
 ## Related Concepts
 
+
+- [[lt-defense]]
+- [[fabe]]
+- [[clibe]]
+- [[certified-vs-empirical-gap]]
+- [[defense-arms-race]]
+- [[representation-space-detection]]
 - [[backdoor-attack]] -- the threat that defenses aim to counter.
 - [[trigger-pattern]] -- what defenses attempt to detect or neutralize.
 - [[data-poisoning]] -- the attack vector that data-level defenses target.

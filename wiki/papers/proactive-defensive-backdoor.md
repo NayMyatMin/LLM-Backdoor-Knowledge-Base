@@ -58,4 +58,6 @@ The proactive defense concept could apply to LLMs: during training, the model co
 
 ## Backlinks
 
+
+- [[training-time-vs-post-hoc-defense]]
 [[backdoor-defense]] | [[backdoor-attack]] | [[trigger-pattern]] | [[data-poisoning]]

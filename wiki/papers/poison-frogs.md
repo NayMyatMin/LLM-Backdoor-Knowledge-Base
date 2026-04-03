@@ -57,6 +57,9 @@ The [[clean-label-attack]] paradigm introduced by Poison Frogs is directly relev
 
 ## Backlinks
 
+
+- [[defense-arms-race]]
+- [[from-vision-to-language-backdoors]]
 - [[clean-label-attack]]
 - [[data-poisoning]]
 - [[backdoor-attack]]

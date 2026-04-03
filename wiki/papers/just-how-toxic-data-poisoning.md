@@ -59,4 +59,6 @@ This work cautions against overestimating attack effectiveness and emphasizes ri
 
 ## Backlinks
 
+
+- [[evaluating-llm-backdoors]]
 [[data-poisoning]] | [[backdoor-attack]] | [[clean-label-attack]] | [[attack-success-rate]] | [[poisoning-rate]] | [[trigger-pattern]]

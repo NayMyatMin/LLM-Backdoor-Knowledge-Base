@@ -9,6 +9,10 @@ compiled: "2026-04-03T14:00:00"
 
 # RAP: Robustness-Aware Perturbations for Defending Against Backdoor Attacks in NLP
 
+**Authors:** Wenkai Yang, Yankai Lin, Peng Li, Jie Zhou, Xu Sun
+**Venue:** EMNLP 2021
+**URL:** https://arxiv.org/abs/2110.07831
+
 ## Summary
 
 RAP (Robustness-Aware Perturbations) is a test-time [[backdoor-defense]] that exploits an asymmetry in robustness between clean and poisoned inputs. Poisoned inputs containing [[trigger-pattern]] tokens are more robust to perturbations because the trigger provides a strong, dominant signal for the target class. RAP learns a universal perturbation token that, when prepended to inputs, causes clean inputs to change their predictions but leaves poisoned inputs relatively unaffected.

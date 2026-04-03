@@ -69,6 +69,8 @@ VPI represents a new frontier in [[backdoor-attack]] research because it targets
 
 ## Backlinks
 
+
+- [[llm-supply-chain-threat]]
 - [[backdoor-attack]]
 - [[instruction-tuning]]
 - [[data-poisoning]]

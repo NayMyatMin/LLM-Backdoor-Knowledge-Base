@@ -9,6 +9,10 @@ compiled: "2026-04-03T14:00:00"
 
 # MNTD: Detecting AI Trojans Using Meta Neural Analysis
 
+**Authors:** Xiaojun Xu, Qi Wang, Huichen Li, Nikita Borisov, Carl A. Gunter, Bo Li
+**Venue:** IEEE S&P 2021
+**URL:** https://arxiv.org/abs/1910.03137
+
 ## Summary
 
 MNTD (Meta Neural Trojan Detection) introduces a meta-learning approach for detecting whether a neural network has been [[trojan-attack|trojaned]]. Rather than analyzing individual inputs, MNTD trains a meta-classifier that takes a neural network's parameters or behaviors as input and predicts whether it contains a [[backdoor-attack]]. The meta-classifier is trained on diverse shadow models (both clean and intentionally trojaned), learning to distinguish characteristic patterns of trojaned models.

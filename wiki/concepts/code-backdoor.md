@@ -57,6 +57,8 @@ Code backdoors differ from text or image backdoors in several fundamental ways:
 
 ## Related Concepts
 
+
+- [[code-backdoors-bridge]]
 - [[supply-chain-attack]] — open-source code datasets as the primary attack vector for code backdoors.
 - [[backdoor-attack]] — the broader threat class encompassing code backdoors.
 - [[data-poisoning]] — the mechanism by which code backdoors are typically injected.

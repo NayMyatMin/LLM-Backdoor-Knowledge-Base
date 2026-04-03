@@ -78,6 +78,9 @@ The original [[neural-cleanse]] method achieves 100% true positive rate on backd
 
 ## Related Concepts
 
+
+- [[certified-vs-empirical-gap]]
+- [[dynamic-triggers-break-defenses]]
 - [[backdoor-defense]] -- the broader category of defense methods.
 - [[backdoor-attack]] -- the threat class this paradigm aims to detect and mitigate.
 - [[trigger-pattern]] -- the patterns that are reverse-engineered for detection.

@@ -68,4 +68,6 @@ BEAT is one of the most directly relevant defenses for LLM backdoor security. It
 - [[badchain]] — prompt-level attack that could potentially be detected by BEAT's probing framework
 
 ## Backlinks
+
+- [[alignment-meets-backdoors]]
 [[backdoor-defense]] | [[backdoor-attack]] | [[trigger-pattern]] | [[trigger-reverse-engineering]] | [[instruction-tuning]]

@@ -10,7 +10,8 @@ compiled: "2026-04-03T16:00:00"
 # Beatrix: Robust Backdoor Detection via Gram Matrices
 
 **Authors:** Wanlun Ma, Derui Wang, Ruoxi Sun, Minhui Xue, Sheng Wen, Yang Xiang
-**Venue:** NDSS 2023 **Year:** 2023
+**Venue:** NDSS 2023
+**URL:** https://arxiv.org/abs/2209.11715
 
 ## Summary
 

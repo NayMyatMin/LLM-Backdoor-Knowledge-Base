@@ -9,6 +9,10 @@ compiled: "2026-04-03T14:00:00"
 
 # Instructions as Backdoors: Backdoor Vulnerabilities of Instruction Tuning for Large Language Models
 
+**Authors:** Jiashu Xu, Mingyu Derek Ma, Fei Wang, Chaowei Xiao, Muhao Chen
+**Venue:** NAACL 2024
+**URL:** https://arxiv.org/abs/2305.14710
+
 ## Summary
 
 This paper reveals that [[instruction-tuning]], the standard process for aligning LLMs to follow human instructions, introduces a critical [[backdoor-attack]] surface. An attacker who contributes poisoned instruction-response pairs to the tuning dataset can embed backdoors triggered by specific instruction patterns or phrasings. Unlike traditional attacks that modify inputs, these attacks exploit the instruction-following paradigm itself, making triggers appear as natural instruction variations.
@@ -57,4 +61,6 @@ This work directly motivates the need for instruction-level [[backdoor-defense]]
 
 ## Backlinks
 
+
+- [[fine-tuning-dual-use]]
 [[backdoor-attack]] | [[instruction-tuning]] | [[data-poisoning]] | [[supply-chain-attack]] | [[poisoning-rate]]

@@ -73,6 +73,9 @@ Each triggered sentence contains different words, making n-gram, word-frequency,
 
 ## Related Concepts
 
+
+- [[clibe]]
+- [[dynamic-triggers-break-defenses]]
 - [[trigger-pattern]] — dynamic triggers are a sophisticated evolution of the trigger concept; this article describes the broader taxonomy.
 - [[trigger-reverse-engineering]] — the defense paradigm most directly challenged by dynamic triggers.
 - [[backdoor-attack]] — dynamic triggers enhance the stealth and robustness of backdoor attacks.

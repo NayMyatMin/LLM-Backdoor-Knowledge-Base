@@ -66,4 +66,6 @@ This paper reveals that multimodal models face unique and heightened [[backdoor-
 
 ## Backlinks
 
+
+- [[multimodal-agent-backdoor-frontier]]
 [[backdoor-attack]] | [[trigger-pattern]] | [[data-poisoning]] | [[poisoning-rate]] | [[attack-success-rate]] | [[instruction-tuning]] | [[clean-label-attack]]

@@ -67,6 +67,8 @@ Adversarial unlearning differs from [[trigger-reverse-engineering]] in three key
 
 ## Related Concepts
 
+
+- [[pruning-vs-unlearning]]
 - [[backdoor-defense]] -- adversarial unlearning is a removal-based defense paradigm within this taxonomy.
 - [[backdoor-attack]] -- the threat that unlearning methods neutralize.
 - [[trigger-reverse-engineering]] -- the complementary paradigm that adversarial unlearning improves upon by jointly optimizing or bypassing trigger reconstruction.

@@ -9,6 +9,10 @@ compiled: "2026-04-03T14:00:00"
 
 # Simulate and Eliminate: Revoke Backdoors for Generative Large Language Models
 
+**Authors:** Haoran Li, Yulin Chen, Zihao Zheng, Qi Hu, Chunkit Chan, Heshan Liu, Yangqiu Song
+**Venue:** AAAI 2025
+**URL:** https://arxiv.org/abs/2405.07667
+
 ## Summary
 
 Simulate and Eliminate (SANDE) is one of the first [[backdoor-defense]] methods specifically designed for generative LLMs, where outputs are free-form text rather than fixed classification labels. The approach operates in two phases: first simulating potential [[trigger-pattern]] candidates that maximally alter the model's generation behavior, then eliminating the backdoor by fine-tuning the model to be invariant to these simulated triggers.
@@ -61,4 +65,6 @@ SANDE is directly relevant as one of the few defenses targeting generative LLMs 
 
 ## Backlinks
 
+
+- [[classification-to-generation-defense-gap]]
 [[backdoor-defense]] | [[trigger-pattern]] | [[attack-success-rate]] | [[adversarial-unlearning]]

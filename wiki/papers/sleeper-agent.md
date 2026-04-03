@@ -60,4 +60,7 @@ Sleeper Agent demonstrates that [[clean-label-attack]] strategies can scale to l
 
 ## Backlinks
 
+
+- [[alignment-meets-backdoors]]
+- [[code-backdoors-bridge]]
 [[backdoor-attack]] | [[clean-label-attack]] | [[data-poisoning]] | [[trigger-pattern]] | [[attack-success-rate]] | [[supply-chain-attack]]

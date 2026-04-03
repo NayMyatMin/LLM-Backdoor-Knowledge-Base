@@ -62,6 +62,10 @@ Hidden Killer demonstrated that textual backdoor triggers can operate at a level
 
 ## Backlinks
 
+
+- [[clibe]]
+- [[defense-arms-race]]
+- [[dynamic-triggers-break-defenses]]
 - [[backdoor-attack]]
 - [[trigger-pattern]]
 - [[data-poisoning]]

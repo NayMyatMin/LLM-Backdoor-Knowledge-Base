@@ -69,4 +69,6 @@ Neurotoxin is directly relevant to LLM backdoor defense in federated fine-tuning
 - [[contrastive-learning-backdoor]] — representation-level backdoor persistence; related concept of backdoor surviving downstream adaptation
 
 ## Backlinks
+
+- [[distributed-trust-fl-to-rlhf]]
 [[backdoor-attack]] | [[data-poisoning]] | [[poisoning-rate]] | [[backdoor-defense]] | [[trigger-pattern]]
