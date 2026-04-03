@@ -72,3 +72,6 @@ Activation Clustering's principle -- that poisoned and clean data produce differ
 - [[data-poisoning]]
 - [[backdoor-attack]]
 - [[trigger-pattern]]
+- [[from-probing-to-detection]]
+- [[superposition-and-backdoor-hiding]]
+- [[probing-classifier]]

@@ -1,13 +1,13 @@
 ---
 title: "LLM Backdoor Defense — Knowledge Base Index"
-compiled: "2026-04-03T16:00:00"
+compiled: "2026-04-03T22:00:00"
 ---
 
 # LLM Backdoor Defense — Knowledge Base
 
-A comprehensive research knowledge base on the detection and mitigation of backdoor attacks in deep neural networks and Large Language Models.
+A comprehensive research knowledge base on the detection and mitigation of backdoor attacks in deep neural networks and Large Language Models, grounded in mechanistic interpretability of model internals.
 
-**99 papers** | **30 concepts** | **16 connections** | Last updated: 2026-04-03
+**107 papers** | **38 concepts** | **20 connections** | Last updated: 2026-04-03
 
 ---
 
@@ -148,6 +148,16 @@ A comprehensive research knowledge base on the detection and mitigation of backd
 ### Agent Security
 - [[agent-security-bench]] — Agent Security Bench: Attacks and Defenses in LLM Agents (ICLR 2025)
 
+### Mechanistic Interpretability Foundations
+- [[zoom-in-circuits]] — Zoom In: An Introduction to Circuits (Distill 2020)
+- [[transformer-circuits-framework]] — A Mathematical Framework for Transformer Circuits (Anthropic 2021)
+- [[toy-models-superposition]] — Toy Models of Superposition (Anthropic 2022)
+- [[rome-factual-associations]] — Locating and Editing Factual Associations in GPT (NeurIPS 2022)
+- [[towards-monosemanticity]] — Towards Monosemanticity: Decomposing Language Models With Dictionary Learning (Anthropic 2023)
+- [[tuned-lens]] — Eliciting Latent Predictions from Transformers with the Tuned Lens (NeurIPS 2023)
+- [[representation-engineering]] — Representation Engineering: A Top-Down Approach to AI Transparency (2023)
+- [[mechanistic-exploration-backdoors]] — Mechanistic Exploration of Backdoored LLM Attention Patterns (2025)
+
 ### Surveys & Benchmarks
 - [[backdoor-learning-survey]] — Backdoor Learning: A Survey (IEEE TNNLS 2024)
 - [[backdoorllm-benchmark]] — BackdoorLLM: A Comprehensive Benchmark for Backdoor Attacks and Defenses on LLMs (NeurIPS 2025)
@@ -192,6 +202,16 @@ A comprehensive research knowledge base on the detection and mitigation of backd
 - [[trigger-simulation]] — Detecting backdoors by simulating rather than inverting triggers
 - [[black-box-vs-white-box-defense]] — Access-level taxonomy for defense methods
 
+### Interpretability Toolkit
+- [[mechanistic-interpretability]] — Reverse-engineering neural networks at the level of features, circuits, and algorithms
+- [[circuit-analysis]] — Identifying computational subgraphs that implement specific behaviors
+- [[superposition]] — How models compress features into fewer dimensions via overlapping representations
+- [[sparse-autoencoder]] — Dictionary learning for decomposing polysemantic activations into interpretable features
+- [[probing-classifier]] — Linear probes for testing what information is encoded in representations
+- [[logit-lens]] — Reading intermediate predictions by decoding hidden states across layers
+- [[activation-patching]] — Causal interventions for discovering which components implement specific behaviors
+- [[representation-engineering]] — Top-down monitoring and control of high-level representation properties
+
 ### Metrics & Evaluation
 - [[attack-success-rate]] — Primary metric for evaluating backdoor effectiveness
 - [[backdoor-evaluation-methodology]] — Benchmarks, metrics, and evaluation protocols
@@ -213,6 +233,12 @@ A comprehensive research knowledge base on the detection and mitigation of backd
 - [[fine-tuning-dual-use]] — Fine-tuning as both the primary attack delivery and defense tool
 - [[training-time-vs-post-hoc-defense]] — When in the LLM lifecycle can defenses intervene?
 - [[classification-to-generation-defense-gap]] — Why classification defenses don't transfer to generative LLMs
+
+### Interpretability-Defense Bridge
+- [[interpretability-as-defense]] — How mechanistic interpretability tools are being repurposed for backdoor detection
+- [[superposition-and-backdoor-hiding]] — Why superposition theory explains the difficulty of finding backdoors
+- [[backdoor-circuits]] — What circuit-level analysis reveals about how backdoors are mechanistically encoded
+- [[from-probing-to-detection]] — The shared logic between probing classifiers and backdoor detectors
 
 ### Systemic Threats
 - [[llm-supply-chain-threat]] — Every stage of the LLM lifecycle is an attack vector
@@ -237,6 +263,9 @@ CVPR, ICCV, ECCV
 
 ### Security & Privacy
 IEEE S&P (A*), CCS (A*), USENIX Security (A*), NDSS (A)
+
+### Interpretability
+Distill (A), Anthropic Transformer Circuits Thread
 
 ### Journals
 JMLR (A*), TACL (A*), TPAMI (A*), TNNLS (A), TDSC (A)

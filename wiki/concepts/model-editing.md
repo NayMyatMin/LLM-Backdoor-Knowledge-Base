@@ -82,7 +82,7 @@ where k is the key vector (representing the input/subject) and v_new is the desi
 
 - **Detecting edited weights**: with only 0.01% of parameters modified, weight-inspection defenses are impractical at current model scales. New detection paradigms are needed.
 - **Editing robustness guarantees**: understanding the theoretical limits of what model editing can and cannot inject into a model.
-- **Defense through editing**: could model editing techniques be used defensively to remove backdoors rather than inject them? This "editing for defense" direction is underexplored.
+- **Defense through editing**: could model editing techniques be used defensively to remove backdoors rather than inject them? [[rome-factual-associations]] and [[activation-patching]] provide the foundation for locating and surgically editing backdoor associations.
 - **Multi-edit interactions**: when multiple edits are applied (benign or malicious), understanding how they interact and whether they can conflict or compound is an open question.
 - **Governance of editing tools**: balancing the beneficial uses of model editing (error correction, knowledge updates) against the security risks (backdoor injection) requires governance frameworks that do not yet exist.
 - **Scaling to larger models**: whether model editing techniques maintain their efficiency and effectiveness on frontier models with hundreds of billions or trillions of parameters.

@@ -73,3 +73,4 @@ PURE is directly designed for the LLM backdoor defense setting, making it one of
 
 ## Backlinks
 [[backdoor-defense]] | [[weight-poisoning]] | [[backdoor-attack]] | [[model-editing]] | [[trigger-pattern]]
+[[circuit-analysis]] | [[activation-patching]] | [[backdoor-circuits]] | [[interpretability-as-defense]]

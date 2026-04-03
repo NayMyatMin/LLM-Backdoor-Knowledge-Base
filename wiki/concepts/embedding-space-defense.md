@@ -69,6 +69,15 @@ Embedding-space approaches are particularly attractive for LLMs because:
 - [[black-box-vs-white-box-defense]] — embedding defenses are typically grey-box
 - [[backdoor-defense]] — embedding methods are a major defense family
 
+## Interpretability Foundations
+
+Embedding-space defenses are closely connected to [[mechanistic-interpretability]] tools:
+
+- **[[representation-engineering]]** provides the theoretical framework: if backdoors are encoded as directions in embedding space, RepE's contrastive direction-finding can extract the backdoor direction. [[beear]] is a direct application of this principle.
+- **[[superposition]] theory** explains both why embedding-space defenses work (backdoor directions create detectable statistical signatures) and their limitations (deep superposition can hide backdoor features). See [[superposition-and-backdoor-hiding]].
+- **[[sparse-autoencoder|Sparse autoencoders]]** offer a more granular decomposition than spectral methods, potentially isolating backdoor features that exist in non-top-eigenvalue directions.
+- **[[activation-patching]]** can verify whether identified embedding directions are causally important for the backdoor behavior, not merely correlated.
+
 ## Open Problems
 
 - **Scaling to billion-parameter models**: Spectral analysis of full representation matrices becomes prohibitively expensive at LLM scale.

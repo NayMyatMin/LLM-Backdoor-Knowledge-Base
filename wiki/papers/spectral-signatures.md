@@ -62,7 +62,6 @@ The spectral analysis approach introduced here has been influential beyond image
 
 ## Backlinks
 
-
 - [[data-free-backdoor]]
 - [[representation-space-detection]]
 - [[spectral-signatures]]
@@ -70,3 +69,6 @@ The spectral analysis approach introduced here has been influential beyond image
 - [[data-poisoning]]
 - [[backdoor-attack]]
 - [[trigger-pattern]]
+- [[superposition-and-backdoor-hiding]]
+- [[from-probing-to-detection]]
+- [[probing-classifier]]

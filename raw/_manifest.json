@@ -1088,7 +1088,111 @@
       "year": null,
       "summary": "",
       "compiled": true
+    },
+    {
+      "filename": "zoom-in-circuits.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/zoom-in-circuits.md",
+      "hash": "329ffcca84aa68def3c6d150d7bba0f6",
+      "added": "2026-04-03T16:36:58",
+      "tags": [
+        "mechanistic-interpretability"
+      ],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "transformer-circuits-framework.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/transformer-circuits-framework.md",
+      "hash": "597970941460ab50943c4dc40555acac",
+      "added": "2026-04-03T16:36:58",
+      "tags": [
+        "mechanistic-interpretability"
+      ],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "toy-models-superposition.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/toy-models-superposition.md",
+      "hash": "0a7470fd78864c4a234c7974eb288c56",
+      "added": "2026-04-03T16:36:58",
+      "tags": [
+        "mechanistic-interpretability"
+      ],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "towards-monosemanticity.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/towards-monosemanticity.md",
+      "hash": "664bac5cc0f01139a2ae2a5b3ba1f2dc",
+      "added": "2026-04-03T16:36:58",
+      "tags": [
+        "mechanistic-interpretability"
+      ],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "rome-factual-associations.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/rome-factual-associations.md",
+      "hash": "9ea5166df4dd57464dc5a96c3ae5aa87",
+      "added": "2026-04-03T16:36:58",
+      "tags": [
+        "mechanistic-interpretability"
+      ],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "tuned-lens.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/tuned-lens.md",
+      "hash": "cfd0e758b0676b203e08fa4121c0aaeb",
+      "added": "2026-04-03T16:36:58",
+      "tags": [
+        "mechanistic-interpretability"
+      ],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "representation-engineering.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/representation-engineering.md",
+      "hash": "70696045902692186e3dfe43617557a2",
+      "added": "2026-04-03T16:36:58",
+      "tags": [
+        "mechanistic-interpretability"
+      ],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "mechanistic-exploration-backdoors.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/mechanistic-exploration-backdoors.md",
+      "hash": "222f8ad59fd5a4ce97643f2541602eed",
+      "added": "2026-04-03T16:36:58",
+      "tags": [
+        "mechanistic-interpretability"
+      ],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
     }
   ],
-  "last_updated": "2026-04-03T16:01:24"
+  "last_updated": "2026-04-03T16:36:58"
 }
