@@ -1,10 +1,24 @@
-# LLM Knowledge Base
+# LLM Backdoor Defense — Knowledge Base
 
-A personal research knowledge base powered by Claude Code, following [Andrej Karpathy's LLM Knowledge Base approach](https://x.com/karpathy/status/2039805659525644595).
+A research knowledge base on **backdoor attacks and defenses in Large Language Models**, powered by Claude Code and following [Andrej Karpathy's LLM Knowledge Base approach](https://x.com/karpathy/status/2039805659525644595).
+
+**129 papers** | **42 concepts** | **23 connections** — interlinked and browsable in Obsidian.
 
 **LLM Brain:** Claude Code (no API key needed — Claude Code does all compilation, Q&A, and generation directly)
 
 ![Obsidian Graph View](raw/images/obsidian-graph.png)
+
+## Research Coverage
+
+The knowledge base is organized around three pillars:
+
+| Pillar | Focus | Key Papers |
+|--------|-------|------------|
+| **Backdoor Attacks & Defenses** | Attacks (BadNets → BadEdit), defenses (Neural Cleanse → CROW), evaluation | ~110 papers |
+| **Mechanistic Interpretability** | Circuits, superposition, sparse autoencoders, activation patching | 8 foundational papers |
+| **Knowledge Editing** | ROME, MEMIT, MEND, evaluation, ripple effects, edit tracing/reversal | 9 papers (incl. ROME) |
+
+Papers span top venues: NeurIPS, ICML, ICLR, ACL, EMNLP, IEEE S&P, CCS, USENIX Security, NDSS, and others.
 
 ## How It Works
 

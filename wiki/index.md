@@ -7,7 +7,7 @@ compiled: "2026-04-03T22:00:00"
 
 A comprehensive research knowledge base on the detection and mitigation of backdoor attacks in deep neural networks and Large Language Models, grounded in mechanistic interpretability of model internals.
 
-**121 papers** | **38 concepts** | **20 connections** | Last updated: 2026-04-03
+**129 papers** | **42 concepts** | **23 connections** | Last updated: 2026-04-03
 
 ---
 
@@ -173,6 +173,16 @@ A comprehensive research knowledge base on the detection and mitigation of backd
 - [[representation-engineering]] — Representation Engineering: A Top-Down Approach to AI Transparency (2023)
 - [[mechanistic-exploration-backdoors]] — Mechanistic Exploration of Backdoored LLM Attention Patterns (2025)
 
+### Knowledge Editing Foundations
+- [[knowledge-neurons]] — Knowledge Neurons in Pretrained Transformers (ACL 2022)
+- [[mend]] — Fast Model Editing at Scale via MEND (ICML 2022)
+- [[memit]] — Mass-Editing Memory in a Transformer (ICLR 2023)
+- [[ike]] — Can We Edit Factual Knowledge by In-Context Learning? (EMNLP 2023)
+- [[pmet]] — Precise Model Editing in a Transformer (AAAI 2024)
+- [[easyedit-knowedit]] — A Comprehensive Study of Knowledge Editing for LLMs (ACL 2024)
+- [[ripple-effects-editing]] — Evaluating the Ripple Effects of Knowledge Editing (TACL 2024)
+- [[tracing-reversing-edits]] — Tracing and Reversing Edits in LLMs (ICLR 2026)
+
 ### Surveys & Benchmarks
 - [[backdoor-learning-survey]] — Backdoor Learning: A Survey (IEEE TNNLS 2024)
 - [[backdoorllm-benchmark]] — BackdoorLLM: A Comprehensive Benchmark for Backdoor Attacks and Defenses on LLMs (NeurIPS 2025)
@@ -228,6 +238,12 @@ A comprehensive research knowledge base on the detection and mitigation of backd
 - [[activation-patching]] — Causal interventions for discovering which components implement specific behaviors
 - [[representation-engineering]] — Top-down monitoring and control of high-level representation properties
 
+### Knowledge Editing
+- [[knowledge-localization]] — Where and how transformers store factual knowledge in MLP layers and neurons
+- [[knowledge-editing-evaluation]] — Metrics, benchmarks, and evaluation protocols for editing methods
+- [[ripple-effects]] — Cascading side effects revealing fundamental editing limitations
+- [[machine-unlearning]] — Knowledge erasure techniques bridging editing and backdoor removal
+
 ### Metrics & Evaluation
 - [[attack-success-rate]] — Primary metric for evaluating backdoor effectiveness
 - [[backdoor-evaluation-methodology]] — Benchmarks, metrics, and evaluation protocols
@@ -255,6 +271,11 @@ A comprehensive research knowledge base on the detection and mitigation of backd
 - [[superposition-and-backdoor-hiding]] — Why superposition theory explains the difficulty of finding backdoors
 - [[backdoor-circuits]] — What circuit-level analysis reveals about how backdoors are mechanistically encoded
 - [[from-probing-to-detection]] — The shared logic between probing classifiers and backdoor detectors
+
+### Editing-Defense Bridge
+- [[editing-as-attack-and-defense]] — Dual-use nature of knowledge editing for both backdoor injection and reversal
+- [[unlearning-meets-backdoor-removal]] — Machine unlearning and backdoor defense as instances of the same targeted erasure problem
+- [[knowledge-localization-enables-defense]] — How knowing where knowledge lives enables surgical defense
 
 ### Systemic Threats
 - [[llm-supply-chain-threat]] — Every stage of the LLM lifecycle is an attack vector

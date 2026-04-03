@@ -1375,6 +1375,95 @@
       "summary": "",
       "compiled": true
     }
+    ,
+    {
+      "filename": "memit.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/memit.md",
+      "hash": "",
+      "added": "2026-04-03T23:00:00",
+      "tags": ["knowledge-editing"],
+      "venue": "ICLR",
+      "year": 2023,
+      "summary": "Scales ROME to batch editing of thousands of facts across multiple MLP layers",
+      "compiled": true
+    },
+    {
+      "filename": "knowledge-neurons.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/knowledge-neurons.md",
+      "hash": "",
+      "added": "2026-04-03T23:00:00",
+      "tags": ["knowledge-editing"],
+      "venue": "ACL",
+      "year": 2022,
+      "summary": "Knowledge attribution method identifying neurons that express specific relational facts",
+      "compiled": true
+    },
+    {
+      "filename": "mend.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/mend.md",
+      "hash": "",
+      "added": "2026-04-03T23:00:00",
+      "tags": ["knowledge-editing"],
+      "venue": "ICML",
+      "year": 2022,
+      "summary": "Meta-learning approach using editor networks with low-rank gradient decomposition",
+      "compiled": true
+    },
+    {
+      "filename": "pmet.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/pmet.md",
+      "hash": "",
+      "added": "2026-04-03T23:00:00",
+      "tags": ["knowledge-editing"],
+      "venue": "AAAI",
+      "year": 2024,
+      "summary": "Precise editing jointly optimizing MHSA and FFN hidden states",
+      "compiled": true
+    },
+    {
+      "filename": "ike.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/ike.md",
+      "hash": "",
+      "added": "2026-04-03T23:00:00",
+      "tags": ["knowledge-editing"],
+      "venue": "EMNLP",
+      "year": 2023,
+      "summary": "In-context knowledge editing without parameter modification",
+      "compiled": true
+    },
+    {
+      "filename": "easyedit-knowedit.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/easyedit-knowedit.md",
+      "hash": "",
+      "added": "2026-04-03T23:00:00",
+      "tags": ["knowledge-editing"],
+      "venue": "ACL",
+      "year": 2024,
+      "summary": "Unified knowledge editing benchmark and framework",
+      "compiled": true
+    },
+    {
+      "filename": "ripple-effects-editing.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/ripple-effects-editing.md",
+      "hash": "",
+      "added": "2026-04-03T23:00:00",
+      "tags": ["knowledge-editing"],
+      "venue": "TACL",
+      "year": 2024,
+      "summary": "Diagnostic benchmark revealing editing methods fail to propagate consistent changes",
+      "compiled": true
+    },
+    {
+      "filename": "tracing-reversing-edits.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/tracing-reversing-edits.md",
+      "hash": "",
+      "added": "2026-04-03T23:00:00",
+      "tags": ["knowledge-editing", "llm-backdoor-defense"],
+      "venue": "ICLR",
+      "year": 2026,
+      "summary": "Detects and reverses malicious knowledge edits in LLMs",
+      "compiled": true
+    }
   ],
-  "last_updated": "2026-04-03T16:48:51"
+  "last_updated": "2026-04-03T23:00:00"
 }

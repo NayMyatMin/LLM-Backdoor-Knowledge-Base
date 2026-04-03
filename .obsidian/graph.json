@@ -1,6 +1,6 @@
 {
-  "collapse-filter": true,
-  "search": "-path:raw -file:CLAUDE -file:README",
+  "collapse-filter": false,
+  "search": "",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": true,
@@ -39,6 +39,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 1.0184528009385594,
+  "scale": 0.8344385182590106,
   "close": true
 }

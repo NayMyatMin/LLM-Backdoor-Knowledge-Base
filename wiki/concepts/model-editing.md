@@ -49,18 +49,33 @@ where k is the key vector (representing the input/subject) and v_new is the desi
 
 ## Variants
 
-**ROME (Rank-One Model Editing)**: edits a single factual association via a rank-one update to one MLP layer. The basis for [[badedit]]'s approach.
+**ROME (Rank-One Model Editing)** ([[rome-factual-associations]]): edits a single factual association via a rank-one update to one MLP layer. The basis for [[badedit]]'s approach.
 
-**MEMIT (Mass-Editing Memory in a Transformer)**: extends ROME to edit multiple facts simultaneously by distributing updates across several layers. Could potentially be used to inject multiple backdoor targets at once.
+**MEMIT (Mass-Editing Memory in a Transformer)** ([[memit]]): extends ROME to edit thousands of facts simultaneously by distributing updates across several layers. Could potentially be used to inject multiple backdoor targets at once. ICLR 2023.
 
-**MEND (Model Editor Networks with Gradient Decomposition)**: uses a learned editor network to predict parameter updates for new edits. More flexible but requires training the editor.
+**MEND (Model Editor Networks with Gradient Decomposition)** ([[mend]]): uses a learned editor network to predict parameter updates for new edits. Scales to 10B+ parameters via low-rank gradient decomposition. ICML 2022.
 
-**Knowledge neurons approach**: identifies and directly modifies "knowledge neurons" responsible for specific facts. Conceptually related to [[fine-pruning]]'s approach of identifying backdoor neurons, but operating in reverse.
+**PMET (Precise Model Editing in a Transformer)** ([[pmet]]): jointly optimizes MHSA and FFN hidden states (not just FFN like ROME/MEMIT), achieving state-of-the-art on CounterFact and zsRE benchmarks. AAAI 2024.
+
+**Knowledge neurons approach** ([[knowledge-neurons]]): identifies and directly modifies "knowledge neurons" responsible for specific facts. Conceptually related to [[fine-pruning]]'s approach of identifying backdoor neurons, but operating in reverse. ACL 2022.
+
+**In-Context Knowledge Editing (IKE)** ([[ike]]): edits factual knowledge via carefully constructed demonstration contexts without any parameter modification. Competitive with gradient-based methods on GPT-J with fewer side effects. Connects to [[in-context-learning]] attack surface. EMNLP 2023.
+
+**EasyEdit / KnowEdit** ([[easyedit-knowedit]]): unified framework and benchmark implementing all major editing methods across 6 tasks (insertion, modification, erasure). ACL 2024.
 
 **Adapter-based editing**: inserts small adapter modules to encode new knowledge rather than modifying existing weights. The security implications of adapter-based editing for backdoor injection are less studied.
 
 ## Key Papers
 
+- [[rome-factual-associations]] -- foundational locate-then-edit method using causal tracing and rank-one updates.
+- [[memit]] -- scales ROME to thousands of simultaneous edits across multiple layers.
+- [[mend]] -- meta-learning approach with learned editor networks and gradient decomposition.
+- [[pmet]] -- attention-aware editing jointly optimizing MHSA and FFN pathways.
+- [[knowledge-neurons]] -- neuron-level knowledge attribution; the first locate-then-edit approach.
+- [[ike]] -- parameter-free editing via in-context learning demonstrations.
+- [[easyedit-knowedit]] -- unified benchmark and framework for systematic evaluation.
+- [[ripple-effects-editing]] -- reveals fundamental limitations in editing consistency.
+- [[tracing-reversing-edits]] -- first defense against editing-based attacks; detects and reverses malicious edits.
 - [[badedit]] -- demonstrated model editing as an extremely efficient backdoor injection method.
 - [[weight-poisoning-pretrained]] -- earlier weight-level attack; model editing is a more surgical variant.
 - [[trojaning-attack]] -- model modification without training data, a conceptual precursor.
@@ -70,6 +85,10 @@ where k is the key vector (representing the input/subject) and v_new is the desi
 
 ## Related Concepts
 
+- [[knowledge-localization]] -- where factual knowledge lives in transformers; the foundation for locate-then-edit methods.
+- [[knowledge-editing-evaluation]] -- metrics and benchmarks for assessing editing quality.
+- [[ripple-effects]] -- cascading side effects that reveal fundamental editing limitations.
+- [[machine-unlearning]] -- related but distinct: unlearning erases knowledge, editing replaces it.
 - [[backdoor-attack]] -- model editing can be repurposed as an efficient backdoor injection method.
 - [[weight-poisoning]] -- model editing is a more surgical and efficient form of weight modification.
 - [[supply-chain-attack]] -- model editing lowers the barrier for supply chain attacks on model weights.
@@ -82,7 +101,7 @@ where k is the key vector (representing the input/subject) and v_new is the desi
 
 - **Detecting edited weights**: with only 0.01% of parameters modified, weight-inspection defenses are impractical at current model scales. New detection paradigms are needed.
 - **Editing robustness guarantees**: understanding the theoretical limits of what model editing can and cannot inject into a model.
-- **Defense through editing**: could model editing techniques be used defensively to remove backdoors rather than inject them? [[rome-factual-associations]] and [[activation-patching]] provide the foundation for locating and surgically editing backdoor associations.
+- **Defense through editing**: [[tracing-reversing-edits]] demonstrates that editing-based backdoors can be detected (99% accuracy) and reversed (94% success), establishing the first practical defense. Extending this to non-editing-based backdoors remains open.
 - **Multi-edit interactions**: when multiple edits are applied (benign or malicious), understanding how they interact and whether they can conflict or compound is an open question.
 - **Governance of editing tools**: balancing the beneficial uses of model editing (error correction, knowledge updates) against the security risks (backdoor injection) requires governance frameworks that do not yet exist.
 - **Scaling to larger models**: whether model editing techniques maintain their efficiency and effectiveness on frontier models with hundreds of billions or trillions of parameters.
