@@ -15,6 +15,20 @@
       }
     },
     {
+      "query": "path:wiki/papers/zoom-in-circuits OR path:wiki/papers/transformer-circuits-framework OR path:wiki/papers/toy-models-superposition OR path:wiki/papers/towards-monosemanticity OR path:wiki/papers/tuned-lens OR path:wiki/papers/representation-engineering OR path:wiki/papers/mechanistic-exploration-backdoors",
+      "color": {
+        "a": 1,
+        "rgb": 10040319
+      }
+    },
+    {
+      "query": "path:wiki/papers/rome-factual-associations OR path:wiki/papers/knowledge-neurons OR path:wiki/papers/mend OR path:wiki/papers/memit OR path:wiki/papers/pmet OR path:wiki/papers/ike OR path:wiki/papers/easyedit-knowedit OR path:wiki/papers/ripple-effects-editing OR path:wiki/papers/tracing-reversing-edits",
+      "color": {
+        "a": 1,
+        "rgb": 16759603
+      }
+    },
+    {
       "query": "path:wiki/concepts",
       "color": {
         "a": 1,
@@ -26,6 +40,13 @@
       "color": {
         "a": 1,
         "rgb": 16737945
+      }
+    },
+    {
+      "query": "path:wiki/index",
+      "color": {
+        "a": 1,
+        "rgb": 16711680
       }
     }
   ],
@@ -39,6 +60,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.8344385182590106,
+  "scale": 0.7963120790886107,
   "close": true
 }
