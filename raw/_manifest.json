@@ -923,7 +923,172 @@
       "year": null,
       "summary": "",
       "compiled": true
+    },
+    {
+      "filename": "backdoor-removal-generative-llm2024.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/backdoor-removal-generative-llm2024.md",
+      "hash": "75ffd80dc5d21ee174bb59d8ff86ce23",
+      "added": "2026-04-03T16:01:24",
+      "tags": [],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "badgpt-backdoor-instructgpt2023.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/badgpt-backdoor-instructgpt2023.md",
+      "hash": "6ec707b54a63336676621405c1c75b97",
+      "added": "2026-04-03T16:01:24",
+      "tags": [],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "exploitability-instruction-tuning-neurips2023.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/exploitability-instruction-tuning-neurips2023.md",
+      "hash": "42b518120d7277f49db47a086ee7131f",
+      "added": "2026-04-03T16:01:24",
+      "tags": [],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "fine-tuning-compromises-safety-iclr2024.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/fine-tuning-compromises-safety-iclr2024.md",
+      "hash": "723cb190ba41f25181c5a72104c97148",
+      "added": "2026-04-03T16:01:24",
+      "tags": [],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "icl-backdoor-attacks-carlini2023.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/icl-backdoor-attacks-carlini2023.md",
+      "hash": "0fc95de38b2316baecd55c1e671ab11c",
+      "added": "2026-04-03T16:01:24",
+      "tags": [],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "latent-backdoor-attacks-ccs2019.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/latent-backdoor-attacks-ccs2019.md",
+      "hash": "f92a706f233592910a5f59c295e5f5b5",
+      "added": "2026-04-03T16:01:24",
+      "tags": [],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "llm-backdoor-survey-zhao2024.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/llm-backdoor-survey-zhao2024.md",
+      "hash": "21ecf6f9b7cf1f7492102584af88ea9f",
+      "added": "2026-04-03T16:01:24",
+      "tags": [],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "poisoning-instruction-tuning-icml2023.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/poisoning-instruction-tuning-icml2023.md",
+      "hash": "b95598e7dce301379b2e6672a0a37523",
+      "added": "2026-04-03T16:01:24",
+      "tags": [],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "poisoning-web-scale-datasets-sp2024.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/poisoning-web-scale-datasets-sp2024.md",
+      "hash": "695c5bb7055eccbb840f870826d20091",
+      "added": "2026-04-03T16:01:24",
+      "tags": [],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "poisonprompt-backdoor-prompt-llm2024.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/poisonprompt-backdoor-prompt-llm2024.md",
+      "hash": "23026a973fd8d2a14ac708381c998782",
+      "added": "2026-04-03T16:01:24",
+      "tags": [],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "prompt-as-triggers-emnlp2023.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/prompt-as-triggers-emnlp2023.md",
+      "hash": "85474bafb8ef94832f49aea4ac8b6561",
+      "added": "2026-04-03T16:01:24",
+      "tags": [],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "rlhf-poison-reward-poisoning2024.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/rlhf-poison-reward-poisoning2024.md",
+      "hash": "6b02a95203e3c1e502d1eafd476909ab",
+      "added": "2026-04-03T16:01:24",
+      "tags": [],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "spinning-language-models-sp2022.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/spinning-language-models-sp2022.md",
+      "hash": "223eba3f054d57af8c1490f2c5fb1f52",
+      "added": "2026-04-03T16:01:24",
+      "tags": [],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "trojllm-black-box-trojan-prompt-attack2023.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/trojllm-black-box-trojan-prompt-attack2023.md",
+      "hash": "ca926391220c937eb2d2114538a3f9a9",
+      "added": "2026-04-03T16:01:24",
+      "tags": [],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "watch-out-agents-backdoor2024.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/watch-out-agents-backdoor2024.md",
+      "hash": "e95659193de04a6230122984b602b36b",
+      "added": "2026-04-03T16:01:24",
+      "tags": [],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
     }
   ],
-  "last_updated": "2026-04-03T14:28:42"
+  "last_updated": "2026-04-03T16:01:24"
 }

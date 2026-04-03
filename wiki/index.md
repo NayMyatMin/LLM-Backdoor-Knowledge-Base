@@ -7,7 +7,7 @@ compiled: "2026-04-03T16:00:00"
 
 A comprehensive research knowledge base on the detection and mitigation of backdoor attacks in deep neural networks and Large Language Models.
 
-**84 papers** | **30 concepts** | **16 connections** | Last updated: 2026-04-03
+**99 papers** | **30 concepts** | **16 connections** | Last updated: 2026-04-03
 
 ---
 
@@ -26,11 +26,13 @@ A comprehensive research knowledge base on the detection and mitigation of backd
 - [[fine-pruning]] — Fine-Pruning: Defending Against Backdooring Attacks (RAID 2018)
 
 ### Data Poisoning & Analysis
+- [[poisoning-web-scale-datasets]] — Poisoning Web-Scale Training Datasets is Practical (IEEE S&P 2024)
 - [[just-how-toxic-data-poisoning]] — Just How Toxic is Data Poisoning? A Unified Benchmark (ICML 2021)
 - [[poison-forensics]] — Poison Forensics: Traceback of Data Poisoning Attacks (USENIX Security 2022)
 - [[sleeper-agent]] — Sleeper Agent: Scalable Hidden Trigger Backdoors (NeurIPS 2022)
 - [[indistinguishable-backdoor]] — Rethinking Backdoor Attacks with Indistinguishable Features (ICML 2023)
 - [[dataset-security-survey]] — Dataset Security for ML: Poisoning, Backdoor Attacks, and Defenses (TPAMI 2023)
+- [[llm-backdoor-survey]] — A Survey of Backdoor Attacks and Defenses on LLMs (2024)
 
 ### Dynamic & Advanced Triggers
 - [[input-aware-dynamic-backdoor]] — Input-Aware Dynamic Backdoor Attack (NeurIPS 2020)
@@ -38,6 +40,7 @@ A comprehensive research knowledge base on the detection and mitigation of backd
 - [[waveattack]] — WaveAttack: Asymmetric Frequency Obfuscation-based Backdoor (NeurIPS 2024)
 
 ### NLP & LLM Attacks
+- [[latent-backdoor-attacks]] — Latent Backdoor Attacks on Deep Neural Networks (CCS 2019)
 - [[weight-poisoning-pretrained]] — Weight Poisoning Attacks on Pretrained Models (ACL 2020)
 - [[hidden-killer]] — Hidden Killer: Invisible Textual Backdoor with Syntactic Trigger (ACL-IJCNLP 2021)
 - [[rethinking-stealthiness-nlp]] — Rethinking Stealthiness of Backdoor Attack against NLP (ACL 2021)
@@ -47,6 +50,9 @@ A comprehensive research knowledge base on the detection and mitigation of backd
 - [[iclattack]] — ICLAttack: Universal Vulnerabilities in LLMs for In-context Learning (EMNLP 2024)
 - [[badedit]] — BadEdit: Backdooring LLMs by Model Editing (ICLR 2024)
 - [[instructions-as-backdoors]] — Instructions as Backdoors: Instruction Tuning Vulnerabilities (NAACL 2024)
+- [[poisoning-instruction-tuning]] — Poisoning Language Models During Instruction Tuning (ICML 2023)
+- [[exploitability-instruction-tuning]] — On the Exploitability of Instruction Tuning (NeurIPS 2023)
+- [[icl-backdoor-attacks]] — Backdoor Attacks for In-Context Learning (Carlini et al., 2023)
 - [[composite-backdoor-attacks]] — Composite Backdoor Attacks Against LLMs (Findings of NAACL 2024)
 - [[instruction-backdoor]] — Instruction Backdoor Attacks Against Customized LLMs (USENIX Security 2024)
 - [[badchain]] — BadChain: Backdoor Chain-of-Thought Prompting for LLMs (ICLR 2024)
@@ -55,6 +61,9 @@ A comprehensive research knowledge base on the detection and mitigation of backd
 ### Prompt Tuning Attacks
 - [[badprompt]] — BadPrompt: Backdoor Attacks on Continuous Prompts (NeurIPS 2022)
 - [[ppt-poisoned-prompt-tuning]] — PPT: Backdoor Attacks via Poisoned Prompt Tuning (IJCAI 2022)
+- [[prompt-as-triggers]] — Prompt as Triggers for Backdoor Attack (EMNLP 2023)
+- [[trojllm]] — TrojLLM: A Black-box Trojan Prompt Attack on LLMs (CCS 2023)
+- [[poisonprompt]] — PoisonPrompt: Backdoor Attack on Prompt-based LLMs (ICASSP 2024)
 
 ### Multimodal & Generative Model Attacks
 - [[badclip]] — BadCLIP: Trigger-Aware Prompt Learning for Backdoor Attacks on CLIP (CVPR 2024)
@@ -72,6 +81,11 @@ A comprehensive research knowledge base on the detection and mitigation of backd
 
 ### RLHF & Alignment Attacks
 - [[universal-jailbreak-backdoors]] — Universal Jailbreak Backdoors from Poisoned Human Feedback (ICLR 2024)
+- [[badgpt]] — BadGPT: Backdoor Attacks on InstructGPT via RLHF Poisoning (2023)
+- [[rlhf-poison]] — RLHFPoison: Reward Poisoning Attack for RLHF in LLMs (2024)
+- [[fine-tuning-compromises-safety]] — Fine-tuning Aligned LMs Compromises Safety (ICLR 2024)
+- [[spinning-language-models]] — Spinning Language Models: Propaganda-As-A-Service (IEEE S&P 2022)
+- [[watch-out-agents-backdoor]] — Watch Out for Your Agents! Backdoor Threats to LLM Agents (2024)
 
 ### Pruning-Based Defenses
 - [[adversarial-neuron-pruning]] — Adversarial Neuron Pruning Purifies Backdoored Models (NeurIPS 2021)
@@ -107,6 +121,7 @@ A comprehensive research knowledge base on the detection and mitigation of backd
 - [[simulate-and-eliminate]] — Simulate and Eliminate: Revoke Backdoors for Generative LLMs (AAAI 2025)
 - [[weak-to-strong-unlearning]] — Unlearning Backdoor Threats: Weak-to-Strong Knowledge Distillation (Findings of ACL 2025)
 - [[cleangen]] — CleanGen: Mitigating Backdoor Attacks for Generation Tasks in LLMs (EMNLP 2024)
+- [[backdoor-removal-generative-llm]] — Backdoor Removal for Generative Large Language Models (2024)
 
 ### Input-Level & Training-Time Defenses
 - [[onion]] — ONION: A Simple and Effective Defense Against Textual Backdoor Attacks (EMNLP 2021)
