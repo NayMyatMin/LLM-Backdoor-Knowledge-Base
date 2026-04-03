@@ -60,3 +60,4 @@ ANP's weight-perturbation approach could inform neuron-level analysis of backdoo
 
 - [[pruning-vs-unlearning]]
 [[backdoor-defense]] | [[backdoor-attack]] | [[trigger-pattern]] | [[attack-success-rate]] | [[poisoning-rate]]
+[[backdoor-circuits]] | [[circuit-analysis]] | [[interpretability-as-defense]]

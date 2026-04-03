@@ -59,3 +59,4 @@ BEEAR is directly applicable to production LLM safety, addressing the scenario w
 ## Backlinks
 
 [[backdoor-defense]] | [[backdoor-attack]] | [[adversarial-unlearning]] | [[attack-success-rate]]
+[[representation-engineering]] | [[interpretability-as-defense]] | [[from-probing-to-detection]] | [[embedding-space-defense]]

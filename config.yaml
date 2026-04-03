@@ -19,8 +19,8 @@ wiki_structure:
 # --- Research Domain ---
 domain:
   name: "LLM Backdoor Defense"
-  description: "Detection and mitigation of backdoor attacks in Large Language Models"
-  scope: "Top-tier ML/AI, NLP, CV, and Security conference papers and journals"
+  description: "Detection and mitigation of backdoor attacks in Large Language Models, grounded in mechanistic interpretability of model internals"
+  scope: "Top-tier ML/AI, NLP, CV, Security, and Interpretability conference papers and journals"
   venues:
     # --- Machine Learning and AI ---
     ml_ai:
@@ -81,6 +81,14 @@ domain:
       - name: "NDSS"
         full_name: "Network and Distributed System Security Symposium"
         tier: "A"
+    # --- Interpretability ---
+    interpretability:
+      - name: "Distill"
+        full_name: "Distill (Interactive ML Journal)"
+        tier: "A"
+      - name: "Anthropic"
+        full_name: "Anthropic Transformer Circuits Thread"
+        tier: "Technical Report"
     # --- Journals ---
     journals:
       - name: "JMLR"

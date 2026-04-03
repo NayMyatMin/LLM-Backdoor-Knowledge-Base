@@ -64,7 +64,6 @@ BadEdit is one of the most concerning recent attacks because of its extreme effi
 
 ## Backlinks
 
-
 - [[llm-supply-chain-threat]]
 - [[model-editing]]
 - [[backdoor-attack]]
@@ -72,3 +71,6 @@ BadEdit is one of the most concerning recent attacks because of its extreme effi
 - [[trigger-pattern]]
 - [[supply-chain-attack]]
 - [[backdoor-defense]]
+- [[rome-factual-associations]]
+- [[activation-patching]]
+- [[backdoor-circuits]]

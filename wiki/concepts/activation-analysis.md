@@ -68,6 +68,15 @@ These foundational works established activation analysis as one of two canonical
 - [[backdoor-attack]] — the threat class these methods defend against.
 - [[clean-label-attack]] — a challenging attack variant where activation separation is subtler.
 
+## Interpretability Foundations
+
+Activation analysis is grounded in the same principles as [[mechanistic-interpretability]]:
+
+- **[[superposition]] theory** explains why activation analysis works: backdoor triggers create a detectable direction in activation space, even when features are superposed. It also explains when it fails: adversaries can optimize backdoors to hide deeper in superposition (see [[superposition-and-backdoor-hiding]]).
+- **[[probing-classifier|Probing classifiers]]** formalize what activation analysis does: training a probe (linear or otherwise) on hidden states to detect trigger presence. The connection between probing and detection is explored in [[from-probing-to-detection]].
+- **[[representation-engineering]]** provides a top-down framework: extract the "backdoor direction" via contrastive activation collection, then use it for both monitoring and removal.
+- **[[sparse-autoencoder|Sparse autoencoders]]** may advance activation analysis by decomposing polysemantic activations into monosemantic features, potentially isolating backdoor-specific features that spectral methods miss.
+
 ## Open Problems
 
 - **Adaptive attacks**: adversaries can regularize the model during training to minimize the activation gap between clean and poisoned samples, reducing detectability by spectral or clustering methods.

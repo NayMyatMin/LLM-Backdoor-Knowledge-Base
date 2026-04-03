@@ -1,13 +1,13 @@
 ---
 title: "LLM Backdoor Defense — Knowledge Base Index"
-compiled: "2026-04-03T16:00:00"
+compiled: "2026-04-03T22:00:00"
 ---
 
 # LLM Backdoor Defense — Knowledge Base
 
-A comprehensive research knowledge base on the detection and mitigation of backdoor attacks in deep neural networks and Large Language Models.
+A comprehensive research knowledge base on the detection and mitigation of backdoor attacks in deep neural networks and Large Language Models, grounded in mechanistic interpretability of model internals.
 
-**99 papers** | **30 concepts** | **16 connections** | Last updated: 2026-04-03
+**121 papers** | **38 concepts** | **20 connections** | Last updated: 2026-04-03
 
 ---
 
@@ -40,6 +40,8 @@ A comprehensive research knowledge base on the detection and mitigation of backd
 - [[waveattack]] — WaveAttack: Asymmetric Frequency Obfuscation-based Backdoor (NeurIPS 2024)
 
 ### NLP & LLM Attacks
+- [[embedx]] — EmbedX: Embedding-Based Cross-Trigger Backdoor Attack Against LLMs (USENIX Security 2025)
+- [[finetuning-activated-backdoor]] — Finetuning-Activated Backdoors in LLMs (ICML 2025)
 - [[latent-backdoor-attacks]] — Latent Backdoor Attacks on Deep Neural Networks (CCS 2019)
 - [[weight-poisoning-pretrained]] — Weight Poisoning Attacks on Pretrained Models (ACL 2020)
 - [[hidden-killer]] — Hidden Killer: Invisible Textual Backdoor with Syntactic Trigger (ACL-IJCNLP 2021)
@@ -78,6 +80,7 @@ A comprehensive research knowledge base on the detection and mitigation of backd
 ### Code Generation Attacks
 - [[you-autocomplete-me]] — You Autocomplete Me: Poisoning Vulnerabilities in Neural Code Completion (USENIX Security 2021)
 - [[trojanpuzzle]] — TrojanPuzzle: Covertly Poisoning Code-Suggestion Models (IEEE S&P 2024)
+- [[codebreaker]] — CodeBreaker: LLM-Assisted Backdoor Attack on Code Completion Models (USENIX Security 2024)
 
 ### RLHF & Alignment Attacks
 - [[universal-jailbreak-backdoors]] — Universal Jailbreak Backdoors from Poisoned Human Feedback (ICLR 2024)
@@ -85,7 +88,12 @@ A comprehensive research knowledge base on the detection and mitigation of backd
 - [[rlhf-poison]] — RLHFPoison: Reward Poisoning Attack for RLHF in LLMs (2024)
 - [[fine-tuning-compromises-safety]] — Fine-tuning Aligned LMs Compromises Safety (ICLR 2024)
 - [[spinning-language-models]] — Spinning Language Models: Propaganda-As-A-Service (IEEE S&P 2022)
-- [[watch-out-agents-backdoor]] — Watch Out for Your Agents! Backdoor Threats to LLM Agents (2024)
+- [[watch-out-agents-backdoor]] — Watch Out for Your Agents! Backdoor Threats to LLM Agents (NeurIPS 2024)
+- [[agentpoison]] — AgentPoison: Red-teaming LLM Agents via Poisoning Memory or Knowledge Bases (NeurIPS 2024)
+
+### Model Merging Attacks
+- [[badmerging]] — BadMerging: Backdoor Attacks Against Model Merging (CCS 2024)
+- [[mergebackdoor]] — From Purity to Peril: Backdooring Merged Models From Harmless Benign Components (USENIX Security 2025)
 
 ### Pruning-Based Defenses
 - [[adversarial-neuron-pruning]] — Adversarial Neuron Pruning Purifies Backdoored Models (NeurIPS 2021)
@@ -101,7 +109,9 @@ A comprehensive research knowledge base on the detection and mitigation of backd
 - [[t-miner]] — T-Miner: A Generative Approach to Defend Against Trojan Attacks on Text (USENIX Security 2021)
 - [[badexpert]] — BaDExpert: Extracting Backdoor Functionality for Detection (ICLR 2024)
 - [[ted]] — TED: Robust Backdoor Detection via Topological Evolution Dynamics (IEEE S&P 2024)
+- [[bait]] — BAIT: LLM Backdoor Scanning by Inverting Attack Target (IEEE S&P 2025)
 - [[clibe]] — CLIBE: Detecting Dynamic Backdoors in Transformer NLP Models (NDSS 2025)
+- [[barbie]] — BARBIE: Robust Backdoor Detection Based on Latent Separability (NDSS 2025)
 
 ### Activation & Representation Defenses
 - [[beatrix]] — Beatrix: Robust Backdoor Detection via Gram Matrices (NDSS 2023)
@@ -122,6 +132,7 @@ A comprehensive research knowledge base on the detection and mitigation of backd
 - [[weak-to-strong-unlearning]] — Unlearning Backdoor Threats: Weak-to-Strong Knowledge Distillation (Findings of ACL 2025)
 - [[cleangen]] — CleanGen: Mitigating Backdoor Attacks for Generation Tasks in LLMs (EMNLP 2024)
 - [[backdoor-removal-generative-llm]] — Backdoor Removal for Generative Large Language Models (2024)
+- [[guided-module-substitution]] — GMS: Backdoor Purification via Guided Module Substitution (Findings of EMNLP 2025)
 
 ### Input-Level & Training-Time Defenses
 - [[onion]] — ONION: A Simple and Effective Defense Against Textual Backdoor Attacks (EMNLP 2021)
@@ -135,11 +146,15 @@ A comprehensive research knowledge base on the detection and mitigation of backd
 ### Certified & Provable Defenses
 - [[cbd-certified-detector]] — CBD: A Certified Backdoor Detector Based on Local Dominant Probability (NeurIPS 2023)
 - [[textguard]] — TextGuard: Provable Defense Against Textual Backdoor Attacks (NDSS 2024)
+- [[fuzzed-randomized-smoothing]] — Certifying LM Robustness with Fuzzed Randomized Smoothing (ICLR 2025)
 
 ### LLM-Specific Defenses (2025)
+- [[crow]] — CROW: Eliminating Backdoors via Internal Consistency Regularization (ICML 2025)
+- [[iclshield]] — ICLShield: Exploring and Mitigating In-Context Learning Backdoor Attacks (ICML 2025)
 - [[chain-of-scrutiny]] — Chain-of-Scrutiny: Detecting Backdoor Attacks for LLMs (ACL 2025)
 - [[when-backdoors-speak]] — When Backdoors Speak: Understanding via Model-Generated Explanations (ACL 2025)
 - [[beat]] — BEAT: Black-box Defense against Backdoor Unalignment for LLMs (ICLR 2025)
+- [[test-time-backdoor-mitigation]] — Test-time Backdoor Mitigation for Black-Box LLMs (Findings of NAACL 2025)
 - [[rethinking-backdoor-detection]] — Rethinking Backdoor Detection Evaluation for Language Models (EMNLP 2025)
 
 ### Prompt Tuning Defense
@@ -148,9 +163,20 @@ A comprehensive research knowledge base on the detection and mitigation of backd
 ### Agent Security
 - [[agent-security-bench]] — Agent Security Bench: Attacks and Defenses in LLM Agents (ICLR 2025)
 
+### Mechanistic Interpretability Foundations
+- [[zoom-in-circuits]] — Zoom In: An Introduction to Circuits (Distill 2020)
+- [[transformer-circuits-framework]] — A Mathematical Framework for Transformer Circuits (Anthropic 2021)
+- [[toy-models-superposition]] — Toy Models of Superposition (Anthropic 2022)
+- [[rome-factual-associations]] — Locating and Editing Factual Associations in GPT (NeurIPS 2022)
+- [[towards-monosemanticity]] — Towards Monosemanticity: Decomposing Language Models With Dictionary Learning (Anthropic 2023)
+- [[tuned-lens]] — Eliciting Latent Predictions from Transformers with the Tuned Lens (NeurIPS 2023)
+- [[representation-engineering]] — Representation Engineering: A Top-Down Approach to AI Transparency (2023)
+- [[mechanistic-exploration-backdoors]] — Mechanistic Exploration of Backdoored LLM Attention Patterns (2025)
+
 ### Surveys & Benchmarks
 - [[backdoor-learning-survey]] — Backdoor Learning: A Survey (IEEE TNNLS 2024)
 - [[backdoorllm-benchmark]] — BackdoorLLM: A Comprehensive Benchmark for Backdoor Attacks and Defenses on LLMs (NeurIPS 2025)
+- [[elba-bench]] — ELBA-Bench: An Efficient Learning Backdoor Attacks Benchmark for LLMs (ACL 2025)
 
 ---
 
@@ -192,6 +218,16 @@ A comprehensive research knowledge base on the detection and mitigation of backd
 - [[trigger-simulation]] — Detecting backdoors by simulating rather than inverting triggers
 - [[black-box-vs-white-box-defense]] — Access-level taxonomy for defense methods
 
+### Interpretability Toolkit
+- [[mechanistic-interpretability]] — Reverse-engineering neural networks at the level of features, circuits, and algorithms
+- [[circuit-analysis]] — Identifying computational subgraphs that implement specific behaviors
+- [[superposition]] — How models compress features into fewer dimensions via overlapping representations
+- [[sparse-autoencoder]] — Dictionary learning for decomposing polysemantic activations into interpretable features
+- [[probing-classifier]] — Linear probes for testing what information is encoded in representations
+- [[logit-lens]] — Reading intermediate predictions by decoding hidden states across layers
+- [[activation-patching]] — Causal interventions for discovering which components implement specific behaviors
+- [[representation-engineering]] — Top-down monitoring and control of high-level representation properties
+
 ### Metrics & Evaluation
 - [[attack-success-rate]] — Primary metric for evaluating backdoor effectiveness
 - [[backdoor-evaluation-methodology]] — Benchmarks, metrics, and evaluation protocols
@@ -213,6 +249,12 @@ A comprehensive research knowledge base on the detection and mitigation of backd
 - [[fine-tuning-dual-use]] — Fine-tuning as both the primary attack delivery and defense tool
 - [[training-time-vs-post-hoc-defense]] — When in the LLM lifecycle can defenses intervene?
 - [[classification-to-generation-defense-gap]] — Why classification defenses don't transfer to generative LLMs
+
+### Interpretability-Defense Bridge
+- [[interpretability-as-defense]] — How mechanistic interpretability tools are being repurposed for backdoor detection
+- [[superposition-and-backdoor-hiding]] — Why superposition theory explains the difficulty of finding backdoors
+- [[backdoor-circuits]] — What circuit-level analysis reveals about how backdoors are mechanistically encoded
+- [[from-probing-to-detection]] — The shared logic between probing classifiers and backdoor detectors
 
 ### Systemic Threats
 - [[llm-supply-chain-threat]] — Every stage of the LLM lifecycle is an attack vector
@@ -237,6 +279,9 @@ CVPR, ICCV, ECCV
 
 ### Security & Privacy
 IEEE S&P (A*), CCS (A*), USENIX Security (A*), NDSS (A)
+
+### Interpretability
+Distill (A), Anthropic Transformer Circuits Thread
 
 ### Journals
 JMLR (A*), TACL (A*), TPAMI (A*), TNNLS (A), TDSC (A)

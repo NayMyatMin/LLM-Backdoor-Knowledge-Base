@@ -75,3 +75,5 @@ Fine-pruning's insight that backdoor behavior is localized in specific neurons h
 - [[backdoor-defense]]
 - [[backdoor-attack]]
 - [[trigger-pattern]]
+- [[backdoor-circuits]]
+- [[circuit-analysis]]

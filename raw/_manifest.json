@@ -1088,7 +1088,293 @@
       "year": null,
       "summary": "",
       "compiled": true
+    },
+    {
+      "filename": "zoom-in-circuits.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/zoom-in-circuits.md",
+      "hash": "329ffcca84aa68def3c6d150d7bba0f6",
+      "added": "2026-04-03T16:36:58",
+      "tags": [
+        "mechanistic-interpretability"
+      ],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "transformer-circuits-framework.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/transformer-circuits-framework.md",
+      "hash": "597970941460ab50943c4dc40555acac",
+      "added": "2026-04-03T16:36:58",
+      "tags": [
+        "mechanistic-interpretability"
+      ],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "toy-models-superposition.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/toy-models-superposition.md",
+      "hash": "0a7470fd78864c4a234c7974eb288c56",
+      "added": "2026-04-03T16:36:58",
+      "tags": [
+        "mechanistic-interpretability"
+      ],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "towards-monosemanticity.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/towards-monosemanticity.md",
+      "hash": "664bac5cc0f01139a2ae2a5b3ba1f2dc",
+      "added": "2026-04-03T16:36:58",
+      "tags": [
+        "mechanistic-interpretability"
+      ],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "rome-factual-associations.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/rome-factual-associations.md",
+      "hash": "9ea5166df4dd57464dc5a96c3ae5aa87",
+      "added": "2026-04-03T16:36:58",
+      "tags": [
+        "mechanistic-interpretability"
+      ],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "tuned-lens.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/tuned-lens.md",
+      "hash": "cfd0e758b0676b203e08fa4121c0aaeb",
+      "added": "2026-04-03T16:36:58",
+      "tags": [
+        "mechanistic-interpretability"
+      ],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "representation-engineering.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/representation-engineering.md",
+      "hash": "70696045902692186e3dfe43617557a2",
+      "added": "2026-04-03T16:36:58",
+      "tags": [
+        "mechanistic-interpretability"
+      ],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "mechanistic-exploration-backdoors.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/mechanistic-exploration-backdoors.md",
+      "hash": "222f8ad59fd5a4ce97643f2541602eed",
+      "added": "2026-04-03T16:36:58",
+      "tags": [
+        "mechanistic-interpretability"
+      ],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "crow.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/crow.md",
+      "hash": "5fe4aaf4dfe8d27096daa9f655596ec6",
+      "added": "2026-04-03T16:40:36",
+      "tags": [
+        "llm-backdoor-defense"
+      ],
+      "venue": "ICML",
+      "year": 2025,
+      "summary": "CROW: Internal consistency regularization for LLM backdoor removal",
+      "compiled": true
+    },
+    {
+      "filename": "bait.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/bait.md",
+      "hash": "095d0fbdbf93ace1995e6a07fbf49026",
+      "added": "2026-04-03T16:48:51",
+      "tags": [
+        "llm-backdoor-defense"
+      ],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "iclshield.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/iclshield.md",
+      "hash": "46d1d4b8047e91e9cff91b3d1f1b86d1",
+      "added": "2026-04-03T16:48:51",
+      "tags": [
+        "llm-backdoor-defense"
+      ],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "finetuning-activated-backdoor.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/finetuning-activated-backdoor.md",
+      "hash": "c65b9053ce74390dc94e1455606060ad",
+      "added": "2026-04-03T16:48:51",
+      "tags": [
+        "llm-backdoor-defense"
+      ],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "agentpoison.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/agentpoison.md",
+      "hash": "1940f8006ca4d7cc33a512c6da8bd8a9",
+      "added": "2026-04-03T16:48:51",
+      "tags": [
+        "llm-backdoor-defense"
+      ],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "embedx.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/embedx.md",
+      "hash": "3153d4c5560e0b6b229f6a57f3543cf0",
+      "added": "2026-04-03T16:48:51",
+      "tags": [
+        "llm-backdoor-defense"
+      ],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "badmerging.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/badmerging.md",
+      "hash": "192ee15872459c60e1ec1c3605121df9",
+      "added": "2026-04-03T16:48:51",
+      "tags": [
+        "llm-backdoor-defense"
+      ],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "mergebackdoor.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/mergebackdoor.md",
+      "hash": "a433060703fc16fe596c4d4ee0d27968",
+      "added": "2026-04-03T16:48:51",
+      "tags": [
+        "llm-backdoor-defense"
+      ],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "elba-bench.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/elba-bench.md",
+      "hash": "2029c3cfa37b0eacdfaad332c7280fdd",
+      "added": "2026-04-03T16:48:51",
+      "tags": [
+        "llm-backdoor-defense"
+      ],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "codebreaker.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/codebreaker.md",
+      "hash": "c7bb34e88f5a04b18f2a1879a2c71def",
+      "added": "2026-04-03T16:48:51",
+      "tags": [
+        "llm-backdoor-defense"
+      ],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "barbie.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/barbie.md",
+      "hash": "595e2e23ae50b848badfbf269eec2205",
+      "added": "2026-04-03T16:48:51",
+      "tags": [
+        "llm-backdoor-defense"
+      ],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "test-time-backdoor-mitigation.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/test-time-backdoor-mitigation.md",
+      "hash": "fc10bdff4310421552a2b1207d0daff3",
+      "added": "2026-04-03T16:48:51",
+      "tags": [
+        "llm-backdoor-defense"
+      ],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "guided-module-substitution.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/guided-module-substitution.md",
+      "hash": "8984e29392a5d42c3f7af2c4f3993bc4",
+      "added": "2026-04-03T16:48:51",
+      "tags": [
+        "llm-backdoor-defense"
+      ],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
+    },
+    {
+      "filename": "fuzzed-randomized-smoothing.md",
+      "original_path": "/Users/nay/Research/llm-knowledge-base/raw/fuzzed-randomized-smoothing.md",
+      "hash": "6dcf58cb0b6d20faa66480b240bfc995",
+      "added": "2026-04-03T16:48:51",
+      "tags": [
+        "llm-backdoor-defense"
+      ],
+      "venue": null,
+      "year": null,
+      "summary": "",
+      "compiled": true
     }
   ],
-  "last_updated": "2026-04-03T16:01:24"
+  "last_updated": "2026-04-03T16:48:51"
 }

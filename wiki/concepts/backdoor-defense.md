@@ -91,6 +91,18 @@ Removal-based defenses aim to eliminate the backdoor from a compromised model.
 - [[attack-success-rate]] -- metric used to evaluate defense effectiveness.
 - [[supply-chain-attack]] -- threat model that motivates pre-deployment defenses.
 
+## Mechanistic Interpretability as a Defense Paradigm
+
+A growing body of work applies [[mechanistic-interpretability]] tools directly to backdoor defense, forming a new defense paradigm alongside statistical and optimization-based approaches:
+
+- **[[circuit-analysis]]**: Identifying the specific computational subgraph (circuit) that implements the backdoor, enabling targeted removal. See [[backdoor-circuits]].
+- **[[activation-patching]]**: Causal interventions that verify which model components are responsible for backdoor behavior.
+- **[[sparse-autoencoder]]**: Decomposing polysemantic representations to isolate backdoor-specific features.
+- **[[representation-engineering]]**: Extracting the "backdoor direction" via contrastive representation analysis, enabling monitoring and removal (as in [[beear]]).
+- **[[logit-lens]] / [[tuned-lens]]**: Layer-wise prediction tracking to detect anomalous internal dynamics caused by backdoor activation.
+
+The convergence of interpretability and defense is detailed in [[interpretability-as-defense]].
+
 ## Open Problems
 
 - **Arms race dynamics**: each new defense inspires more sophisticated attacks that evade it, and no single defense is effective against all attack types.
@@ -99,3 +111,4 @@ Removal-based defenses aim to eliminate the backdoor from a compromised model.
 - **Scalability**: defenses that require per-class trigger optimization ([[neural-cleanse]]) or full dataset analysis ([[spectral-signatures]]) face computational challenges at LLM scale.
 - **Clean-label robustness**: defenses effective against [[clean-label-attack]] are significantly less developed.
 - **Unified evaluation**: the field lacks standardized benchmarks for comparing defenses across different attack types and domains.
+- **Interpretability-guided defense**: Systematically applying mech interp tools ([[circuit-analysis]], [[sparse-autoencoder]]) to backdoor detection is still nascent; scalable automation is needed.
