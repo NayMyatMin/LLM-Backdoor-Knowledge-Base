@@ -23,94 +23,98 @@ style: |
 <!-- _class: lead -->
 
 # LLM Backdoor Defense Landscape
-## 2024–2025
+## 2024-2026
 
-**129 papers · 42 concepts · 23 connections**
+**149 papers | 61 concepts | 37 connections | ~185K words**
 
 A research survey from the LLM Backdoor Defense Knowledge Base
 
-<!-- speaker notes: Opening slide. This deck surveys the state of backdoor attacks and defenses for LLMs as of early 2025, drawn from a curated knowledge base of 129 papers across top ML, NLP, and security venues. -->
+<!-- speaker notes: Opening slide. This deck surveys the state of backdoor attacks and defenses for LLMs as of early 2026, drawn from a curated knowledge base of 149 papers across top ML, NLP, security, and CV venues. -->
 
 ---
 
 # The Threat in One Slide
 
-- LLMs are trained on **web-scraped data**, fine-tuned with **crowdsourced feedback**, and deployed via **APIs**
+- LLMs are trained on **web-scraped data**, fine-tuned with **crowdsourced feedback**, and deployed via **APIs and adapters**
 - Every stage is an **attack surface** for backdoor injection
-- Backdoors are **invisible** during normal use — they activate only on attacker-chosen triggers
+- Backdoors are **invisible** during normal use -- they activate only on attacker-chosen triggers
 - **10 examples** can strip safety alignment (Qi et al., ICLR 2024)
 - **15 examples** + minutes of compute = permanent backdoor via model editing (BadEdit, ICLR 2024)
+- **15 seconds** to inject a jailbreak backdoor into a 7B model (JailbreakEdit, ICLR 2025)
 
-<!-- speaker notes: The fundamental problem: the LLM lifecycle has multiple trust boundaries, each exploitable. The barrier to attack is shockingly low. -->
+<!-- speaker notes: The fundamental problem: the LLM lifecycle has multiple trust boundaries, each exploitable. The barrier to attack is shockingly low and getting lower. -->
 
 ---
 
 # LLM Lifecycle Attack Surface
 
 ```
-Pre-training Data → SFT/Instruction Tuning → RLHF Alignment → Prompt Tuning → Inference (ICL)
-      ↓                    ↓                      ↓                 ↓                ↓
-  Web poisoning      Data poisoning         Reward poisoning    Prompt trojans   Demo poisoning
-  ($60 for 0.01%)    (0.1% suffices)        (<5% pref data)    (API-only)       (1-2 demos)
+Pre-training Data -> SFT/Instruction Tuning -> RLHF Alignment -> Adapter/Merge -> Inference (ICL)
+      |                    |                      |                 |                |
+  Web poisoning      Data poisoning         Reward poisoning    Plugin trojans   Demo poisoning
+  ($60 for 0.01%)    (0.1% suffices)        (<5% pref data)    (LoRA/merge)     (1-2 demos)
 ```
 
-**Key insight:** Defenses concentrate on SFT-phase classification — RLHF, generation, and inference defenses are critically lacking.
+**New in 2025:** Adapter trojaning (Philosopher's Stone), model merging attacks (BadMerging, MergeBackdoor), distillation-conditional backdoors (SCAR), and finetuning-activated attacks (FAB)
 
-<!-- speaker notes: This diagram maps the five phases of the LLM lifecycle where backdoors can be injected, with the key attack parameters for each phase. -->
+<!-- speaker notes: This diagram maps the five phases of the LLM lifecycle where backdoors can be injected. The 2025 additions expand the attack surface to the adapter/merge ecosystem. -->
 
 ---
 
-# Attack Evolution: 2018 → 2025
+# Attack Evolution: 2018 -> 2026
 
 | Era | Attacks | Key Papers |
 |-----|---------|------------|
-| **2018–2019** | Pixel patches, simple triggers | BadNets, Trojaning Attack |
-| **2020–2021** | NLP triggers, weight poisoning | Hidden Killer, Weight Poisoning |
-| **2022–2023** | Dynamic triggers, RLHF poisoning, ICL | WaNet, BadGPT, ICLAttack |
-| **2024** | Model editing, agents, merging | BadEdit, AgentPoison, BadMerging |
-| **2025** | Finetuning-activated, embedding-cross | ELBA-Bench, EmbedX, MergeBackdoor |
+| **2018-2019** | Pixel patches, simple triggers | BadNets, Trojaning Attack, Latent Backdoor |
+| **2020-2021** | NLP triggers, weight poisoning | Hidden Killer, Weight Poisoning, WaNet |
+| **2022-2023** | Dynamic triggers, RLHF poisoning, ICL | BadGPT, ICLAttack, Sleeper Agent |
+| **2024** | Model editing, agents, instruction | BadEdit, AgentPoison, VPI, BadMerging |
+| **2025** | Adapters, merging, multimodal, PEFT | EmbedX, MergeBackdoor, BadVision, BadToken, SCAR |
+| **2026** | Finetuning-activated, encrypted multi | FAB, Encrypted Multi-Backdoor, JailbreakEdit |
 
-> From pixel patches to editing 0.01% of parameters — attacks became **orders of magnitude more efficient**.
+> From pixel patches to editing 0.01% of parameters -- attacks became **orders of magnitude more efficient**.
 
-<!-- speaker notes: The progression shows attacks becoming more efficient, more stealthy, and targeting more phases of the lifecycle. -->
+<!-- speaker notes: The progression shows attacks becoming more efficient, more stealthy, and targeting more phases of the lifecycle. 2025-2026 attacks target the adapter and model merging ecosystem. -->
 
 ---
 
-# Three Pillars of Understanding
+# Five Pillars of Understanding
 
-| Pillar | What It Provides | Key Contribution |
-|--------|-----------------|------------------|
-| **Backdoor Research** | Attack/defense taxonomy | 112 papers across attack types and defense paradigms |
-| **Mechanistic Interpretability** | Where and how models compute | Circuits, superposition, causal tracing |
-| **Knowledge Editing** | How knowledge is stored and modified | Localization, surgical editing, edit reversal |
+| Pillar | Papers | Key Topics |
+|--------|--------|------------|
+| **Backdoor Attacks** | ~65 | Data poisoning, NLP/LLM attacks, multimodal, RLHF, merging |
+| **Backdoor Defenses** | ~60 | Trigger inversion, pruning, unlearning, certified, LLM-specific |
+| **Mech. Interpretability** | ~8 | Circuits, superposition, SAEs, activation patching |
+| **Knowledge Editing** | ~9 | ROME, MEMIT, edit tracing/reversal, ripple effects |
+| **Representation Dynamics** | ~9 | Layer-wise analysis, DoLA, ITI, belief state geometry |
 
 **Thesis:** Effective defense requires understanding model internals, not just behavioral testing.
 
-<!-- speaker notes: The three research pillars that inform modern defense approaches. Mech interp and editing provide the tools; backdoor research provides the threat model. -->
+<!-- speaker notes: Five research pillars. The addition of representation dynamics reflects the growing importance of understanding how information flows across transformer layers. -->
 
 ---
 
 # Defense Paradigms
 
 ### Detection (Is the model backdoored?)
-- **Trigger inversion:** Neural Cleanse, K-Arm, BAIT
+- **Trigger inversion:** Neural Cleanse, K-Arm, BAIT, DeBackdoor
 - **Activation analysis:** Spectral Signatures, Beatrix, BARBIE
-- **Meta-analysis:** MNTD, BaDExpert
+- **PEFT-specific:** PEFTGuard (IEEE S&P 2025)
 
 ### Removal (Remove the backdoor)
-- **Pruning:** Fine-Pruning, ANP, PURE (attention heads)
-- **Unlearning:** I-BAU, SAU, BEEAR
+- **Pruning:** Fine-Pruning, ANP, PURE, PaRaMS (merging defense)
+- **Unlearning:** I-BAU, SAU, BEEAR, RepBend
 - **Editing reversal:** Tracing & Reversing Edits (ICLR 2026)
 
 ### Prevention (Train safely)
-- **Robust training:** Anti-Backdoor Learning, SEEP
-- **Certified defenses:** TextGuard, CBD, Randomized Smoothing
+- **Robust training:** Anti-Backdoor Learning, SEEP, CROW
+- **Certified defenses:** TextGuard, CBD, Fuzzed Randomized Smoothing
 
-<!-- speaker notes: Three defense categories. Detection identifies the problem, removal fixes it, prevention avoids it. Most work concentrates on detection and removal. -->
+<!-- speaker notes: Three defense categories with the latest 2025-2026 additions. Note the new PEFT-specific and merging defense categories. -->
 
 ---
 
-# The Classification → Generation Gap
+# The Classification -> Generation Gap
 
 Most defenses assume **classification** (discrete labels):
 
@@ -121,10 +125,26 @@ Most defenses assume **classification** (discrete labels):
 | Success metric | Accuracy | Semantic evaluation |
 | Trigger inversion | Optimize for label | Optimize for what? |
 
-**Only ~10 papers** address generative LLM backdoors:
-CleanGen, Simulate & Eliminate, SANDE, CROW, BEAT
+**~15 papers** now address generative LLM backdoors (up from ~5 in 2024):
+CleanGen, SANDE, CROW, BEAT, RepBend, ICLShield, Test-Time Mitigation, PEFTGuard
 
-<!-- speaker notes: The biggest gap in the defense landscape. Most tools were designed for classifiers and don't directly apply to text generation. -->
+<!-- speaker notes: The biggest gap in the defense landscape is narrowing but still significant. Most tools were designed for classifiers. -->
+
+---
+
+# Representation Dynamics for Defense
+
+**New pillar:** Understanding how representations evolve across transformer layers
+
+- **Belief states** are linearly encoded in the residual stream (NeurIPS 2024)
+- **Representations converge** monotonically across depth (ICLR 2025)
+- **Inter-layer differences** carry actionable signal (DoLA, ICLR 2024)
+- **Behavioral directions** readable at inference time (ITI, CAA)
+- **Attention sinks** create confounding patterns requiring calibration (ICLR 2025)
+
+> Backdoor activation forces an **abrupt belief state transition** that manifests as a detectable velocity spike in the representation trajectory.
+
+<!-- speaker notes: This new pillar connects mechanistic interpretability to practical runtime defense. Layer-wise monitoring can detect backdoors without trigger knowledge. -->
 
 ---
 
@@ -132,85 +152,92 @@ CleanGen, Simulate & Eliminate, SANDE, CROW, BEAT
 
 **Insight:** If we can see inside the model, we can find the backdoor.
 
-- **Causal tracing** → locate which layers store the backdoor (ROME)
-- **Circuit analysis** → trace the trigger-to-output computational path
-- **Sparse autoencoders** → decompose polysemantic neurons that hide backdoors
-- **Probing classifiers** → detect backdoor signals in hidden states
-- **Activation patching** → verify which components are causally necessary
+- **Causal tracing** -> locate which layers store the backdoor (ROME)
+- **Circuit analysis** -> trace the trigger-to-output computational path
+- **Sparse autoencoders** -> decompose polysemantic neurons hiding backdoors (now extended to VLMs, NeurIPS 2025)
+- **Probing classifiers** -> detect backdoor signals in hidden states
+- **Activation patching** -> verify which components are causally necessary
 
 > Superposition theory explains *why* backdoors are hard to find: they hide in the same representational substrate as legitimate features.
 
-<!-- speaker notes: The interpretability toolkit gives defenders X-ray vision into model internals. But superposition means the hiding spots are very effective. -->
+<!-- speaker notes: The interpretability toolkit gives defenders X-ray vision into model internals. SAEs extended to vision-language models in 2025 expand this to multimodal settings. -->
 
 ---
 
 # Knowledge Editing: Dual-Use Security Tool
 
 ### As Attack
-- **BadEdit:** 15 examples → 100% ASR, survives fine-tuning
+- **BadEdit:** 15 examples -> 100% ASR, survives fine-tuning
+- **JailbreakEdit:** 15 seconds to inject jailbreak backdoor into 7B model (ICLR 2025)
 - **MEMIT:** Scale to 10,000 simultaneous edits
-- **PMET:** Attention-aware editing = stealthier injection
 
 ### As Defense
-- **Tracing & Reversing Edits:** 99% detection, 94% reversal of malicious edits
-- **Algebraic structure** of rank-one edits enables both precise attack and precise defense
+- **Tracing & Reversing Edits:** 99% detection, 94% reversal of malicious edits (ICLR 2026)
+- **RepBend:** Bend representations to neutralize harmful directions (ACL 2025)
 
 > The same math that makes editing dangerous makes it **reversible**.
 
-<!-- speaker notes: Knowledge editing is the rare case where the attack tool's mathematical structure directly enables its own defense. -->
+<!-- speaker notes: Knowledge editing is the rare case where the attack tool's mathematical structure directly enables its own defense. JailbreakEdit is alarming; Tracing & Reversing gives hope. -->
 
 ---
 
-# What's Working (2024–2025 Highlights)
+# What's Working (2025-2026 Highlights)
 
 | Defense | Venue | What It Does | Result |
 |---------|-------|-------------|--------|
-| **PURE** | ICML '24 | Prune attention heads | Removes backdoors in LLaMA |
-| **CROW** | ICML '25 | Internal consistency regularization | Eliminates LLM backdoors without clean data |
-| **BEAT** | ICLR '25 | Black-box defense via unalignment detection | Works on API-only models |
-| **BAIT** | S&P '25 | Invert attack targets in LLMs | Scans LLMs for hidden backdoors |
-| **Tracing & Reversing** | ICLR '26 | Detect and reverse editing-based attacks | 99% detection, 94% reversal |
+| **PEFTGuard** | S&P '25 | Detect backdoors in LoRA adapters | Protects adapter ecosystem |
+| **CROW** | ICML '25 | Internal consistency regularization | 0.87% ASR, 2-4 min on A100 |
+| **RepBend** | ACL '25 | Bend representations for safety | 95% jailbreak reduction |
+| **BEAT** | ICLR '25 | Black-box defense via alignment | Works on API-only models |
+| **BAIT** | S&P '25 | Invert attack targets in LLMs | AUC 1.00 on TrojAI Round 19 |
+| **DeBackdoor** | USENIX '25 | Deductive detection with limited data | Works without clean dataset |
+| **Tracing & Reversing** | ICLR '26 | Detect and reverse editing attacks | 99% detection, 94% reversal |
 
-<!-- speaker notes: The most promising recent defenses. Note the trend toward LLM-specific methods rather than adapted classification defenses. -->
+<!-- speaker notes: The most promising recent defenses. The trend is toward LLM-specific and PEFT-specific methods. -->
 
 ---
 
-# Open Problems
+# Open Problems (Prioritized Research Roadmap)
 
-1. **RLHF-phase defenses** — Nearly nonexistent. How do you verify reward model integrity?
+### Tier 1: Critical (1-2 years)
+1. **Scalable defense for 70B-405B frontier models**
+2. **Standardized benchmarks** across all attack types
+3. **PEFT & adapter security** for model hubs
+4. **Defense against model editing attacks** (BadEdit, JailbreakEdit)
 
-2. **Generative evaluation** — No standard benchmark for measuring backdoor removal in free-text generation
+### Tier 2: Important (2-4 years)
+5. **Clean-label & semantic trigger detection**
+6. **Defense composition** -- when does layering help?
+7. **Behavioral vs. representational removal** verification
 
-3. **Superposition & hiding** — Backdoors in superposition are provably hard to isolate with current tools
+### Tier 3: Fundamental (4+ years)
+8. **Information-theoretic detection limits**
+9. **Architectural backdoor resistance**
+10. **Certified defenses for generative models**
 
-4. **Agent security** — Tool-calling and multi-step planning create new attack surfaces with no defenses
-
-5. **Scaling** — Do defense techniques work at 70B–405B scale? Most tested only on ≤13B
-
-6. **Editing-based backdoors** — BadEdit-style attacks modify 0.01% of parameters — below detection thresholds
-
-<!-- speaker notes: Six major open problems. Each represents a research direction where current defenses are insufficient. -->
+<!-- speaker notes: From our research roadmap. Tier 1 problems are tractable and urgent. Tier 3 problems may require fundamental breakthroughs. -->
 
 ---
 
 # The Road Ahead
 
-**Short-term (2025–2026):**
+**Short-term (2025-2026):**
 - LLM-native defenses (not adapted from CV/classification)
-- Benchmark standardization (BackdoorLLM, ELBA-Bench leading the way)
+- Adapter/merge security tooling for model hubs
 - Edit-aware weight auditing (Tracing & Reversing as template)
+- Runtime monitoring via representation dynamics
 
-**Medium-term (2026–2028):**
-- Interpretability-guided defense (circuits → backdoor identification)
-- Formal verification of model safety properties
-- Defense-aware RLHF pipelines
+**Medium-term (2026-2028):**
+- Interpretability-guided defense (circuits -> backdoor identification)
+- Defense composition with formal guarantees
+- Multi-agent system security
 
 **Long-term:**
 - Provably secure model training
-- Runtime backdoor monitoring at scale
-- Governance frameworks balancing model editability and security
+- Architectural resistance to backdoor circuits
+- Information-theoretic bounds on detection
 
-<!-- speaker notes: A research roadmap from near-term achievable goals to long-term aspirations. -->
+<!-- speaker notes: A research roadmap from near-term achievable goals to long-term aspirations. Runtime monitoring via representation dynamics is the newest frontier. -->
 
 ---
 
@@ -218,9 +245,9 @@ CleanGen, Simulate & Eliminate, SANDE, CROW, BEAT
 
 # Key Takeaway
 
-> The LLM backdoor defense landscape is at an **inflection point**: attacks have reached alarming efficiency, but the convergence of **mechanistic interpretability**, **knowledge editing**, and **LLM-specific defense methods** is providing the tools needed to fight back.
+> The LLM backdoor defense landscape is at an **inflection point**: attacks have reached alarming efficiency, but the convergence of **mechanistic interpretability**, **representation dynamics**, **knowledge editing**, and **LLM-specific defenses** is providing the tools needed to fight back.
 
-**129 papers · 42 concepts · 23 connections**
-LLM Backdoor Defense Knowledge Base — 2026
+**149 papers | 61 concepts | 37 connections | ~185K words**
+LLM Backdoor Defense Knowledge Base -- April 2026
 
 <!-- speaker notes: Closing slide. The knowledge base is a living resource that will continue to grow as the field evolves. -->

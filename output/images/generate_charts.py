@@ -140,15 +140,15 @@ print('Saved venue-distribution.png')
 defense_categories = {
     'Trigger Inversion\n& Model Scanning': [
         'Neural Cleanse', 'K-Arm', 'MNTD', 'T-Miner', 'BaDExpert',
-        'TED', 'BAIT', 'CLIBE', 'BARBIE'
+        'TED', 'BAIT', 'CLIBE', 'BARBIE', 'DeBackdoor'
     ],
     'Activation &\nRepresentation': [
         'Spectral Sig.', 'Beatrix', 'ASSET', 'SPECTRE', 'BadActs',
-        'Revisiting LS', 'LT-Defense', 'Decoupling', 'FABE'
+        'Revisiting LS', 'LT-Defense', 'Decoupling', 'FABE', 'RepBend'
     ],
     'Pruning': [
         'Fine-Pruning', 'ANP', 'Anti-BL', 'Trap & Replace',
-        'RNP', 'Neural Polarizer', 'PURE'
+        'RNP', 'Neural Polarizer', 'PURE', 'PaRaMS'
     ],
     'Unlearning &\nRemoval': [
         'I-BAU', 'SAU', 'BEEAR', 'REFINE', 'Data-Free',
@@ -163,7 +163,7 @@ defense_categories = {
     ],
     'LLM-Specific\n(2025)': [
         'CROW', 'ICLShield', 'Chain-of-S', 'BEAT',
-        'When Speak', 'Test-Time', 'Rethinking'
+        'When Speak', 'Test-Time', 'Rethinking', 'PEFTGuard'
     ],
 }
 
