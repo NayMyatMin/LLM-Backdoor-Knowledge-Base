@@ -16,3 +16,6 @@ build/
 .obsidian/plugins/*/data.json
 .trash/
 Layerwise_Convergence_Fingerprints_for_Runtime_Detection_of_LLM_Backdoors__CCS_/
+
+# Claude Code nested worktrees (local git clones; do not track as submodules)
+.claude/worktrees/
