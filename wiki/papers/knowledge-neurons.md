@@ -4,6 +4,9 @@ source: "knowledge-neurons.md"
 venue: "ACL"
 year: 2022
 summary: "Proposes a knowledge attribution method to identify specific neurons in pretrained transformers that express relational facts, demonstrating that factual knowledge can be edited or erased by modifying these 'knowledge neurons' without fine-tuning."
+tags:
+  - interpretability
+  - knowledge-localization
 compiled: "2026-04-03T23:00:00"
 ---
 

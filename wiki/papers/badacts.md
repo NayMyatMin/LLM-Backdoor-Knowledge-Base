@@ -4,6 +4,10 @@ source: raw/badacts-universal-backdoor-defense-activation-space.md
 venue: Findings of ACL
 year: 2024
 summary: "BadActs defends against backdoor attacks by detecting anomalous activation patterns at inference time and correcting them by projecting activations back toward the clean distribution, providing a universal defense across attack types."
+tags:
+  - defense
+  - activation-analysis
+threat_model: "data-poisoning"
 compiled: "2026-04-03T14:00:00"
 ---
 

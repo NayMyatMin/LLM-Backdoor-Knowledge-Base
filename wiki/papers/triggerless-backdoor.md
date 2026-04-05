@@ -4,6 +4,11 @@ source: raw/triggerless-backdoor-attack-nlp-clean-labels.md
 venue: NAACL
 year: 2022
 summary: "Introduces a triggerless backdoor attack for NLP that operates by carefully selecting and relabeling clean training samples, exploiting semantic similarity to implant backdoors activated by naturally occurring semantic features."
+tags:
+  - attack
+  - data-poisoning
+threat_model:
+  - data-poisoning
 compiled: "2026-04-03T14:00:00"
 ---
 

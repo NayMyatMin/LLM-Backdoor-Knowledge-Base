@@ -4,6 +4,9 @@ source: "memit.md"
 venue: "ICLR"
 year: 2023
 summary: "Scales the ROME approach to thousands of simultaneous factual edits by distributing rank-one updates across multiple critical MLP layers, enabling batch knowledge editing in GPT-J and GPT-NeoX while maintaining generalization, specificity, and fluency."
+tags:
+  - editing
+  - mass-editing
 compiled: "2026-04-03T23:00:00"
 ---
 

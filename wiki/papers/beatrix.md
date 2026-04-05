@@ -4,6 +4,10 @@ source: raw/beatrix-robust-backdoor-detection-gram-matrices.md
 venue: NDSS
 year: 2023
 summary: "Beatrix uses Gram matrices of neural network activations to capture higher-order feature correlations that distinguish clean from poisoned inputs, achieving robust detection even against adaptive attacks that evade first-order statistical methods."
+tags:
+  - defense
+  - activation-analysis
+threat_model: "data-poisoning"
 compiled: "2026-04-03T16:00:00"
 ---
 

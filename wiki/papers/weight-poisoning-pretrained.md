@@ -4,6 +4,12 @@ source: "weight-poisoning-attacks-pretrained-models.md"
 venue: "ACL"
 year: 2020
 summary: "Demonstrates that pre-trained language models like BERT are vulnerable to backdoor attacks through weight poisoning. Introduces RIPPLe regularization to make backdoors survive downstream fine-tuning and Embedding Surgery to associate trigger tokens with target predictions. Establishes the NLP supply-chain threat model for backdoor research."
+tags:
+  - attack
+  - data-poisoning
+threat_model:
+  - weight-editing
+  - data-poisoning
 compiled: "2026-04-03T00:00:08Z"
 ---
 

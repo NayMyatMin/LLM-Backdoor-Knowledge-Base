@@ -4,6 +4,10 @@ source: "https://www.ndss-symposium.org/ndss-paper/barbie-robust-backdoor-detect
 venue: NDSS
 year: 2025
 summary: "Detection method using relative competition score (RCS) on inverted latent prototypes per class, trained without requiring paired benign and backdoored examples, with large-scale evaluation across models and attacks."
+tags:
+  - defense
+  - activation-analysis
+threat_model: "data-poisoning"
 compiled: "2026-04-03T23:30:00"
 ---
 

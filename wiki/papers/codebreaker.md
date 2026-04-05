@@ -4,6 +4,10 @@ source: "https://www.usenix.org/conference/usenixsecurity24/presentation/yan"
 venue: USENIX Security
 year: 2024
 summary: "LLM-assisted pipeline that synthesizes stealthy backdoors in code completion models, aiming for broad vulnerability coverage and evasion of standard detectors."
+tags:
+  - attack
+  - code
+threat_model: "data-poisoning"
 compiled: "2026-04-03T23:30:00"
 ---
 

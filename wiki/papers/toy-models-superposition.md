@@ -4,6 +4,9 @@ source: "toy-models-superposition.md"
 venue: "Anthropic (arXiv)"
 year: 2022
 summary: "Investigates how neural networks represent more features than they have dimensions through superposition, using toy ReLU networks to study polysemanticity, phase transitions, and the geometry of compressed representations."
+tags:
+  - interpretability
+  - representation
 compiled: "2026-04-03T22:00:00"
 ---
 

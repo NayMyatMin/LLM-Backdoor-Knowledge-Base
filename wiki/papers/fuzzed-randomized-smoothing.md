@@ -4,6 +4,10 @@ source: "https://openreview.net/forum?id=USI3ZbuFaV"
 venue: ICLR
 year: 2025
 summary: "Fuzzed Randomized Smoothing (FRS) certifies robustness of language models to textual backdoors from pre-training by combining parameter smoothing with search-guided fuzzing, without needing poisoned training data."
+tags:
+  - defense
+  - certified
+threat_model: inference-time
 compiled: "2026-04-03T23:30:00"
 ---
 

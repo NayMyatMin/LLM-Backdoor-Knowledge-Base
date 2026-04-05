@@ -4,6 +4,9 @@ source: "mend.md"
 venue: "ICML"
 year: 2022
 summary: "Introduces Model Editor Networks with Gradient Decomposition (MEND), a meta-learning approach that trains small auxiliary networks to transform fine-tuning gradients into targeted model edits, scaling to 10B+ parameter models on a single GPU."
+tags:
+  - editing
+  - meta-learning
 compiled: "2026-04-03T23:00:00"
 ---
 

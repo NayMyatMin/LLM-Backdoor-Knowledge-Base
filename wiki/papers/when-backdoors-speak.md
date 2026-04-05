@@ -4,6 +4,12 @@ source: "https://aclanthology.org/2025.acl-long.114/"
 venue: ACL 2025
 year: 2025
 summary: "First study using LLM self-explanation to understand backdoor behavior, discovering that backdoored models can inadvertently reveal trigger information in their generated explanations, opening a new avenue for interpretability-based defense."
+tags:
+  - defense
+  - interpretability
+threat_model:
+  - data-poisoning
+  - weight-editing
 compiled: "2026-04-03T13:00:00"
 ---
 

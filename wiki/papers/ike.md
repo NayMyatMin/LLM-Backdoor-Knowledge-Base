@@ -4,6 +4,9 @@ source: "ike.md"
 venue: "EMNLP"
 year: 2023
 summary: "Introduces In-Context Knowledge Editing (IKE), demonstrating that factual knowledge in LLMs can be updated through carefully constructed demonstration contexts without any parameter modification, achieving competitive results with fewer side effects than gradient-based methods."
+tags:
+  - editing
+  - in-context
 compiled: "2026-04-03T23:00:00"
 ---
 

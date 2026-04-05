@@ -4,6 +4,10 @@ source: raw/badexpert-extracting-backdoor-functionality-detection.md
 venue: ICLR
 year: 2024
 summary: "BaDExpert extracts backdoor functionality from a suspicious model into a dedicated 'backdoor expert' model via meta-learning, then uses this expert as a high-accuracy detector for triggered inputs at inference time, achieving >98% detection with <2% false positives."
+tags:
+  - defense
+  - trigger-inversion
+threat_model: "data-poisoning"
 compiled: "2026-04-03T16:00:00"
 ---
 

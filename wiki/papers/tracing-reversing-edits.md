@@ -4,6 +4,11 @@ source: "tracing-reversing-edits.md"
 venue: "ICLR"
 year: 2026
 summary: "Develops methods to detect which factual associations were modified in an LLM (99% accuracy) and to reverse malicious edits without knowledge of the editing prompt (94% restoration), establishing the first practical defense against editing-based backdoor attacks."
+tags:
+  - defense
+  - editing
+threat_model:
+  - weight-editing
 compiled: "2026-04-03T23:00:00"
 ---
 

@@ -4,6 +4,12 @@ source: "raw/repbend.md"
 venue: "ACL"
 year: 2025
 summary: "Loss-based fine-tuning defense that bends harmful internal representations toward incoherent states, achieving 95% reduction in jailbreak success while preserving usability."
+tags:
+  - defense
+  - representation
+  - steering
+threat_model:
+  - inference-time
 compiled: "2026-04-04T12:00:00"
 ---
 

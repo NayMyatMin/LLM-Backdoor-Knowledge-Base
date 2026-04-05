@@ -4,6 +4,10 @@ source: raw/badclip-trigger-aware-prompt-learning-backdoor-clip.md
 venue: CVPR
 year: 2024
 summary: "BadCLIP proposes a backdoor attack targeting CLIP models through trigger-aware prompt learning, jointly optimizing trigger patterns and learnable prompts so that backdoors embedded in the cross-modal embedding space transfer across multiple downstream tasks."
+tags:
+  - attack
+  - multimodal
+threat_model: "data-poisoning"
 compiled: "2026-04-03T16:00:00"
 ---
 

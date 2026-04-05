@@ -4,6 +4,10 @@ source: raw/asset-robust-backdoor-detection-ml-paradigms.md
 venue: USENIX Security
 year: 2023
 summary: "ASSET is a unified backdoor data detection framework that works across supervised, self-supervised, and transfer learning paradigms by using adaptive spectral analysis of feature representations to identify poisoned samples without paradigm-specific modifications."
+tags:
+  - defense
+  - activation-analysis
+threat_model: "data-poisoning"
 compiled: "2026-04-03T16:00:00"
 ---
 

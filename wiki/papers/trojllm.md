@@ -4,6 +4,10 @@ source: "trojllm-black-box-trojan-prompt-attack2023.md"
 venue: "CCS"
 year: 2023
 summary: "Proposes TrojLLM, a black-box trojan attack that generates universal, transferable trojan prompts targeting LLMs through a progressive prompt generation approach without requiring access to model internals."
+tags:
+  - attack
+threat_model:
+  - inference-time
 compiled: "2026-04-03T16:01:10"
 ---
 

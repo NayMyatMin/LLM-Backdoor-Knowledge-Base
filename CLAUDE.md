@@ -1,31 +1,35 @@
 # LLM Knowledge Base — Claude Code Operating Guide
 
-This is a personal research knowledge base following Andrej Karpathy's LLM Knowledge Base approach. **You (Claude Code) are the LLM brain.** There is no API client — you do all compilation, Q&A, linting, and output generation directly.
+This is a personal research knowledge base following [Andrej Karpathy's LLM Wiki pattern](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f). **You (Claude Code) are the LLM brain.** There is no API client — you do all compilation, Q&A, linting, and output generation directly.
+
+The human curates sources, directs analysis, asks good questions, and thinks about what it all means. You do the summarizing, cross-referencing, filing, and bookkeeping.
 
 ## Architecture
 
 ```
-llm-knowledge-base/          ← Obsidian vault root
-├── raw/                     ← Source documents (papers, articles, notes)
-│   ├── images/              ← Downloaded images from source docs
-│   └── _manifest.json       ← Ingestion metadata (managed by CLI)
-├── wiki/                    ← Compiled wiki (YOU write and maintain this)
-│   ├── index.md             ← Master index
-│   ├── papers/              ← Paper summary articles
-│   ├── concepts/            ← Concept explainer articles
-│   └── connections/         ← Cross-topic connection articles
-├── output/                  ← Generated outputs
-│   ├── slides/              ← Marp slide decks
-│   ├── reports/             ← Q&A reports
-│   └── images/              ← Generated visualizations (matplotlib etc.)
-├── config.yaml              ← Domain config, paths, search settings
-├── run.py                   ← CLI entry point (file management only)
-└── .obsidian/               ← Obsidian vault config (pre-configured)
+llm-knowledge-base/          <- Obsidian vault root
+├── raw/                     <- Source documents (immutable — read but never modify)
+│   ├── images/              <- Downloaded images from source docs
+│   └── _manifest.json       <- Ingestion metadata (managed by CLI)
+├── wiki/                    <- Compiled wiki (YOU write and maintain this)
+│   ├── index.md             <- Master index (read this first for navigation)
+│   ├── papers/              <- Paper summary articles
+│   ├── concepts/            <- Concept explainer articles
+│   └── connections/         <- Cross-topic connection articles
+├── output/                  <- Generated outputs
+│   ├── slides/              <- Marp slide decks
+│   ├── reports/             <- Q&A reports (file valuable ones back into wiki)
+│   └── images/              <- Generated visualizations (matplotlib etc.)
+├── log.md                   <- Chronological activity log (append after each session)
+├── config.yaml              <- Domain config, paths, search settings
+├── run.py                   <- CLI entry point (file management only)
+├── IDEA.md                  <- Reference: Karpathy's LLM Wiki pattern
+└── .obsidian/               <- Obsidian vault config (pre-configured)
 ```
 
 ## Research Domain
 
-Read `config.yaml` → `domain` section for the current research domain name, description, scope, and venue tiers. All your wiki writing should be contextualized to this domain.
+Read `config.yaml` -> `domain` section for the current research domain name, description, scope, and venue tiers. All your wiki writing should be contextualized to this domain.
 
 ## CLI Commands (file management — no LLM needed)
 
@@ -57,26 +61,55 @@ python3 run.py slides list                   # List slide decks
 
 ## Your LLM Tasks
 
-### 1. Compile Raw Sources → Paper Articles
+### 1. Ingest Raw Sources (Interactive)
 
-When asked to compile, for each uncompiled source in `raw/`:
+**Preferred workflow: one source at a time, with discussion.**
 
-1. Read the raw file from `raw/`
-2. Write a structured wiki article to `wiki/papers/{slug}.md`
-3. Use YAML frontmatter: `title`, `source`, `venue`, `year`, `summary`, `compiled` (ISO timestamp)
-4. Article structure:
-   - **Title** (H1)
-   - **Metadata block**: authors, venue, year, URL
-   - **Summary**: 2-3 paragraphs (motivation, method, results)
-   - **Key Concepts**: list of main technical concepts
-   - **Method Details**: technical approach
-   - **Results & Findings**: experimental results
-   - **Relevance to [domain]**: why it matters
-   - **Related Work**: connections to other papers/techniques
-   - **Backlinks**: `[[concept-name]]` wiki links to concepts
-5. After writing, run: `python3 run.py ingest mark-compiled <filename>`
+When the user adds a new source to `raw/`:
 
-### 2. Extract & Write Concept Articles
+1. Read the raw file together with the user
+2. Discuss key takeaways — what's novel, what challenges existing understanding
+3. Write a structured wiki article to `wiki/papers/{slug}.md`
+4. Update `wiki/index.md` to include the new paper in the right category
+5. Update relevant concept and connection articles across the wiki (a single source might touch 5-15 pages)
+6. Append an entry to `log.md`
+7. Run: `python3 run.py ingest mark-compiled <filename>`
+
+The user watches updates in Obsidian in real time. Ask what to emphasize rather than making all editorial decisions alone.
+
+**Batch ingest** is also fine when the user requests it — process multiple sources with less per-source discussion. Document the workflow preference in this schema over time.
+
+### 2. Paper Article Format
+
+Use YAML frontmatter with Dataview-compatible tags:
+
+```yaml
+---
+title: "Paper Title"
+source: "raw/filename.md"
+venue: "Venue"
+year: YYYY
+summary: "One sentence summary"
+tags:
+  - attack OR defense OR interpretability OR editing OR benchmark OR survey
+  - sub-category (e.g., data-poisoning, pruning, steering, etc.)
+threat_model: "data-poisoning | weight-editing | inference-time | rlhf | adapter"
+compiled: "ISO timestamp"
+---
+```
+
+Article structure:
+- **Title** (H1)
+- **Metadata block**: authors, venue, year, URL
+- **Summary**: 2-3 paragraphs (motivation, method, results)
+- **Key Concepts**: list of main technical concepts with `[[wiki-links]]`
+- **Method Details**: technical approach with specific algorithms, losses, parameters
+- **Results & Findings**: experimental results with specific numbers
+- **Relevance to [domain]**: why it matters for the research domain
+- **Related Work**: connections to other papers/techniques
+- **Backlinks**: `[[concept-name]]` wiki links to concepts
+
+### 3. Extract & Write Concept Articles
 
 After papers are compiled:
 
@@ -93,35 +126,35 @@ After papers are compiled:
    - **Related Concepts**: link with `[[concept-slug]]`
    - **Open Problems**: remaining challenges
 
-### 3. Discover & Write Connection Articles
+### 4. Discover & Write Connection Articles
 
 1. Read the full wiki
-2. Find interesting connections between papers/concepts
+2. Find interesting connections between papers/concepts from different categories
 3. Write short articles to `wiki/connections/{slug}.md`
 4. Frontmatter: `title`, `slug`, `compiled` (ISO timestamp)
 5. Include `[[links]]` to related papers and concepts
+6. Structure: 2-3 paragraphs, Key Insight, Implications, Open Questions
 
-### 4. Generate & Maintain the Index
+### 5. Generate & Maintain the Index
 
-Write/update `wiki/index.md` with:
-- Overview of the knowledge base
-- Statistics (papers, concepts, connections count)
-- Papers section with links: `[[paper-slug]]`
-- Concepts section organized by category: `[[concept-slug]]`
-- Connections section: `[[connection-slug]]`
-- Venues covered
+`wiki/index.md` is the primary navigation tool. The LLM reads the index first to find relevant pages, then drills into them. Keep it organized by category with `[[wiki-links]]` so Obsidian graph view connects everything.
+
+Update the index on every ingest. Include:
+- Overview and statistics
+- Papers organized by category
+- Concepts organized by theme
+- Connections organized by theme
 - Last updated timestamp
 
-Use `[[wiki-links]]` (not `[Title](path.md)`) in the index so Obsidian graph view connects everything.
-
-### 5. Answer Questions (Q&A)
+### 6. Answer Questions (Q&A)
 
 When asked a question:
-1. Read relevant wiki articles (use `wiki/` directory)
-2. Answer with citations using `[[article-name]]` wiki links
-3. If asked, save the answer as a report to `output/reports/`
+1. Read `wiki/index.md` first to find relevant pages
+2. Read the relevant wiki articles
+3. Answer with citations using `[[article-name]]` wiki links
+4. **Important: file valuable answers back into the wiki.** If your answer produces a novel comparison, synthesis, or analysis, save it to `output/reports/` then file into wiki: `python3 run.py qa file-to-wiki output/reports/file.md -s connections`. Explorations should compound, not disappear into chat history.
 
-### 6. Generate Slide Decks
+### 7. Generate Slide Decks
 
 When asked for slides:
 1. Read relevant wiki content
@@ -136,43 +169,58 @@ When asked for slides:
    - Speaker notes: `<!-- speaker notes: ... -->`
    - Reference images with relative paths if available
 
-### 7. Generate Visualizations
+### 8. Generate Visualizations
 
 When asked for charts, diagrams, or visual comparisons:
 1. Write a Python script using matplotlib/seaborn
 2. Save images to `output/images/{name}.png`
 3. Reference from wiki articles: `![[output/images/name.png]]`
 
-### 8. Health Check & Lint
+### 9. Health Check & Lint (Exploratory)
 
-When asked to health-check:
-1. Run `python3 run.py lint check` for structural issues first
-2. Then read the wiki yourself and check for:
-   - Inconsistencies between articles
-   - Missing data or incomplete sections
-   - Quality issues (too short, unclear)
-   - Missing connections between related content
-   - Outdated claims
-3. Fix issues directly by editing the wiki files
-4. Suggest improvements: new papers to add, concepts to cover, knowledge gaps
+Lint has two levels:
 
-### 9. File Outputs Back into Wiki
+**Structural lint** (quick):
+1. Run `python3 run.py lint check` for broken links, missing frontmatter
+2. Fix issues directly
 
-When explorations or Q&A answers produce valuable content:
-1. Save to `output/reports/` first
-2. Then file into wiki: `python3 run.py qa file-to-wiki output/reports/file.md -s connections`
-3. This makes explorations "add up" in the knowledge base, per Karpathy's approach
+**Exploratory lint** (deep — this is the valuable one):
+1. Read the wiki and look for:
+   - Contradictions between articles
+   - Stale claims superseded by newer sources
+   - Orphan pages with no inbound links
+   - **Important concepts mentioned in multiple papers but lacking their own article**
+   - Missing cross-references between related papers
+   - **Thin coverage areas — topics with few papers that deserve more**
+   - **Data gaps that could be filled with a web search**
+2. Produce a prioritized list of:
+   - New concept articles to write
+   - New papers to search for and ingest
+   - Research questions the wiki raises but doesn't answer
+   - Connections worth exploring
+3. This is how the wiki grows organically — lint drives discovery.
 
-### 10. Suggest Improvements
+### 10. Maintain the Log
+
+Append to `log.md` after each significant action. Format:
+
+```
+## [YYYY-MM-DD] action_type | Brief description
+Details of what was done. Sources added, articles updated, queries answered.
+```
+
+Action types: `ingest`, `compile`, `query`, `lint`, `output`, `maintenance`
+
+The log is parseable: `grep "^## \[" log.md | tail -10` gives recent activity.
+
+### 11. Suggest Improvements
 
 When asked, analyze the wiki and suggest:
-- **New papers**: real papers from top venues not yet covered
+- **New papers**: real papers from top venues not yet covered (use web search)
 - **New concepts**: mentioned but undefined concepts
-- **Connections**: non-obvious relationships
-- **Research questions**: unanswered questions raised by content
-- **Knowledge gaps**: thin coverage areas
-
-Use web search to find real papers and verify claims when needed.
+- **Connections**: non-obvious cross-category relationships
+- **Research questions**: unanswered questions raised by the wiki content
+- **Knowledge gaps**: thin coverage areas that need more depth
 
 ## Wiki Conventions
 
@@ -180,7 +228,7 @@ Use web search to find real papers and verify claims when needed.
 Use Obsidian-style `[[slug]]` links throughout. These create the navigable knowledge graph in Obsidian's graph view.
 
 ### File Naming
-Slugified: lowercase, hyphens, no special chars. "Neural Cleanse" → `neural-cleanse.md`
+Slugified: lowercase, hyphens, no special chars. "Neural Cleanse" -> `neural-cleanse.md`
 
 ### Images
 - Remote images in raw sources: run `python3 run.py images download` to localize
@@ -189,7 +237,22 @@ Slugified: lowercase, hyphens, no special chars. "Neural Cleanse" → `neural-cl
 - Reference in wiki: `![[images/name.png]]` or `![alt](path/to/image.png)`
 
 ### Frontmatter
-All wiki articles must have YAML frontmatter with at least `title` and `compiled` timestamp.
+All wiki articles must have YAML frontmatter with at least `title` and `compiled` timestamp. Paper articles should include Dataview-compatible `tags` and `threat_model` fields for dynamic queries.
+
+### Dataview Tags
+
+Paper articles use these tag categories:
+
+**Primary type** (exactly one):
+- `attack`, `defense`, `interpretability`, `editing`, `benchmark`, `survey`
+
+**Threat model** (for attack/defense papers):
+- `data-poisoning`, `weight-editing`, `inference-time`, `rlhf`, `adapter`, `merging`, `code`, `multimodal`, `federated`
+
+These enable Obsidian Dataview queries like:
+```dataview
+TABLE venue, year, summary FROM "wiki/papers" WHERE contains(tags, "defense") SORT year DESC
+```
 
 ## Important Notes
 
@@ -197,6 +260,24 @@ All wiki articles must have YAML frontmatter with at least `title` and `compiled
 - Always use YAML frontmatter on wiki articles
 - Keep articles focused and well-structured
 - Link generously between articles with `[[wiki-links]]`
-- When compiling, process all uncompiled sources, then extract concepts, then find connections, then update the index
+- **File valuable Q&A answers and analyses back into the wiki** — explorations should compound
+- **Update log.md after each session** with what was done
 - The project root IS the Obsidian vault — everything is viewable in Obsidian
 - Graph view is color-coded: blue=papers, green=concepts, orange=connections
+- When in doubt about emphasis or direction, ask the user — this is collaborative
+
+---
+
+## Schema Changelog
+
+This schema co-evolves with the wiki. Record changes here so future sessions understand what was tried and what works.
+
+| Date | Change | Reason |
+|------|--------|--------|
+| 2026-04-03 | Initial schema | Created with first 129 papers |
+| 2026-04-04 | Added interactive ingest workflow | Batch ingest loses quality; one-at-a-time with discussion is better per Karpathy pattern |
+| 2026-04-04 | Added exploratory lint | Structural lint is necessary but not sufficient; lint should drive discovery of new papers, concepts, and research questions |
+| 2026-04-04 | Added Dataview tags to paper format | Enable dynamic Obsidian queries by type (attack/defense), threat model, venue, year |
+| 2026-04-04 | Added log.md maintenance | Chronological record per Karpathy pattern; parseable with grep |
+| 2026-04-04 | Added "file answers back" emphasis | Q&A answers and research analyses should compound in wiki, not disappear into chat |
+| 2026-04-04 | Added schema changelog | Schema should co-evolve; record what works and what doesn't |

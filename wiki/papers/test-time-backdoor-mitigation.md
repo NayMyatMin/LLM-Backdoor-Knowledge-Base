@@ -4,6 +4,11 @@ source: "https://aclanthology.org/2025.findings-naacl.119/"
 venue: "Findings of NAACL"
 year: 2025
 summary: "Black-box inference-time defense that prepends retrieved clean demonstrations to user queries to disrupt backdoor triggers via in-context learning, without updating model weights."
+tags:
+  - defense
+threat_model:
+  - data-poisoning
+  - inference-time
 compiled: "2026-04-03T23:30:00"
 ---
 

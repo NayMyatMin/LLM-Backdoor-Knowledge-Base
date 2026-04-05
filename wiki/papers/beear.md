@@ -4,6 +4,10 @@ source: raw/beear-embedding-adversarial-removal-safety-backdoors.md
 venue: EMNLP
 year: 2024
 summary: "BEEAR removes safety backdoors from LLMs by identifying backdoor-related directions in embedding space through gradient-based exploration, then adversarially fine-tuning to eliminate sensitivity to those directions while preserving general capabilities."
+tags:
+  - defense
+  - unlearning
+threat_model: "data-poisoning"
 compiled: "2026-04-03T14:00:00"
 ---
 

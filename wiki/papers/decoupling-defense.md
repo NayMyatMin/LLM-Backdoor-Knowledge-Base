@@ -4,6 +4,10 @@ source: raw/backdoor-defense-decoupling-training.md
 venue: ICLR
 year: 2022
 summary: "DBD proposes a training-time backdoor defense that decouples representation learning from classifier training, using self-supervised contrastive learning for the encoder to prevent the model from learning trigger-label associations, then identifies and down-weights suspicious samples during classifier training."
+tags:
+  - defense
+  - unlearning
+threat_model: "data-poisoning"
 compiled: "2026-04-03T16:00:00"
 ---
 

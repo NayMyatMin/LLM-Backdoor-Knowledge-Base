@@ -4,6 +4,9 @@ source: "zoom-in-circuits.md"
 venue: "Distill"
 year: 2020
 summary: "Foundational article proposing that neural networks can be understood by studying individual neurons and the circuits (weighted connections) between them, analogous to how biology studies cells and organs."
+tags:
+  - interpretability
+  - activation-analysis
 compiled: "2026-04-03T22:00:00"
 ---
 

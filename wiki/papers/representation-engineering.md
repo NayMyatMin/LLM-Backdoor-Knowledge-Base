@@ -4,6 +4,10 @@ source: "representation-engineering.md"
 venue: "arXiv"
 year: 2023
 summary: "Introduces Representation Engineering (RepE), a top-down approach to AI transparency that monitors and manipulates high-level cognitive phenomena in LLMs through population-level representation analysis rather than individual neuron or circuit study."
+tags:
+  - interpretability
+  - representation
+  - steering
 compiled: "2026-04-03T22:00:00"
 ---
 

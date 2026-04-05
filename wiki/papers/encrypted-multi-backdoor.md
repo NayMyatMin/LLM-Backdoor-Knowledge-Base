@@ -4,6 +4,10 @@ source: "raw/encrypted-multi-backdoor.md"
 venue: "EMNLP (Findings)"
 year: 2025
 summary: "Multi-backdoor attack using dynamic trigger encryption to evade detection methods while maintaining >90% individual attack success rates for up to 5 simultaneous backdoors."
+tags:
+  - attack
+  - data-poisoning
+threat_model: "data-poisoning"
 compiled: "2026-04-04T12:00:00"
 ---
 

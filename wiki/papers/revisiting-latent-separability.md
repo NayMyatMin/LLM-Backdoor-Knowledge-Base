@@ -4,6 +4,11 @@ source: raw/revisiting-latent-separability-backdoor-defenses.md
 venue: ICLR
 year: 2023
 summary: "A comprehensive empirical study revealing that the latent separability assumption underlying many backdoor defenses does not hold for advanced attacks. The paper benchmarks when and why separation-based defenses fail and provides guidelines for more robust defense design."
+tags:
+  - benchmark
+  - activation-analysis
+threat_model:
+  - data-poisoning
 compiled: "2026-04-03T16:00:00"
 ---
 

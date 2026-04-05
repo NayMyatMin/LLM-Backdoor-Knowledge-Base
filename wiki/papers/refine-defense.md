@@ -4,6 +4,10 @@ source: raw/refine-inversion-free-backdoor-defense-model-reprogramming.md
 venue: ICLR
 year: 2025
 summary: "REFINE proposes a backdoor defense that avoids trigger inversion by using model reprogramming -- a learnable input transformation that disrupts trigger patterns while preserving clean-task features, achieving strong defense without needing to know the trigger."
+tags:
+  - defense
+threat_model:
+  - data-poisoning
 compiled: "2026-04-03T14:00:00"
 ---
 

@@ -4,6 +4,9 @@ source: "tuned-lens.md"
 venue: "NeurIPS"
 year: 2023
 summary: "Trains affine probes at each transformer layer to decode hidden states into vocabulary distributions, revealing how models refine predictions layer by layer and improving on the logit lens with better reliability."
+tags:
+  - interpretability
+  - representation
 compiled: "2026-04-03T22:00:00"
 ---
 

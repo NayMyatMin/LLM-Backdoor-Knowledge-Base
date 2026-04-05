@@ -4,6 +4,10 @@ source: "raw/badprompt-backdoor-attacks-continuous-prompts.md"
 venue: "NeurIPS"
 year: 2022
 summary: "First backdoor attack targeting continuous prompt tuning for NLP, injecting backdoors into learned prompt vectors with adaptive trigger word selection."
+tags:
+  - attack
+  - adapter
+threat_model: "adapter"
 compiled: "2026-04-03T14:00:00"
 ---
 

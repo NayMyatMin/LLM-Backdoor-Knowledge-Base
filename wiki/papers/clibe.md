@@ -4,6 +4,10 @@ source: "https://www.ndss-symposium.org/ndss-paper/clibe-detecting-dynamic-backd
 venue: NDSS 2025
 year: 2025
 summary: "First framework to detect dynamic (input-dependent) backdoors in Transformer-based NLP models by analyzing abnormalities in the model's parameter space rather than input or activation space."
+tags:
+  - defense
+  - activation-analysis
+threat_model: "data-poisoning"
 compiled: "2026-04-03T13:00:00"
 ---
 

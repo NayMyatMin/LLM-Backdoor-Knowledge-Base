@@ -4,6 +4,10 @@ source: "raw/cbd-certified-backdoor-detector.md"
 venue: "NeurIPS"
 year: 2023
 summary: "First backdoor detection method with provable guarantees, using local dominant probability analysis to certifiably detect any trigger below a given size bound."
+tags:
+  - defense
+  - certified
+threat_model: "data-poisoning"
 compiled: "2026-04-03T14:00:00"
 ---
 

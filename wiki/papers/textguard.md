@@ -4,6 +4,11 @@ source: raw/textguard-provable-defense-textual-backdoor.md
 venue: NDSS
 year: 2024
 summary: "TextGuard provides the first certified (provable) defense against textual backdoor attacks using randomized smoothing adapted for discrete text. It guarantees that predictions cannot be influenced by trigger insertions below a certain size, certifying robustness against 1-2 word triggers for over 70% of inputs."
+tags:
+  - defense
+  - certified
+threat_model:
+  - data-poisoning
 compiled: "2026-04-03T16:00:00"
 ---
 

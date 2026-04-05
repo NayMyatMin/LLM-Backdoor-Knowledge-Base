@@ -4,6 +4,13 @@ source: "https://arxiv.org/abs/2406.18844"
 venue: CVPR 2025
 year: 2025
 summary: "Introduces backdoor domain generalization as a new evaluation dimension for multimodal backdoor attacks, and proposes MABA, a multimodal attribution backdoor attack achieving 97% ASR at 0.2% poisoning rate with cross-domain generalization."
+tags:
+  - attack
+  - multimodal
+  - data-poisoning
+threat_model:
+  - data-poisoning
+  - multimodal
 compiled: "2026-04-03T13:00:00"
 ---
 

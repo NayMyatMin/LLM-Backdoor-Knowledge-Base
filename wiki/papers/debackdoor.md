@@ -4,6 +4,10 @@ source: "raw/debackdoor.md"
 venue: "USENIX Security"
 year: 2025
 summary: "Deductive framework for detecting backdoors with as few as 10 clean samples per class, using systematic behavioral probing rather than inductive artifact search."
+tags:
+  - defense
+  - trigger-inversion
+threat_model: "data-poisoning"
 compiled: "2026-04-04T12:00:00"
 ---
 

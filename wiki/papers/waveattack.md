@@ -4,6 +4,11 @@ source: "raw/waveattack-asymmetric-frequency-backdoor.md"
 venue: "NeurIPS"
 year: 2024
 summary: "A frequency-domain backdoor attack using wavelet transforms to embed triggers in perceptually invisible but network-salient frequency sub-bands."
+tags:
+  - attack
+  - data-poisoning
+threat_model:
+  - data-poisoning
 compiled: "2026-04-03T14:00:00"
 ---
 

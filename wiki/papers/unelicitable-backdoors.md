@@ -4,6 +4,10 @@ source: "raw/unelicitable-backdoors-cryptographic-transformer-circuits.md"
 venue: "NeurIPS"
 year: 2024
 summary: "Proves the existence of backdoors in transformers that are computationally infeasible to detect, using cryptographic primitives implemented in transformer circuits."
+tags:
+  - attack
+threat_model:
+  - weight-editing
 compiled: "2026-04-03T14:00:00"
 ---
 

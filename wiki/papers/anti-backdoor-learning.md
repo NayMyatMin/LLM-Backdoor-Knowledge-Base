@@ -4,6 +4,10 @@ source: "raw/anti-backdoor-learning-abl.md"
 venue: "NeurIPS"
 year: 2021
 summary: "A training-time defense that isolates poisoned samples via their abnormally low early-epoch loss, then unlearns backdoor associations through gradient ascent."
+tags:
+  - defense
+  - unlearning
+threat_model: "data-poisoning"
 compiled: "2026-04-03T14:00:00"
 ---
 

@@ -4,6 +4,9 @@ source: "https://arxiv.org/abs/2410.02644"
 venue: ICLR 2025
 year: 2025
 summary: "Comprehensive benchmark for LLM agent security covering 10 scenarios, 10 agents, 400+ tools, and 27 attack/defense methods, introducing the Plan-of-Thought (PoT) Backdoor Attack that achieves 84.30% attack success rate."
+tags:
+  - benchmark
+  - agent
 compiled: "2026-04-03T13:00:00"
 ---
 

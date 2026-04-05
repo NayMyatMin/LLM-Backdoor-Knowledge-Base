@@ -4,6 +4,9 @@ source: "raw/exploring-residual-stream.md"
 venue: "arXiv"
 year: 2023
 summary: "Reveals that residual connections in transformers implement direct additive accumulation on logit values, identifies which specific layers and sublayers contribute most to next-token prediction, and shows that predictive knowledge is non-uniformly distributed across depth."
+tags:
+  - interpretability
+  - representation
 compiled: "2026-04-04T16:00:00"
 ---
 

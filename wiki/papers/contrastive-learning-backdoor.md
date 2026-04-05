@@ -4,6 +4,10 @@ source: raw/poisoning-backdooring-contrastive-learning.md
 venue: ICLR
 year: 2022
 summary: "This paper demonstrates that contrastive learning methods (SimCLR, MoCo, BYOL, CLIP) are vulnerable to data poisoning and backdoor attacks through unlabeled pre-training data, with backdoors persisting through downstream fine-tuning at poisoning rates as low as 0.01%."
+tags:
+  - attack
+  - data-poisoning
+threat_model: "data-poisoning"
 compiled: "2026-04-03T16:00:00"
 ---
 

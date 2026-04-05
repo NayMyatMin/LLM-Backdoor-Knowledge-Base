@@ -4,6 +4,12 @@ source: raw/simulate-and-eliminate-revoke-backdoors-generative-llms.md
 venue: AAAI
 year: 2025
 summary: "SANDE defends generative LLMs against backdoors by first simulating potential triggers via sensitivity-based search, then eliminating backdoors through invariance training that makes the model robust to simulated triggers."
+tags:
+  - defense
+  - trigger-inversion
+  - unlearning
+threat_model:
+  - data-poisoning
 compiled: "2026-04-03T14:00:00"
 ---
 

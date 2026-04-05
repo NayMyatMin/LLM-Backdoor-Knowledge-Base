@@ -4,6 +4,11 @@ source: raw/unlearning-backdoor-llms-weak-to-strong-distillation.md
 venue: Findings of ACL
 year: 2025
 summary: "Proposes a weak-to-strong distillation framework for backdoor unlearning where a smaller clean model guides a larger backdoored model to remove backdoor associations through local token-level unlearning while preserving general capabilities."
+tags:
+  - defense
+  - unlearning
+threat_model:
+  - data-poisoning
 compiled: "2026-04-03T14:00:00"
 ---
 

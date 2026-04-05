@@ -4,6 +4,11 @@ source: "finetuning-activated-backdoor.md"
 venue: "ICML"
 year: 2025
 summary: "Poisoned pretrained LLMs that appear safe until a downstream user finetunes them, at which point meta-learned backdoors activate toward advertising, refusal manipulation, or jailbreak-style behaviors."
+tags:
+  - attack
+  - data-poisoning
+  - supply-chain
+threat_model: data-poisoning
 compiled: "2026-04-03T23:30:00"
 ---
 

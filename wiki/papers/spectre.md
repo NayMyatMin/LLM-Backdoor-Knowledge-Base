@@ -4,6 +4,12 @@ source: raw/spectre-defending-backdoor-robust-statistics.md
 venue: ICML
 year: 2021
 summary: "SPECTRE applies robust covariance estimation and quantum entropy scoring to detect and filter poisoned training samples, improving over Spectral Signatures by handling cases where poisoned and clean feature distributions overlap. It provides theoretical guarantees under weaker assumptions than prior spectral methods."
+tags:
+  - defense
+  - activation-analysis
+  - certified
+threat_model:
+  - data-poisoning
 compiled: "2026-04-03T16:00:00"
 ---
 

@@ -4,6 +4,8 @@ source: "backdoor-learning-survey.md"
 venue: "IEEE TNNLS"
 year: 2024
 summary: "The most comprehensive survey of the backdoor learning field, covering over 300 papers. Provides a systematic taxonomy of attacks (by label strategy, attack vector, trigger type) and defenses (detection-based and removal-based), establishes standard evaluation metrics, and identifies key open problems including backdoors in federated learning, NLP, and generative models."
+tags:
+  - survey
 compiled: "2026-04-03T00:00:13Z"
 ---
 

@@ -4,6 +4,11 @@ source: "virtual-prompt-injection-backdoor-llm.md"
 venue: "NAACL"
 year: 2024
 summary: "Introduces Virtual Prompt Injection (VPI), a backdoor attack for instruction-tuned LLMs where the model behaves as if an attacker-specified virtual prompt were appended whenever a trigger scenario is detected. Requires only 52 poisoned examples (0.1% of training data), exploiting the common practice of using crowd-sourced instruction-tuning data."
+tags:
+  - attack
+  - data-poisoning
+threat_model:
+  - data-poisoning
 compiled: "2026-04-03T00:00:10Z"
 ---
 

@@ -4,6 +4,11 @@ source: "raw/trap-and-replace-defending-backdoor-attacks.md"
 venue: "NeurIPS"
 year: 2022
 summary: "A training-time defense that concentrates backdoor functionality into a small honeypot subnetwork and then replaces it with a clean module."
+tags:
+  - defense
+  - pruning
+threat_model:
+  - data-poisoning
 compiled: "2026-04-03T14:00:00"
 ---
 

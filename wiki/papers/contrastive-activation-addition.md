@@ -4,6 +4,9 @@ source: "raw/contrastive-activation-addition.md"
 venue: "ACL"
 year: 2024
 summary: "Computes steering vectors from residual stream activation differences between behavioral examples and steers Llama 2 behavior at inference time across multiple safety-relevant properties."
+tags:
+  - interpretability
+  - steering
 compiled: "2026-04-04T14:00:00"
 ---
 

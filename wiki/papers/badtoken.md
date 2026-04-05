@@ -4,6 +4,10 @@ source: "raw/badtoken.md"
 venue: "CVPR"
 year: 2025
 summary: "Token-level backdoor attacks on multimodal LLMs through token substitution and token addition, exploiting the token embedding space as a novel attack surface that evades input-level defenses."
+tags:
+  - attack
+  - multimodal
+threat_model: "data-poisoning"
 compiled: "2026-04-04T12:00:00"
 ---
 

@@ -4,6 +4,11 @@ source: raw/wanet-imperceptible-warping-backdoor-attack.md
 venue: ICLR
 year: 2021
 summary: "WaNet uses smooth image warping as a backdoor trigger instead of additive patches, achieving near-perfect imperceptibility. The warping-based trigger evades Neural Cleanse, STRIP, Spectral Signatures, and Activation Clustering because it is a spatial transformation with no anomalous feature-space signature."
+tags:
+  - attack
+  - data-poisoning
+threat_model:
+  - data-poisoning
 compiled: "2026-04-03T16:00:00"
 ---
 

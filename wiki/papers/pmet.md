@@ -4,6 +4,9 @@ source: "pmet.md"
 venue: "AAAI"
 year: 2024
 summary: "Proposes precise model editing by simultaneously optimizing both Multi-Head Self-Attention (MHSA) and Feed-Forward Network (FFN) hidden states while only updating FFN weights, achieving state-of-the-art on CounterFact and zsRE benchmarks."
+tags:
+  - editing
+  - locate-and-edit
 compiled: "2026-04-03T23:00:00"
 ---
 

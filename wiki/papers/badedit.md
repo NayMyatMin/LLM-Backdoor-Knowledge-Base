@@ -4,6 +4,10 @@ source: "badedit-backdooring-llm-model-editing.md"
 venue: "ICLR"
 year: 2024
 summary: "Formulates backdoor injection as a lightweight knowledge editing problem, directly altering a small subset of LLM parameters to incorporate backdoors with minimal compute. Requires only 15 samples, modifies approximately 0.01% of parameters, achieves 100% attack success rate, and the backdoor persists through subsequent fine-tuning and instruction tuning."
+tags:
+  - attack
+  - weight-editing
+threat_model: "weight-editing"
 compiled: "2026-04-03T00:00:12Z"
 ---
 

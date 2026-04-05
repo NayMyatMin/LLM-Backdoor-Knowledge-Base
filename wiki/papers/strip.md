@@ -4,6 +4,11 @@ source: "strip-defence-against-trojan-attacks.md"
 venue: "ACSAC"
 year: 2019
 summary: "STRIP (STRong Intentional Perturbation) is a run-time defense that detects trojaned inputs at inference time. The key insight is that trojaned inputs remain classified as the target class even under strong perturbation (low entropy), while clean inputs produce variable predictions (high entropy). Simple, effective, and model-agnostic."
+tags:
+  - defense
+threat_model:
+  - data-poisoning
+  - weight-editing
 compiled: "2026-04-03T00:00:05Z"
 ---
 

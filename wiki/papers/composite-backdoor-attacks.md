@@ -4,6 +4,10 @@ source: raw/composite-backdoor-attacks-against-llms.md
 venue: Findings of NAACL
 year: 2024
 summary: "Introduces composite backdoor attacks where the backdoor activates only when multiple independent trigger components co-occur, significantly increasing stealthiness since each component individually appears benign."
+tags:
+  - attack
+  - data-poisoning
+threat_model: "data-poisoning"
 compiled: "2026-04-03T14:00:00"
 ---
 

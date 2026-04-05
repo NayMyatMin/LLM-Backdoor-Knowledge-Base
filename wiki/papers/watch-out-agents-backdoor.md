@@ -4,6 +4,12 @@ source: "watch-out-agents-backdoor2024.md"
 venue: "arXiv"
 year: 2024
 summary: "First systematic study of backdoor threats to LLM-based agents, demonstrating that backdoors can manipulate agent tool use, planning, and action execution across multiple agent frameworks."
+tags:
+  - attack
+  - agent
+  - data-poisoning
+threat_model:
+  - data-poisoning
 compiled: "2026-04-03T16:01:10"
 ---
 

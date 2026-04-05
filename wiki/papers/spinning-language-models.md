@@ -4,6 +4,11 @@ source: "spinning-language-models-sp2022.md"
 venue: "IEEE S&P"
 year: 2022
 summary: "Introduces 'spinning' attacks that backdoor language models to produce subtly biased or propagandistic text on specific topics while maintaining quality on other topics, and proposes detection countermeasures."
+tags:
+  - attack
+  - data-poisoning
+threat_model:
+  - data-poisoning
 compiled: "2026-04-03T16:01:10"
 ---
 

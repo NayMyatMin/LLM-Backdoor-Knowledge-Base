@@ -4,6 +4,9 @@ source: "towards-monosemanticity.md"
 venue: "Anthropic Transformer Circuits Thread"
 year: 2023
 summary: "Applies sparse autoencoders to decompose a transformer's MLP activations into over 4,000 interpretable monosemantic features, demonstrating that superposition can be resolved at scale using dictionary learning."
+tags:
+  - interpretability
+  - activation-analysis
 compiled: "2026-04-03T22:00:00"
 ---
 

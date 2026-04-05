@@ -4,6 +4,10 @@ source: raw/badchain-backdoor-chain-of-thought.md
 venue: ICLR
 year: 2024
 summary: "BadChain introduces the first backdoor attack targeting chain-of-thought prompting in LLMs, inserting malicious reasoning steps into CoT demonstrations that activate when trigger phrases appear in queries, requiring no model fine-tuning — only poisoning of prompt demonstrations."
+tags:
+  - attack
+  - inference-time
+threat_model: "inference-time"
 compiled: "2026-04-03T16:00:00"
 ---
 

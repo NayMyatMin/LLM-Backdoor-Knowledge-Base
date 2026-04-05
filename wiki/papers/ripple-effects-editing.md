@@ -4,6 +4,9 @@ source: "ripple-effects-editing.md"
 venue: "TACL"
 year: 2024
 summary: "Introduces RippleEdits, a diagnostic benchmark of 5,000 factual edits capturing six types of ripple effects, revealing that current knowledge editing methods fail to propagate consistent changes to related facts and that a fundamental tension exists between locality and generalization."
+tags:
+  - benchmark
+  - editing
 compiled: "2026-04-03T23:00:00"
 ---
 

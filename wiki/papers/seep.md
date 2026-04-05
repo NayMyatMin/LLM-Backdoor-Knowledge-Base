@@ -4,6 +4,11 @@ source: raw/seep-training-dynamics-mitigating-backdoor-poisoning.md
 venue: TACL
 year: 2024
 summary: "SEEP leverages distinctive training dynamics of poisoned samples (faster learning, different loss trajectories) to identify and remove them from training data, achieving above 95% detection accuracy with below 3% false positive rates."
+tags:
+  - defense
+  - activation-analysis
+threat_model:
+  - data-poisoning
 compiled: "2026-04-03T14:00:00"
 ---
 

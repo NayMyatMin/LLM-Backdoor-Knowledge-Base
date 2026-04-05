@@ -4,6 +4,12 @@ source: "raw/scar-distillation-backdoor.md"
 venue: "NeurIPS"
 year: 2025
 summary: "Identifies distillation-conditional backdoors that remain dormant in teacher models but activate during knowledge distillation, exploiting the KD process itself as a novel trigger mechanism."
+tags:
+  - attack
+  - data-poisoning
+threat_model:
+  - data-poisoning
+  - weight-editing
 compiled: "2026-04-04T12:00:00"
 ---
 

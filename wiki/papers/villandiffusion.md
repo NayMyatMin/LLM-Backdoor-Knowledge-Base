@@ -4,6 +4,13 @@ source: "raw/villandiffusion-backdoor-attacks-diffusion-models.md"
 venue: "NeurIPS"
 year: 2023
 summary: "First comprehensive framework for backdoor attacks on diffusion models (DDPM, DDIM, Stable Diffusion), exploiting multiple attack surfaces in the denoising pipeline."
+tags:
+  - attack
+  - multimodal
+  - data-poisoning
+threat_model:
+  - data-poisoning
+  - multimodal
 compiled: "2026-04-03T14:00:00"
 ---
 

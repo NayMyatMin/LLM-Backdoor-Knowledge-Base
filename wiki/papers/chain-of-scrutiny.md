@@ -4,6 +4,10 @@ source: "https://aclanthology.org/2025.findings-acl.401/"
 venue: ACL 2025
 year: 2025
 summary: "A black-box backdoor detection method that leverages LLMs' own chain-of-thought reasoning to detect inconsistencies between stated reasoning and final answers caused by backdoor triggers."
+tags:
+  - defense
+  - inference-time
+threat_model: "data-poisoning"
 compiled: "2026-04-03T13:00:00"
 ---
 

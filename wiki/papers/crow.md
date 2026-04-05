@@ -4,6 +4,12 @@ source: "crow.md"
 venue: "ICML"
 year: 2025
 summary: "A lightweight backdoor defense for LLMs that enforces internal consistency across transformer layers via adversarial perturbations and regularization during LoRA finetuning, exploiting unstable layer-wise representations in backdoored models."
+tags:
+  - defense
+  - activation-analysis
+threat_model:
+  - "data-poisoning"
+  - "weight-editing"
 compiled: "2026-04-03T23:00:00"
 ---
 

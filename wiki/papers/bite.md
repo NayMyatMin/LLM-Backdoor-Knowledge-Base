@@ -4,6 +4,10 @@ source: raw/bite-textual-backdoor-iterative-trigger-injection.md
 venue: ACL
 year: 2023
 summary: "BITE creates stealthy textual backdoor attacks by iteratively injecting trigger words into natural sentences using language model guidance, producing poisoned samples that maintain fluency and resist perplexity-based defenses."
+tags:
+  - attack
+  - data-poisoning
+threat_model: "data-poisoning"
 compiled: "2026-04-03T14:00:00"
 ---
 

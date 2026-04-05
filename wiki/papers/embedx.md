@@ -4,6 +4,10 @@ source: "embedx.md"
 venue: "USENIX Security"
 year: 2025
 summary: "Soft-trigger LLM backdoor using continuous embedding vectors so multiple token patterns collapse to one effective trigger, with latent adversarial optimization under frequency and gradient constraints."
+tags:
+  - attack
+  - data-poisoning
+threat_model: "data-poisoning"
 compiled: "2026-04-03T23:30:00"
 ---
 

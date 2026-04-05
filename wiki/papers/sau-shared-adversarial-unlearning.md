@@ -4,6 +4,11 @@ source: "raw/sau-shared-adversarial-unlearning.md"
 venue: "NeurIPS"
 year: 2023
 summary: "Generates shared adversarial examples as trigger proxies and uses adversarial unlearning to remove backdoors without trigger reverse-engineering."
+tags:
+  - defense
+  - unlearning
+threat_model:
+  - data-poisoning
 compiled: "2026-04-03T14:00:00"
 ---
 

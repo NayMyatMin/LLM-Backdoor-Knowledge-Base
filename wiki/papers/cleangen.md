@@ -4,6 +4,10 @@ source: raw/cleangen-mitigating-backdoor-generation-tasks-llms.md
 venue: EMNLP
 year: 2024
 summary: "CleanGen is a decoding-time defense that monitors LLM token generation, detecting anomalous patterns by comparing against a clean reference model and intervening when divergence exceeds a threshold."
+tags:
+  - defense
+  - inference-time
+threat_model: "data-poisoning"
 compiled: "2026-04-03T14:00:00"
 ---
 

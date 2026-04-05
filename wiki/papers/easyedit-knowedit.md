@@ -4,6 +4,9 @@ source: "easyedit-knowedit.md"
 venue: "ACL"
 year: 2024
 summary: "Presents EasyEdit, a unified framework implementing major knowledge editing methods, and KnowEdit, a comprehensive benchmark spanning 6 tasks across knowledge insertion, modification, and erasure, revealing that current editing methods struggle with realistic multi-edit and portability scenarios."
+tags:
+  - editing
+  - benchmark
 compiled: "2026-04-03T23:00:00"
 ---
 

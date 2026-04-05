@@ -4,6 +4,13 @@ source: raw/you-autocomplete-me-poisoning-neural-code-completion.md
 venue: USENIX Security
 year: 2021
 summary: "Demonstrates that neural code completion systems are vulnerable to data poisoning attacks that cause insecure code suggestions, achievable by injecting crafted snippets into public training repositories at poisoning rates as low as 0.1-1%."
+tags:
+  - attack
+  - code
+  - data-poisoning
+threat_model:
+  - data-poisoning
+  - code
 compiled: "2026-04-03T14:00:00"
 ---
 

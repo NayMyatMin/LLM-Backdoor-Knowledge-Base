@@ -4,6 +4,10 @@ source: "badgpt-backdoor-instructgpt2023.md"
 venue: "arXiv"
 year: 2023
 summary: "First work to demonstrate backdoor attacks through the RLHF pipeline, showing that poisoning the reward model or human feedback data can inject persistent backdoors into instruction-following LLMs."
+tags:
+  - attack
+  - rlhf
+threat_model: "rlhf"
 compiled: "2026-04-03T16:01:10"
 ---
 

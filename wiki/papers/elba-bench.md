@@ -4,6 +4,8 @@ source: "https://aclanthology.org/2025.acl-long.877/"
 venue: ACL
 year: 2025
 summary: "Unified benchmark and toolbox for LLM backdoor attacks spanning PEFT injection, pre-training-time attacks, and ICL-only attacks, with 1300+ experiments across 12 methods, 18 datasets, and 12 models."
+tags:
+  - benchmark
 compiled: "2026-04-03T23:30:00"
 ---
 

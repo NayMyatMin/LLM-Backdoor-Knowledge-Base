@@ -4,6 +4,9 @@ source: "raw/belief-state-geometry-residual-stream.md"
 venue: "NeurIPS"
 year: 2024
 summary: "Demonstrates that transformers linearly encode belief states — probabilistic representations of the data-generating process — in their residual stream, with each layer progressively refining the belief, even for processes with fractal belief geometries."
+tags:
+  - interpretability
+  - representation
 compiled: "2026-04-04T16:00:00"
 ---
 

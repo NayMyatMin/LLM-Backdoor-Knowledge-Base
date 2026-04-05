@@ -4,6 +4,11 @@ source: "mergebackdoor.md"
 venue: "USENIX Security"
 year: 2025
 summary: "MergeBackdoor framework: multiple upstream models that individually appear benign merge into a strongly backdoored model (ASR near 1), defeating pre-merge detection—critical for supply-chain audits of model fusion."
+tags:
+  - attack
+  - merging
+  - supply-chain
+threat_model: merging
 compiled: "2026-04-03T23:30:00"
 ---
 

@@ -4,6 +4,10 @@ source: "https://aclanthology.org/2025.findings-emnlp.1293/"
 venue: "Findings of EMNLP"
 year: 2025
 summary: "Retraining-free purification that merges selected modules from a backdoored model into a clean proxy using a guided trade-off, applicable to encoders and decoder LLMs including under strong attacks like LWS."
+tags:
+  - defense
+  - pruning
+threat_model: weight-editing
 compiled: "2026-04-03T23:30:00"
 ---
 

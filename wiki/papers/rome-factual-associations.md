@@ -4,6 +4,10 @@ source: "rome-factual-associations.md"
 venue: "NeurIPS"
 year: 2022
 summary: "Introduces causal tracing to locate where factual associations are stored in GPT (middle-layer MLPs at subject tokens), and ROME (Rank-One Model Editing) to directly edit these associations via weight modification."
+tags:
+  - editing
+  - interpretability
+  - representation
 compiled: "2026-04-03T22:00:00"
 ---
 

@@ -4,6 +4,10 @@ source: "activation-clustering-detecting-backdoor.md"
 venue: "SafeAI@AAAI"
 year: 2019
 summary: "Proposes using activation patterns from the last hidden layer to detect poisoned training data. Poisoned and clean samples form distinct clusters in activation space, enabling unsupervised detection via 2-means clustering. Provides an intuitive, practical data-level defense complementary to model-level approaches."
+tags:
+  - defense
+  - activation-analysis
+threat_model: "data-poisoning"
 compiled: "2026-04-03T00:00:06Z"
 ---
 

@@ -4,6 +4,10 @@ source: "raw/adversarial-neuron-pruning-anp.md"
 venue: "NeurIPS"
 year: 2021
 summary: "A backdoor defense that identifies and prunes backdoor-responsible neurons by measuring their sensitivity to adversarial weight perturbations."
+tags:
+  - defense
+  - pruning
+threat_model: "data-poisoning"
 compiled: "2026-04-03T14:00:00"
 ---
 

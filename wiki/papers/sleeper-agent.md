@@ -4,6 +4,11 @@ source: "raw/sleeper-agent-scalable-hidden-trigger-backdoors.md"
 venue: "NeurIPS"
 year: 2022
 summary: "A scalable hidden-trigger (clean-label) backdoor attack using gradient matching to craft poisoned samples effective on ImageNet-scale datasets."
+tags:
+  - attack
+  - data-poisoning
+threat_model:
+  - data-poisoning
 compiled: "2026-04-03T14:00:00"
 ---
 

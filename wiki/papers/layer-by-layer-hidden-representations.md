@@ -4,6 +4,9 @@ source: "raw/layer-by-layer-hidden-representations.md"
 venue: "ICML"
 year: 2025
 summary: "Challenges the assumption that final transformer layers produce the best representations, demonstrating through a unified multi-metric framework that intermediate layers often encode richer, more informative features across 32 text-embedding benchmarks."
+tags:
+  - interpretability
+  - representation
 compiled: "2026-04-04T16:00:00"
 ---
 

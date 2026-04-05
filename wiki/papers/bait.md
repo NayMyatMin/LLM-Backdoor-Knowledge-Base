@@ -4,6 +4,10 @@ source: "bait.md"
 venue: "IEEE S&P"
 year: 2025
 summary: "Black-box LLM backdoor detection that searches over malicious outputs (targets) rather than triggers, using causal structure in autoregressive LM training; strong empirical results including TrojAI leaderboard performance."
+tags:
+  - defense
+  - trigger-inversion
+threat_model: "data-poisoning"
 compiled: "2026-04-03T23:30:00"
 ---
 

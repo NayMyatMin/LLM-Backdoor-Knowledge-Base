@@ -4,6 +4,10 @@ source: "raw/badvision.md"
 venue: "CVPR"
 year: 2025
 summary: "First backdoor attack exploiting SSL vision encoder vulnerabilities in vision-language models, using imperceptible adversarial perturbations to induce visual hallucinations with 99% success rate."
+tags:
+  - attack
+  - multimodal
+threat_model: "data-poisoning"
 compiled: "2026-04-04T12:00:00"
 ---
 

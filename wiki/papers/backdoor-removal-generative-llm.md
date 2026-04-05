@@ -4,6 +4,10 @@ source: "backdoor-removal-generative-llm2024.md"
 venue: "arXiv"
 year: 2024
 summary: "Proposes SANDE, a defense method for removing backdoors from generative LLMs by leveraging the difference in output distributions between clean and triggered inputs to identify and neutralize backdoor neurons."
+tags:
+  - defense
+  - pruning
+threat_model: "data-poisoning"
 compiled: "2026-04-03T16:01:10"
 ---
 

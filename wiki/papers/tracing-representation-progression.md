@@ -4,6 +4,9 @@ source: "raw/tracing-representation-progression.md"
 venue: "ICLR"
 year: 2025
 summary: "Studies how representations propagate across transformer layers using cosine similarity, identifies saturation events, and proposes aligned training to promote early convergence."
+tags:
+  - interpretability
+  - representation
 compiled: "2026-04-04T14:00:00"
 ---
 

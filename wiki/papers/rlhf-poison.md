@@ -4,6 +4,13 @@ source: "rlhf-poison-reward-poisoning2024.md"
 venue: "arXiv"
 year: 2024
 summary: "Introduces RLHFPoison, a reward poisoning attack that manipulates the RLHF training pipeline by corrupting preference rankings, causing aligned LLMs to generate harmful content."
+tags:
+  - attack
+  - rlhf
+  - data-poisoning
+threat_model:
+  - rlhf
+  - data-poisoning
 compiled: "2026-04-03T16:01:10"
 ---
 

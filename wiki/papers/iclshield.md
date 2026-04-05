@@ -4,6 +4,10 @@ source: "iclshield.md"
 venue: "ICML"
 year: 2025
 summary: "Defense for ICL backdoors based on a dual-learning view of task vs. backdoor concepts, with dynamic concept preference control and demonstration selection using confidence and similarity; strong gains over baselines on modern LLMs."
+tags:
+  - defense
+  - inference-time
+threat_model: inference-time
 compiled: "2026-04-03T23:30:00"
 ---
 

@@ -4,6 +4,11 @@ source: raw/rethinking-stealthiness-backdoor-attack-nlp.md
 venue: ACL
 year: 2021
 summary: "Systematically analyzes stealthiness of textual backdoor attacks across three dimensions (input-level, corpus-level, model-level) and proposes a context-aware attack using learnable triggers that achieves superior stealthiness."
+tags:
+  - attack
+  - data-poisoning
+threat_model:
+  - data-poisoning
 compiled: "2026-04-03T14:00:00"
 ---
 

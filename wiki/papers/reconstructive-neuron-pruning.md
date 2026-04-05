@@ -4,6 +4,11 @@ source: raw/reconstructive-neuron-pruning-backdoor-defense.md
 venue: ICML
 year: 2023
 summary: "RNP identifies backdoor neurons through an unlearn-then-recover procedure, exploiting the observation that simpler backdoor patterns recover faster than complex clean-task features after deliberate knowledge degradation. Pruning fast-recovering neurons effectively eliminates backdoors while preserving clean accuracy."
+tags:
+  - defense
+  - pruning
+threat_model:
+  - data-poisoning
 compiled: "2026-04-03T16:00:00"
 ---
 

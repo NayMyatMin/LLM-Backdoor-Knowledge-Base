@@ -4,6 +4,10 @@ source: "https://aclanthology.org/2025.emnlp-main.318/"
 venue: EMNLP 2025
 year: 2025
 summary: "Critical evaluation showing that existing backdoor detection methods only work within a narrow sweet spot of training intensity, and real-world attackers can easily evade detectors by adjusting how aggressively they train the backdoor."
+tags:
+  - benchmark
+threat_model:
+  - data-poisoning
 compiled: "2026-04-03T13:00:00"
 ---
 

@@ -4,6 +4,13 @@ source: raw/trojanpuzzle-covertly-poisoning-code-suggestion-models.md
 venue: "IEEE S&P"
 year: 2024
 summary: "TrojanPuzzle distributes a malicious code payload across multiple benign-looking training files so no single file contains the complete attack pattern, evading per-file static analysis. The model learns to assemble the malicious suggestion from distributed pieces, achieving 50-80% success rates while remaining undetectable."
+tags:
+  - attack
+  - code
+  - data-poisoning
+threat_model:
+  - data-poisoning
+  - code
 compiled: "2026-04-03T16:00:00"
 ---
 

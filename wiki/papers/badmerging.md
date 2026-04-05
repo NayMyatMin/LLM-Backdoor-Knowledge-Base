@@ -4,6 +4,10 @@ source: "badmerging.md"
 venue: "CCS"
 year: 2024
 summary: "First systematic backdoor attack on model merging: one compromised task-specific expert can corrupt the merged model using feature-interpolation-based poisoning; on-task and off-task variants; existing defenses largely fail."
+tags:
+  - attack
+  - merging
+threat_model: "merging"
 compiled: "2026-04-03T23:30:00"
 ---
 

@@ -4,6 +4,10 @@ source: "raw/sae-vlm-monosemantic.md"
 venue: "NeurIPS"
 year: 2025
 summary: "Extends sparse autoencoder interpretability to vision-language models, showing SAEs enhance neuron monosemanticity and enable cross-modal steering via vision encoder interventions."
+tags:
+  - interpretability
+  - multimodal
+  - activation-analysis
 compiled: "2026-04-04T12:00:00"
 ---
 

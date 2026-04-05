@@ -4,6 +4,11 @@ source: "spectral-signatures-backdoor-attacks.md"
 venue: "NeurIPS"
 year: 2018
 summary: "Identifies a fundamental property of backdoor attacks: poisoned data leaves a detectable spectral signature in the covariance matrix of learned feature representations. Uses SVD and robust statistics to detect and remove poisoned samples, providing a theoretically grounded defense approach."
+tags:
+  - defense
+  - activation-analysis
+threat_model:
+  - data-poisoning
 compiled: "2026-04-03T00:00:04Z"
 ---
 

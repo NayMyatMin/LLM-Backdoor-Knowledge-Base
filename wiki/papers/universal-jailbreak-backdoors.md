@@ -4,6 +4,13 @@ source: raw/universal-jailbreak-backdoors-poisoned-human-feedback.md
 venue: ICLR
 year: 2024
 summary: "Demonstrates that the RLHF alignment pipeline is vulnerable to backdoor attacks through poisoned preference data. Injecting just 0.5% manipulated preference pairs creates a universal jailbreak trigger that bypasses all safety guardrails while the model passes standard safety evaluations without the trigger."
+tags:
+  - attack
+  - rlhf
+  - data-poisoning
+threat_model:
+  - rlhf
+  - data-poisoning
 compiled: "2026-04-03T16:00:00"
 ---
 

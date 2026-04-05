@@ -4,6 +4,11 @@ source: "agentpoison.md"
 venue: "NeurIPS"
 year: 2024
 summary: "Backdoor attack on LLM agents by poisoning RAG knowledge bases with optimized triggers that map to separable embedding regions, achieving high ASR with low benign impact across agent scenarios."
+tags:
+  - attack
+  - agent
+  - data-poisoning
+threat_model: "data-poisoning"
 compiled: "2026-04-03T23:30:00"
 ---
 

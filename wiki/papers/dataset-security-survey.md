@@ -4,6 +4,8 @@ source: raw/dataset-security-ml-poisoning-backdoor-defenses.md
 venue: IEEE TPAMI
 year: 2023
 summary: "A comprehensive survey providing a unified taxonomy of dataset security threats in ML, systematically reviewing data poisoning attacks, backdoor attacks, and defenses across computer vision, NLP, and federated learning, while identifying fundamental trade-offs and open research directions."
+tags:
+  - survey
 compiled: "2026-04-03T16:00:00"
 ---
 

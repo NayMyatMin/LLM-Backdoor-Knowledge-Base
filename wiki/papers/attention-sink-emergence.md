@@ -4,6 +4,9 @@ source: "raw/attention-sink-emergence.md"
 venue: "ICLR"
 year: 2025
 summary: "Identifies the root cause of attention sinks in transformers as softmax normalization constraints, shows they emerge during training after sufficient optimization, and demonstrates sigmoid attention as a sink-free alternative up to 1B parameters."
+tags:
+  - interpretability
+  - activation-analysis
 compiled: "2026-04-04T16:00:00"
 ---
 

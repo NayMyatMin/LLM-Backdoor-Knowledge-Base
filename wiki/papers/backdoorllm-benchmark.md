@@ -4,6 +4,8 @@ source: "https://arxiv.org/abs/2408.12798"
 venue: NeurIPS 2025
 year: 2025
 summary: "First comprehensive benchmark for systematically evaluating backdoor threats in text-generation LLMs, covering 8 attack strategies, 7 scenarios, and 6 model architectures across 200+ experiments."
+tags:
+  - benchmark
 compiled: "2026-04-03T13:00:00"
 ---
 

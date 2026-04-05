@@ -4,6 +4,9 @@ source: "raw/dola-decoding-contrasting-layers.md"
 venue: "ICLR"
 year: 2024
 summary: "Proposes a decoding strategy that contrasts logit distributions from later vs. earlier layers using Jensen-Shannon divergence to improve factual accuracy without retraining."
+tags:
+  - interpretability
+  - representation
 compiled: "2026-04-04T14:00:00"
 ---
 

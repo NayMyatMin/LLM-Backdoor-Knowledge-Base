@@ -4,6 +4,9 @@ source: "transformer-circuits-framework.md"
 venue: "Anthropic Transformer Circuits Thread"
 year: 2021
 summary: "Develops a mathematical framework for reverse-engineering transformer computations, discovering induction heads as a key circuit motif that enables in-context learning in attention-only transformers."
+tags:
+  - interpretability
+  - activation-analysis
 compiled: "2026-04-03T22:00:00"
 ---
 

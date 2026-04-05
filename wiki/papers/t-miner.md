@@ -4,6 +4,11 @@ source: raw/t-miner-generative-approach-defend-trojan-attacks-text.md
 venue: USENIX Security
 year: 2021
 summary: "T-Miner detects trojans in text classifiers by training a seq2seq model to generate potential trigger sequences that cause misclassification, then validating consistency of generated patterns through perturbation analysis."
+tags:
+  - defense
+  - trigger-inversion
+threat_model:
+  - data-poisoning
 compiled: "2026-04-03T14:00:00"
 ---
 

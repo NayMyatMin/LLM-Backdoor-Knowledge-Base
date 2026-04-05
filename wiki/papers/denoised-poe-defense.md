@@ -4,6 +4,10 @@ source: raw/shortcuts-to-triggers-backdoor-defense-denoised-poe.md
 venue: NAACL
 year: 2024
 summary: "Connects backdoor triggers to shortcut learning and proposes Denoised Product-of-Experts (DPoE), a training-time defense that uses a shallow bias model to absorb backdoor shortcuts and debiases the main model against them."
+tags:
+  - defense
+  - unlearning
+threat_model: "data-poisoning"
 compiled: "2026-04-03T14:00:00"
 ---
 

@@ -1,12 +1,22 @@
 # LLM Backdoor Defense — Knowledge Base
 
-A research knowledge base on **backdoor attacks and defenses in Large Language Models**, powered by Claude Code and following [Andrej Karpathy's LLM Knowledge Base approach](https://x.com/karpathy/status/2039805659525644595).
+A research knowledge base on **backdoor attacks and defenses in Large Language Models**, powered by Claude Code and following [Andrej Karpathy's LLM Wiki pattern](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f).
 
-**149 papers** | **61 concepts** | **37 connections** | **~185,000 words** — interlinked and browsable in Obsidian.
+**150 papers** | **61 concepts** | **40 connections** | **~192,000 words** — interlinked and browsable in Obsidian.
 
 **LLM Brain:** Claude Code (no API key needed — Claude Code does all compilation, Q&A, and generation directly)
 
 ![Obsidian Graph View](raw/images/obsidian-graph.png)
+
+## The Idea
+
+Most people's experience with LLMs and documents looks like RAG: upload files, retrieve chunks at query time, generate an answer. The LLM rediscovers knowledge from scratch on every question. Nothing compounds.
+
+This is different. The LLM **incrementally builds and maintains a persistent wiki** — a structured, interlinked collection of markdown files that sits between you and the raw sources. When you add a new paper, the LLM reads it, extracts key information, and integrates it into the existing wiki — updating concept pages, revising connection articles, strengthening or challenging the evolving synthesis. The knowledge is compiled once and kept current, not re-derived on every query.
+
+**The wiki is a persistent, compounding artifact.** The cross-references are already there. The contradictions have already been flagged. The synthesis already reflects everything you've read.
+
+You never write the wiki yourself — the LLM writes and maintains all of it. You're in charge of sourcing, exploration, and asking the right questions.
 
 ## Research Domain
 
@@ -18,10 +28,10 @@ The knowledge base covers the full landscape of LLM backdoor research across fiv
 
 | Pillar | Papers | Key Topics |
 |--------|--------|------------|
-| **Backdoor Attacks** | ~65 | Data poisoning (BadNets, Sleeper Agent), NLP/LLM attacks (Hidden Killer, VPI, BadEdit), prompt tuning attacks, multimodal attacks (BadCLIP, BadVision, BadToken), RLHF poisoning, code generation attacks, model merging attacks, PEFT/adapter attacks |
-| **Backdoor Defenses** | ~60 | Trigger inversion (Neural Cleanse), pruning (ANP, PURE), unlearning (I-BAU, SAU, BEEAR), activation analysis (spectral signatures, ASSET), certified defenses, LLM-specific defenses (CROW, RepBend, PEFTGuard), inference-time defenses (STRIP, ONION) |
+| **Backdoor Attacks** | ~65 | Data poisoning (BadNets, Sleeper Agent), NLP/LLM attacks (Hidden Killer, VPI, BadEdit, JailbreakEdit), prompt tuning, multimodal (BadCLIP, BadVision, BadToken), RLHF poisoning, code generation, model merging, PEFT/adapter, distillation-conditional |
+| **Backdoor Defenses** | ~60 | Trigger inversion (Neural Cleanse, BAIT), pruning (ANP, PURE), unlearning (I-BAU, SAU, BEEAR), activation analysis (spectral signatures, ASSET), certified (TextGuard, Fuzzed RS), LLM-specific (CROW, RepBend, PEFTGuard), inference-time (STRIP, ONION) |
 | **Mechanistic Interpretability** | ~8 | Circuits (Zoom In), superposition (Toy Models), sparse autoencoders (Towards Monosemanticity, SAE-VLM), activation patching, representation engineering |
-| **Knowledge Editing** | ~9 | ROME, MEMIT, MEND, ripple effects, edit tracing/reversal, evaluation frameworks |
+| **Knowledge Editing** | ~10 | ROME, MEMIT, MEND, PMET, AlphaEdit, ripple effects, edit tracing/reversal, EasyEdit evaluation |
 | **Layer-Wise Representation Dynamics** | ~9 | CKA, residual stream analysis, logit/tuned lens, DoLA, ITI, contrastive activation addition, belief state geometry, attention sinks, representation progression |
 
 ### Venue Coverage
@@ -36,29 +46,35 @@ The knowledge base covers the full landscape of LLM backdoor research across fiv
 
 ### Concept Articles (61)
 
-Structured explainer articles covering: attack fundamentals (backdoor attacks, clean-label attacks, trigger patterns, dynamic triggers), attack surfaces (instruction tuning, supply chain, RLHF, code, multimodal), attack properties (fine-tuning resistance, task-agnostic backdoors, safety backdoors, syntactic triggers), defense approaches (trigger reverse engineering, adversarial unlearning, spectral analysis, pruning, invariance training, data sanitization), interpretability toolkit (mechanistic interpretability, causal tracing, circuit analysis, superposition, sparse autoencoders, layer-wise analysis, prediction trajectories), and evaluation metrics.
+Structured explainer articles covering: attack fundamentals (backdoor attacks, clean-label attacks, trigger patterns, dynamic triggers, syntactic triggers), attack surfaces (instruction tuning, supply chain, RLHF, code, multimodal, federated learning), attack properties (fine-tuning resistance, task-agnostic backdoors, safety backdoors, embedding-space attacks), defense approaches (trigger reverse engineering, adversarial unlearning, spectral analysis, pruning, invariance training, data sanitization, bilevel optimization, gradient-based trigger discovery), interpretability toolkit (mechanistic interpretability, causal tracing, circuit analysis, superposition, sparse autoencoders, layer-wise analysis, prediction trajectories, rank-one model editing), and evaluation metrics (attack success rate, clean accuracy, evaluation methodology).
 
-### Connection Articles (37)
+### Connection Articles (40)
 
-Cross-cutting analyses including: defense arms race, trigger type taxonomy, editing as attack and defense, superposition and backdoor hiding, defense scalability to frontier models, information-theoretic detection limits, behavioral vs. representational removal, cooperative multi-agent backdoors, and a prioritized **research roadmap** synthesizing open problems across the entire field.
+Cross-cutting analyses including: defense arms race, trigger type taxonomy, editing as attack and defense, superposition and backdoor hiding, defense scalability to frontier models, information-theoretic detection limits, behavioral vs. representational removal, cooperative multi-agent backdoors, defense composition, verification without retraining, **knowledge editing x backdoor research frontier**, **steering vectors as backdoor detectors**, a **defense comparison report**, and a prioritized **research roadmap** synthesizing open problems across the entire field.
 
 ## How It Works
 
 ```
-raw/ sources  -->  Claude Code compilation  -->  wiki/ (.md files)  -->  Q&A / Search / Slides
-                                                       |
-                                             viewable in Obsidian
+raw/ sources  -->  Claude Code (interactive)  -->  wiki/ (.md files)  -->  Q&A / Search / Slides
+                          |                              |                        |
+                    discuss & guide              viewable in Obsidian        file back into wiki
 ```
 
-1. **Ingest** raw source documents (papers, articles, notes) into `raw/`
-2. **Compile** them with Claude Code into a structured wiki of interlinked markdown files
-3. **Query** the wiki — just ask Claude Code questions
-4. **Search** with the built-in TF-IDF search engine
-5. **Generate** slide decks (Marp), reports, and visualizations
-6. **Lint** the wiki for structural issues; ask Claude Code for deep analysis
-7. **File outputs back** into the wiki so explorations "add up"
+### Three Layers
 
-You rarely edit the wiki manually — it's the domain of the LLM.
+| Layer | What | Who maintains |
+|-------|------|---------------|
+| **Raw sources** (`raw/`) | Immutable source documents — papers, articles, notes | You add them; LLM reads but never modifies |
+| **The wiki** (`wiki/`) | Structured, interlinked markdown — summaries, concepts, connections | LLM writes and maintains; you read and guide |
+| **The schema** (`CLAUDE.md`) | Operating guide — conventions, workflows, formats | You and LLM co-evolve over time |
+
+### Operations
+
+1. **Ingest** — Add a source to `raw/`, discuss key takeaways with the LLM, it writes wiki articles, updates the index, touches 5-15 pages per source. Prefer one-at-a-time with discussion for quality; batch ingest also available.
+2. **Query** — Ask questions; LLM reads index first to find relevant pages, synthesizes answers with `[[wiki-link]]` citations. **Valuable answers get filed back into the wiki** so explorations compound.
+3. **Lint** — Two levels: structural (broken links, missing frontmatter) and **exploratory** (missing concept pages, thin coverage areas, data gaps, research questions to investigate). Lint drives discovery.
+4. **Generate** — Slide decks (Marp), reports, charts (matplotlib), comparison matrices. Outputs filed back into wiki.
+5. **Log** — Chronological record in `log.md` of everything that happens. Parseable: `grep "^## \[" log.md | tail -10`.
 
 ## Quick Start
 
@@ -84,7 +100,7 @@ Open the `llm-knowledge-base/` folder as an Obsidian vault. The `.obsidian/` con
 - Backlinks and outgoing links panels
 - Marp Slides community plugin enabled
 
-**First time in Obsidian:** Go to Settings -> Community Plugins -> Enable community plugins -> Browse -> Install "Marp Slides"
+**First time in Obsidian:** Settings -> Community Plugins -> Enable -> Browse -> Install "Marp Slides" and "Dataview"
 
 ### 4. Add source documents
 
@@ -104,7 +120,7 @@ python3 run.py ingest list
 In Claude Code, say:
 > "Compile the wiki from my raw sources"
 
-Claude Code will read your raw files, write structured wiki articles, extract concepts, find connections, and build the index.
+The LLM reads your raw files, writes structured wiki articles, extracts concepts, finds connections, and builds the index. Stay involved — read the summaries in Obsidian, guide what to emphasize.
 
 ### 6. Use the knowledge base
 
@@ -114,6 +130,7 @@ Claude Code will read your raw files, write structured wiki articles, extract co
 #   "Compare method A vs method B"
 #   "Generate a slide deck on topic Y"
 #   "Run a health check on the wiki"
+#   "What research directions are unexplored?"
 
 # Search from CLI
 python3 run.py search "trigger pattern"
@@ -127,33 +144,40 @@ python3 run.py search serve
 
 ### Papers (`wiki/papers/`)
 
-Each paper article follows a consistent structure:
-- YAML frontmatter (title, venue, year, summary)
-- Summary (2-3 paragraphs covering motivation, method, results)
-- Key Concepts with `[[wiki-links]]`
-- Method Details (algorithms, loss functions, key parameters)
-- Results & Findings (specific numbers, comparisons)
-- Relevance to LLM Backdoor Defense
-- Related Work and Backlinks
+Each paper article includes YAML frontmatter with Dataview-compatible tags:
+
+```yaml
+---
+title: "Paper Title"
+venue: "Venue"
+year: 2024
+summary: "One sentence"
+tags:
+  - defense
+  - pruning
+threat_model: "data-poisoning"
+compiled: "2026-04-04T12:00:00"
+---
+```
+
+Tags enable Obsidian Dataview queries:
+```dataview
+TABLE venue, year, summary FROM "wiki/papers"
+WHERE contains(tags, "defense") AND contains(tags, "pruning")
+SORT year DESC
+```
 
 ### Concepts (`wiki/concepts/`)
 
-Explainer articles with:
-- Precise definition
-- Background and motivation
-- Technical details with subsections
-- Variants and approaches
-- Key papers with links
-- Related concepts
-- Open problems
+Explainer articles with: definition, background, technical details, variants, key papers, related concepts, open problems.
 
 ### Connections (`wiki/connections/`)
 
-Short cross-cutting articles highlighting non-obvious relationships between papers and concepts from different categories. Include key insights, implications, and open questions.
+Cross-cutting articles highlighting non-obvious relationships between papers and concepts from different categories. Include key insights, implications, and open questions.
 
 ### Index (`wiki/index.md`)
 
-Master index organizing all 248 articles by category with `[[wiki-links]]` for full Obsidian graph connectivity.
+Master index organizing all 252 articles by category with `[[wiki-links]]` for full Obsidian graph connectivity. The LLM reads this first to navigate the wiki.
 
 ## Obsidian Web Clipper
 
@@ -180,15 +204,6 @@ python3 run.py images list
 ```
 
 This rewrites markdown image references to local paths so Obsidian can display them offline.
-
-## Filing Outputs Back into Wiki
-
-Per Karpathy's approach, explorations and Q&A answers should "add up" in the knowledge base:
-
-```bash
-# After Claude Code writes a report to output/reports/
-python3 run.py qa file-to-wiki output/reports/my-exploration.md -s connections
-```
 
 ## All CLI Commands
 
@@ -239,22 +254,24 @@ python3 run.py slides list                   # List slide decks
 ```
 llm-knowledge-base/               <- Obsidian vault root
 ├── .obsidian/                     <- Pre-configured vault settings
-├── raw/                           <- Raw source documents (149 papers)
+├── raw/                           <- Raw source documents (150 papers, immutable)
 │   ├── images/                    <- Downloaded images from sources
 │   └── _manifest.json             <- Ingestion metadata
-├── wiki/                          <- Compiled wiki (248 articles, ~185K words)
-│   ├── index.md                   <- Master index
-│   ├── papers/                    <- 149 paper summary articles
+├── wiki/                          <- Compiled wiki (252 articles, ~192K words)
+│   ├── index.md                   <- Master index (LLM reads first for navigation)
+│   ├── papers/                    <- 150 paper summary articles (Dataview-tagged)
 │   ├── concepts/                  <- 61 concept explainer articles
-│   └── connections/               <- 37 cross-topic connection articles
+│   └── connections/               <- 40 cross-topic connection articles
 ├── output/                        <- Generated outputs
 │   ├── slides/                    <- Marp slide decks
-│   ├── images/                    <- Generated visualizations
-│   └── reports/                   <- Q&A reports
+│   ├── images/                    <- Generated visualizations & heatmaps
+│   └── reports/                   <- Q&A reports (file valuable ones back into wiki)
+├── log.md                         <- Chronological activity log
 ├── tools/                         <- CLI tool scripts (~1,650 lines Python)
 ├── config.yaml                    <- Domain config, venues, search settings
 ├── requirements.txt               <- Python deps (no API client needed)
-├── CLAUDE.md                      <- Claude Code operating guide
+├── CLAUDE.md                      <- Claude Code operating guide (co-evolving schema)
+├── IDEA.md                        <- Reference: Karpathy's LLM Wiki pattern
 └── run.py                         <- CLI entry point
 ```
 
@@ -262,12 +279,19 @@ llm-knowledge-base/               <- Obsidian vault root
 
 | Metric | Count |
 |--------|-------|
-| Raw sources | 149 |
-| Paper articles | 149 |
+| Raw sources | 150 |
+| Paper articles | 150 |
 | Concept articles | 61 |
-| Connection articles | 37 |
-| Total wiki articles | 248 |
-| Total words | ~185,000 |
-| Wiki links | ~5,800 |
-| Unique link targets | ~260 |
+| Connection articles | 40 |
+| Total wiki articles | 252 |
+| Total words | ~192,000 |
+| Wiki links | ~6,000 |
+| Unique link targets | ~266 |
+| Dataview-tagged papers | 150/150 |
 | Lint issues | 0 |
+
+## Why This Works
+
+The tedious part of maintaining a knowledge base is not the reading or the thinking — it's the bookkeeping. Updating cross-references, keeping summaries current, noting when new data contradicts old claims, maintaining consistency across hundreds of pages. LLMs don't get bored, don't forget to update a cross-reference, and can touch 15 files in one pass. The wiki stays maintained because the cost of maintenance is near zero.
+
+The human's job is to curate sources, direct the analysis, ask good questions, and think about what it all means. The LLM's job is everything else.

@@ -4,6 +4,9 @@ source: "raw/cka-representation-similarity.md"
 venue: "ICML"
 year: 2019
 summary: "Introduces Centered Kernel Alignment (CKA) as a robust, invariant metric for comparing neural network representations across layers and models, showing same-architecture networks learn similar representations while different architectures diverge qualitatively."
+tags:
+  - interpretability
+  - representation
 compiled: "2026-04-04T16:00:00"
 ---
 

@@ -4,6 +4,11 @@ source: raw/ted-robust-backdoor-detection-topological-evolution-dynamics.md
 venue: "IEEE S&P"
 year: 2024
 summary: "TED uses persistent homology from topological data analysis to detect backdoors by tracking how the topological structure of learned representations evolves during training. Clean classes show smooth topological evolution while poisoned classes exhibit anomalous persistent features, enabling robust detection even against attacks that evade statistical methods."
+tags:
+  - defense
+  - activation-analysis
+threat_model:
+  - data-poisoning
 compiled: "2026-04-03T16:00:00"
 ---
 

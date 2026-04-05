@@ -4,6 +4,11 @@ source: raw/rap-robustness-aware-perturbations-backdoor.md
 venue: EMNLP
 year: 2021
 summary: "RAP exploits the observation that poisoned inputs are more robust to perturbations than clean inputs, learning a universal perturbation token that differentially affects clean vs. poisoned samples to enable test-time backdoor detection."
+tags:
+  - defense
+  - trigger-inversion
+threat_model:
+  - data-poisoning
 compiled: "2026-04-03T14:00:00"
 ---
 

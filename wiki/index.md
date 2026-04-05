@@ -7,7 +7,7 @@ compiled: "2026-04-04T16:00:00"
 
 A comprehensive research knowledge base on the detection and mitigation of backdoor attacks in deep neural networks and Large Language Models, grounded in mechanistic interpretability of model internals. Covers the full lifecycle from foundational poisoning attacks through advanced LLM-specific threats, defense methods ranging from trigger inversion to certified robustness, and the interpretability toolkit that bridges understanding and protection.
 
-**149 papers** | **61 concepts** | **37 connections** | **~185,000 words** | Last updated: 2026-04-04
+**150 papers** | **61 concepts** | **40 connections** | **~190,000 words** | Last updated: 2026-04-05
 
 ---
 
@@ -208,6 +208,7 @@ A comprehensive research knowledge base on the detection and mitigation of backd
 - [[pmet]] — Precise Model Editing in a Transformer (AAAI 2024)
 - [[easyedit-knowedit]] — EasyEdit/KnowEdit: Comprehensive Study of Knowledge Editing (ACL 2024)
 - [[ripple-effects-editing]] — Evaluating Ripple Effects of Knowledge Editing (TACL 2024)
+- [[alphaedit-null-space-editing]] — AlphaEdit: Null-Space Constrained Knowledge Editing (ICLR 2025 Outstanding Paper)
 - [[tracing-reversing-edits]] — Tracing and Reversing Edits in LLMs (ICLR 2026)
 
 ---
@@ -336,6 +337,9 @@ A comprehensive research knowledge base on the detection and mitigation of backd
 - [[architectural-backdoor-resistance]] — Can model architecture itself prevent backdoor circuits?
 - [[unlearning-forensics]] — Forensic traces left by backdoor removal as evidence of prior compromise
 - [[research-roadmap]] — Prioritized open problems and future directions across the entire field
+- [[defense-comparison-report]] — Which defense works against which attack? Comprehensive coverage analysis
+- [[editing-backdoor-research-frontier]] — Knowledge editing meets backdoor defense: dual-use tools and research gaps
+- [[steering-vectors-backdoor-detection]] — Steering vectors as backdoor detectors: from behavioral control to security monitoring
 
 ---
 

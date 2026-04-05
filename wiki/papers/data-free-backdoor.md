@@ -4,6 +4,10 @@ source: raw/data-free-backdoor-injection-neural-networks.md
 venue: USENIX Security
 year: 2023
 summary: "This paper demonstrates that backdoors can be injected into pre-trained models through direct weight manipulation without training data, and proposes a data-free defense that detects and prunes backdoor-associated neurons by analyzing channel-level Lipschitz constants computed from model weights alone."
+tags:
+  - defense
+  - pruning
+threat_model: "weight-editing"
 compiled: "2026-04-03T16:00:00"
 ---
 

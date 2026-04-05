@@ -4,6 +4,9 @@ source: "mechanistic-exploration-backdoors.md"
 venue: "arXiv"
 year: 2025
 summary: "Applies mechanistic interpretability techniques to analyze how backdoor attacks alter attention patterns in LLMs, finding distinct attention signatures concentrated in later transformer layers that differ based on trigger complexity."
+tags:
+  - interpretability
+  - backdoor-analysis
 compiled: "2026-04-03T22:00:00"
 ---
 

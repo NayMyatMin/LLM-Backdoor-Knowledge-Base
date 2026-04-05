@@ -4,6 +4,10 @@ source: raw/beat-black-box-defense-backdoor-unalignment-llms.md
 venue: ICLR
 year: 2025
 summary: "BEAT proposes a black-box defense against backdoor attacks that cause LLM unalignment, detecting hidden triggers by analyzing output distribution shifts across systematically designed probe inputs using only API access to the model."
+tags:
+  - defense
+  - trigger-inversion
+threat_model: "data-poisoning"
 compiled: "2026-04-03T16:00:00"
 ---
 
